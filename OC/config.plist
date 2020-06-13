@@ -555,6 +555,8 @@
 		</array>
 		<key>Quirks</key>
 		<dict>
+			<key>DisableRtcChecksum</key>
+			<false/>
 			<key>AppleCpuPmCfgLock</key>
 			<true/>
 			<key>AppleXcpmCfgLock</key>
@@ -588,8 +590,7 @@
 	<key>Misc</key>
 	<dict>
 		<key>BlessOverride</key>
-		<array>
-		</array>
+		<array/>
 		<key>Boot</key>
 		<dict>
 			<key>HibernateMode</key>
@@ -624,9 +625,9 @@
 			<key>DisplayDelay</key>
 			<integer>0</integer>
 			<key>DisplayLevel</key>
-			<integer>2147483650</integer>
+			<real>2147483650</real>
 			<key>Target</key>
-			<integer>67</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Entries</key>
 		<array>
@@ -647,6 +648,8 @@
 		</array>
 		<key>Security</key>
 		<dict>
+			<key>BootProtect</key>
+			<string></string>
 			<key>AllowNvramReset</key>
 			<true/>
 			<key>AllowSetDefault</key>
@@ -663,8 +666,7 @@
 			<string>Optional</string>
 		</dict>
 		<key>Tools</key>
-		<array>
-		</array>
+		<array/>
 	</dict>
 	<key>NVRAM</key>
 	<dict>
@@ -766,6 +768,19 @@
 	</dict>
 	<key>UEFI</key>
 	<dict>
+		<key>AFPS</key>
+		<dict>
+			<key>MinVersion</key>
+			<integer>0</integer>
+			<key>MinDate</key>
+			<integer>0</integer>
+			<key>JumpstartHotPlug</key>
+			<false/>
+			<key>HideVerbose</key>
+			<true/>
+			<key>EnableJumpstart</key>
+			<true/>
+		</dict>
 		<key>Audio</key>
 		<dict>
 			<key>AudioCodec</key>

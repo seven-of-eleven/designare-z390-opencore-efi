@@ -9,12 +9,23 @@ This EFI is a revision of the [previous Clover EFI](https://github.com/baughmann
 ---
 
 ## Hardware
+### Primary System
 - Gigabyte Designaire Z390
     - Be sure to flash the [latest firmware version](https://www.gigabyte.com/us/Motherboard/Z390-DESIGNARE-rev-10/support#support-dl-bios)! A fantastic beta was released as late as Dec 2019, which is what I use. Just throw it on a USB, boot into the bios, and use Q-Flash to update.
 - Intel Core i9 9900K
 - AMD Radeon VII 16 GB
 - Samsung EVO 970 (NVMe - 1TB)
 - Fenvi T919 Bluetooth/Wi-Fi Card
+
+### Verified Secondary System (changes needed)
+I can also confirm that this basically also works on my wife's computer whose specs are below. Just remove the `USBPorts.kext` from the `config.plist` and the `kexts` directory and you *should* be good to go:
+
+- Asus ROG Maximus X Hero (Wi-Fi AC) Z370
+- Intel Core i7 8700K
+- AMD Radeon VII 16GB
+- Samsun 860 EVO SSD (1TB)
+- Fenvi T919 Bluetooth/Wi-Fi Card
+
 
 ## What works
 - Bluetooth & Wi-Fi

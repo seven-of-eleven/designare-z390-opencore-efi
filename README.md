@@ -26,6 +26,10 @@ I can also confirm that this basically also works on my wife's computer whose sp
 - Samsun 860 EVO SSD (1TB)
 - Fenvi T919 Bluetooth/Wi-Fi Card
 
+### Other Configurations
+I have seen [some users](https://github.com/baughmann/Catalina-Gigabyte-Designare-Z390-i9-9900k-EFI/issues/1) have success without a dedicated GPU. This is important because I believe that the AMD Radeon VII is only going to get harder to find.
+
+Whatever hardware you want to buy, be sure to read the [fantastic Buyer's Guide by Dortania](https://dortania.github.io/GPU-Buyers-Guide/). You will also need to skim/CMD+F the [amazing OpenCore Desktop Guide](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/coffee-lake.html) to see if it requires any `config.plist` changes.
 
 ## What works
 - Bluetooth & Wi-Fi
@@ -33,11 +37,10 @@ I can also confirm that this basically also works on my wife's computer whose sp
 - Audio (rear 3.5mm audio jack works, haven't tested the front)
 - Shutdown / Restart / Sleep
 - USB 3.0/3/1
-- Thunderbold 3 (including charging and hotsqapping)
-
-## What doesn't work
-- ~~NVRAM emulation~~
-- ~~Correct pre-kernel screen resolution (OC UI and pre-driver Apple loading screen is slightly stretched)~~ Turns out it's just that my monitors weird
+- Thunderbold 3 (including charging and hotswapping)
+- Emulated NVRAM
+- NVMe
+- AFPS (actually, AFPS is required for this build)
 
 ## What you need to change
 I've removed the `MLB`, `SystemSerialNumber`, `SystemUUID` fields under `PlatformInfo` inside the `OC/config.plist` and replaced them with `[REPLACEME]`. You should fill these in to get everything to work properly. Thankfully, the Dortania (OpenCore) guys [mentioned this in their guide](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/iservices.html#generate-a-new-serial). 

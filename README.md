@@ -25,8 +25,8 @@ This EFI is a revision of the [previous Clover EFI](https://github.com/baughmann
 - Thunderbold 3 (including charging and hotsqapping)
 
 ## What doesn't work
-- NVRAM emulation
-- Correct pre-kernel screen resolution (OC UI and pre-driver Apple loading screen is slightly stretched)
+- ~~NVRAM emulation~~
+- ~~Correct pre-kernel screen resolution (OC UI and pre-driver Apple loading screen is slightly stretched)~~ Turns out it's just that my monitors weird
 
 ## What you need to change
 I've removed the `MLB`, `SystemSerialNumber`, `SystemUUID` fields under `PlatformInfo` inside the `OC/config.plist` and replaced them with `[REPLACEME]`. You should fill these in to get everything to work properly. Thankfully, the Dortania (OpenCore) guys [mentioned this in their guide](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/iservices.html#generate-a-new-serial). 
@@ -43,3 +43,12 @@ Since there were some pretty big changes included with OpenCore 0.5.7, a lot of 
 
 ## When all else fails, refer to the documentation
 OpenCore, unlike Clover, has robust official documentation. While some of it may be confusing, if you follow it 99% of the time you will be OK. Read the docs!
+
+## Changelog
+- **13 June 2020:** 
+    - Updated OC, Kernel Extensions, and Drivers to be compatible with latest macOS update `10.15.5` (and supplemental update). 
+    - Somehow the boot picker remembers my choice now, meaning that emulated NVRAM is somehow working?
+    - *IMPORTANT:* Upgraded from `DEBUG` to `RELEASE`:
+        - Changed all drivers and OC files from the `DEBUG` versions to `RELEASE` versions because I seem to have a stable system.
+        - Modified `config.plist` to no longer generate logs (log level now `0`).
+        - If you're having problems, switch back to `DEBUG` mode yourself by following [this guide](https://dortania.github.io/OpenCore-Desktop-Guide/troubleshooting/debug.html).

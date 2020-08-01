@@ -1,10 +1,12 @@
 # Gigabyte Designaire Z390 - OpenCore - macOS Catalina
 
-This guide is using macOS Catalina 10.15.4 (19E287), and OpenCore 0.5.7 with integrated boot selector UI. Currently, debug and verbose mode are disabled. If you have exactly the same hardware as I do, this is probably not an issue. Otherwise, it might be helpful to use the `DEBUG` releases of OpenCorePkg and AppleSupportPkg rather than `RELEASE` the versions included in this EFI. You should also add the `debug=0x100` and `-v` flags to the boot args, as well as follow [other recommendations](https://desktop.dortania.ml/config.plist/coffee-lake.html#nvram) laid out in the [OpenCore Desktop guide](https://desktop.dortania.ml/).
+!["About this Mac" screenshot](about_screenshot.png)
+
+This guide is using macOS Catalina 10.15.6 (19G73), and OpenCore 0.5.9 with integrated boot selector UI. Currently, debug and verbose mode are disabled. If you have exactly the same hardware as I do, this is probably not an issue. Otherwise, it might be helpful to use the `DEBUG` releases of OpenCorePkg and AppleSupportPkg rather than `RELEASE` the versions included in this EFI. You should also add the `debug=0x100` and `-v` flags to the boot args, as well as follow [other recommendations](https://desktop.dortania.ml/config.plist/coffee-lake.html#nvram) laid out in the [OpenCore Desktop guide](https://desktop.dortania.ml/).
 
 As always, if this repository is more than a few weeks old when you view it, it would probably behoove you to grab the latest versions of the drivers and kernel extensions used in this EFI.
 
-This EFI is a revision of the [previous Clover EFI](https://github.com/baughmann/Catalina-Gigabyte-Designare-Z390-i9-9900k-EFI) that I posted. Given that OpenCore has a definitive and always-up-to-date installation guide (a much welcome change from Clover), [you should read it](https://dortania.github.io/OpenCore-Desktop-Guide/) in addition to using this EFI.
+> This EFI is a revision of the [previous Clover EFI](https://github.com/baughmann/Catalina-Gigabyte-Designare-Z390-i9-9900k-EFI) that I posted. Given that OpenCore has a definitive and always-up-to-date installation guide (a much welcome change from Clover), [you should read it](https://dortania.github.io/OpenCore-Desktop-Guide/) in addition to using this EFI.
 
 ---
 

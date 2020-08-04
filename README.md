@@ -74,7 +74,10 @@ Since there were some pretty big changes included with OpenCore 0.5.7, a lot of 
 OpenCore, unlike Clover, has robust official documentation. While some of it may be confusing, if you follow it 99% of the time you will be OK. Read the docs!
 
 ## Changelog
-
+- **1 August 2020:**
+  - Updated OC to version [0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9)
+  - Updated all kexts and drivers to latest
+  - Removed `ApfsDriverLoader.efi` because it was rolled into OC starting with 0.5.9
 - **13 June 2020:**
   - Updated OC, Kernel Extensions, and Drivers to be compatible with latest macOS update `10.15.5` (and supplemental update).
   - Somehow the boot picker remembers my choice now, meaning that emulated NVRAM is somehow working?

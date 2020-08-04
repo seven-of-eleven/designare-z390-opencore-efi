@@ -49,9 +49,12 @@ Whatever hardware you want to buy, be sure to read the [fantastic Buyer's Guide 
 - Shutdown / Restart / Sleep
 - USB 3.0/3/1
 - Thunderbold 3 (including charging and hotswapping)
-- Emulated NVRAM
+- ~~Emulated NVRAM~~
 - NVMe
 - APFS (actually, APFS is required for this build)
+
+## What doesn't work
+- Emulated NVRAM ☹️
 
 ## What you need to change
 

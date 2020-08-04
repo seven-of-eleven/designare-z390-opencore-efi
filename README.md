@@ -1,4 +1,5 @@
 # Gigabyte Designaire Z390 - OpenCore - macOS Catalina
+**Thank you guys for all the stars!**
 
 !["About this Mac" screenshot](about_screenshot.png)
 

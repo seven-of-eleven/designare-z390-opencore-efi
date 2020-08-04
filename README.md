@@ -66,7 +66,7 @@ Whatever hardware you want to buy, be sure to read the [fantastic Buyer's Guide 
 
 #### **Customize the `config.plist`**
 
-The following fields have been replaced by `[REPLACME]` (for ease of Cmd+F)
+The following fields have been replaced by `[REPLACME]` (for ease of Cmd+F):
 
 - `config.plist` > `PlatformInfo`
   - `SystemSerialNumber`
@@ -77,7 +77,7 @@ The following fields have been replaced by `[REPLACME]` (for ease of Cmd+F)
 #### **Updated your motherboard's BIOS firmware**
 
 - Visit [Gigabyte's website](https://www.gigabyte.com/us/Motherboard/Z390-DESIGNARE-rev-10/support#support-dl-bios) and make sure you're running the lates version of the bios
-  - I'm on version `F8` FYI but any later version should work
+  - I'm on version `F8` but any later version should work
 
 ## About this custom EFI
 

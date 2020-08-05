@@ -97,10 +97,23 @@ The following fields have been replaced by `[REPLACME]` (for ease of Cmd+F):
   - `MLB`
     Follow these [instructions](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/iservices.html#generate-a-new-serial) to generate your own unique identifiers. The AppleCare step is optional.
 
-#### **Updated your motherboard's BIOS firmware**
+#### **Update your motherboard's BIOS firmware**
 
 - Visit [Gigabyte's website](https://www.gigabyte.com/us/Motherboard/Z390-DESIGNARE-rev-10/support#support-dl-bios) and make sure you're running the lates version of the bios
   - I'm on version `F8` but any later version should work
+
+#### **BIOS configuration**
+
+This is by no means an extensive list. This is just some stuff unique to our BIOS.
+
+**Top-level settings**
+![](bios_settings.png)
+
+**USB Settings**
+![](bios_settings_usb.png)
+
+**Thunderbold 3 Settings**
+![](bios_settings_tb3.png)
 
 ---
 

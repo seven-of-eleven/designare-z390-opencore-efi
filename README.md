@@ -75,13 +75,12 @@ I can also confirm that this basically also works on my wife's computer whose sp
 - Shutdown / Restart / Sleep
 - USB 3.0/3/1
 - Thunderbold 3 (including charging and hotswapping)
-- ~~Emulated NVRAM~~
 - NVMe
 - APFS (actually, APFS is required for this build)
 
 #### **What doesn't work**
 
-- Emulated NVRAM (it's a Z390 after all) ☹
+- Emulated NVRAM (it's a Z390 after all) ☹ - please comment on [the issue](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues/4) if you know of a resolution.
 
 ---
 

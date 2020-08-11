@@ -105,14 +105,14 @@ The following fields have been replaced by `[REPLACME]` (for ease of Cmd+F):
 
 This is by no means an extensive list. This is just some stuff unique to our BIOS.
 
-**Top-level settings**
-![](bios_settings.png)
+The most important settings are:
 
-**USB Settings**
-![](bios_settings_usb.png)
-
-**Thunderbold 3 Settings**
-![](bios_settings_tb3.png)
+- Disable:
+  - CSM
+  - SecureBoot
+  - iGPU (onboard graphics)
+- Enable
+  - Above 4G decoding
 
 ---
 

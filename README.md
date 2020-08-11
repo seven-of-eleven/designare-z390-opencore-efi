@@ -62,6 +62,7 @@ I can also confirm that this basically also works on my wife's computer whose sp
 
 - [Without dedicated GPU](https://github.com/baughmann/Catalina-Gigabyte-Designare-Z390-i9-9900k-EFI/issues/1)
 - Other AMD GPU's are _probably mostly_ plug-n-play. Be sure to read the [fantastic Buyer's Guide by Dortania](https://dortania.github.io/GPU-Buyers-Guide/) before you buy!.
+- MacOS Big Sur Beta: According to [this issue](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues/6), this EFI reportedly works for the Big Sur beta with nearly no modifications. Additional confirmation required on base system.
 
 ---
 
@@ -77,6 +78,7 @@ I can also confirm that this basically also works on my wife's computer whose sp
 - Thunderbold 3 (including charging and hotswapping)
 - NVMe
 - APFS (actually, APFS is required for this build)
+- iMessage, AirDrop, etc.
 
 #### **What doesn't work**
 

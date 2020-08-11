@@ -107,6 +107,7 @@ This is by no means an extensive list. This is just some stuff unique to our BIO
 
 The most important settings are:
 
+- Udate to BIOS firmware version F8 or later.
 - Disable:
   - CSM
   - SecureBoot

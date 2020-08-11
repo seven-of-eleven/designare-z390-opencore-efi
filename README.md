@@ -139,6 +139,8 @@ The primary changes that I remember making that differ from the fantastic [OpenC
 
 ## \*_Changelog_
 
+- **10 August 2020**
+  - Added `SmallTreeIntel82576.kext` for enabling the secondary Ethernet port as per [issue #7](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/pull/7)
 - **4 August 2020:**
   - Updated OC to version [0.6.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.0)
   - Updated all of [acidanthera's](https://github.com/acidanthera) drivers and kexts

@@ -18,7 +18,7 @@
 
 ## Features
 
-- macOS Catalina 10.15.6 (19G73)
+- macOS Catalina 10.15.6 (19G2021)
 - OpenCore 0.6.0 (release mode)
 - OpenCanopy (boot UI)
 - **_[Almost](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#installation)_** plug-n-play if you have [my hardware configuration](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#primary-system)
@@ -139,7 +139,9 @@ The primary changes that I remember making that differ from the fantastic [OpenC
 
 ## \*_Changelog_
 
-- **10 August 2020**
+- **13 August 2020:**
+  - Verified that supplemental update 10.15.6 `19G73` => `19G2021` works without issues.
+- **10 August 2020:**
   - Added `SmallTreeIntel82576.kext` for enabling the secondary Ethernet port as per [issue #7](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/pull/7)
 - **4 August 2020:**
   - Updated OC to version [0.6.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.0)

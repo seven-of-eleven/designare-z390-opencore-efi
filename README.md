@@ -128,6 +128,7 @@ The primary changes that I remember making that differ from the fantastic [OpenC
 - boot args `slide=1 alcid=7`
 - Adding my own USB map kext (`USBPorts.kext`) that shuts off the MoBo's built-in Wi-Fi card so that I can use the Fenvi
 - Adding the `HfsPlus.efi` driver
+- All packages are `RELEASE` and debugging is enabled. If you're having issues, be sure to enable debugging [as described in the OpenCore docs](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#debug), and also grab [the `DEBUG` version of OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases).
 
 ---
 

@@ -4,6 +4,15 @@
 
 !["About this Mac" screenshot](about_screenshot.png)
 
+## Benchmarks (Geekbench)
+CPU:
+- Single core: [1260](https://browser.geekbench.com/v5/cpu/3386429)
+- Multi-core: [8253](https://browser.geekbench.com/v5/cpu/3386429)
+
+Compute (GPU):
+- Metals: [57287](https://browser.geekbench.com/v5/compute/1378496)
+- OpenCL: [50008](https://browser.geekbench.com/v5/compute/1378498)
+
 ## Table of contents
 
 - [Features](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#features)

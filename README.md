@@ -28,7 +28,7 @@ Compute (GPU):
 ## Features
 
 - macOS Catalina 10.15.6 (19G2021)
-- OpenCore 0.6.0 (release mode)
+- OpenCore 0.6.1 (release mode)
 - OpenCanopy (boot UI)
 - **_[Almost](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#installation)_** plug-n-play if you have [my hardware configuration](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#primary-system)
 - Regularly updated

@@ -1,4 +1,4 @@
-# Gigabyte Designaire Z390 - OpenCore - macOS Catalina
+# Gigabyte Designaire Z390 - OpenCore - macOS ~~Catalina~~ Big Sur
 
 ⭐️ **Thank you guys for all the stars!** ⭐️
 
@@ -26,10 +26,10 @@ Compute (GPU):
 - [Issues](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues)
 
 ## Features
-
-- macOS Catalina 10.15.6 (19G2021)
-- OpenCore 0.6.1 (release mode)
-- OpenCanopy (boot UI)
+- macOS Big Sur 11.0.1 (20B29)
+  - For Catalina, see [this release](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/releases/tag/1.0-oc_0.6.0). It seems to be pretty stable and I can make new Catalina releases if needed, just open an issue.
+- OpenCore 0.6.3 (release mode)
+- OpenCanopy (boot UI -- but no boot chime)
 - **_[Almost](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#installation)_** plug-n-play if you have [my hardware configuration](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#primary-system)
 - Regularly updated
 - Pretty stable (my every-day driver)
@@ -51,13 +51,9 @@ Compute (GPU):
 | SSD       | Samsung EVO 970 (NVMe - 1TB)      |
 | BT/Wi-Fi  | Fenvi T919 Bluetooth/Wi-Fi Card   |
 
-#### Verified Secondary System (changes needed)
+#### Verified Secondary System
 
 I can also confirm that this basically also works on my wife's computer whose specs are below.
-
-> ‼️ **Required Changes** ‼️
->
-> Just remove the `USBPorts.kext` from the `config.plist` and the `kexts` directory and you _should_ be good to go/
 
 | Component | Product                                 |
 | --------- | --------------------------------------- |
@@ -134,8 +130,8 @@ The most important settings are:
 
 The primary changes that I remember making that differ from the fantastic [OpenCore Desktop Guide for Coffee Lake](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/coffee-lake.html) are:
 
-- boot args `slide=1 alcid=7`
-- Adding my own USB map kext (`USBPorts.kext`) that shuts off the MoBo's built-in Wi-Fi card so that I can use the Fenvi
+- boot args `slide=0 alcid=7`
+- ~~Adding my own USB map kext (`USBPorts.kext`) that shuts off the MoBo's built-in Wi-Fi card so that I can use the Fenvi~~ No longer necessary as of macOS Big Sur
 - Adding the `HfsPlus.efi` driver
 - All packages are `RELEASE` and debugging is enabled. If you're having issues, be sure to enable debugging [as described in the OpenCore docs](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#debug), and also grab [the `DEBUG` version of OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases). For debugging help see the [Troubleshooting section of this page](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#troubleshooting).
 
@@ -148,8 +144,12 @@ The primary changes that I remember making that differ from the fantastic [OpenC
 - [Post an issue](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues) and I will get back to you when I can. I should be able to be pretty helpful if you have similar hardware as I do.
   - You *must* grab the OC boot logs if you wish to get help! Refer to the [debugging section of the OpenCore docs](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/debug.html) as well as the [debugging section of `config.plist` setup](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#debug) for info on how to enable logging.
 
-## \*_Changelog_
-
+## Changelog
+- **16 Nov 2020:**
+  - Updated to macOS Big Sur from Catalina
+  - For some reason, with Big Sur and OC 0.6.3 we no longer need AirportBrcmFix for teh Fenvi BT/WiFi Card
+  - Changed `slide=1` to `slide=0`
+  - Kept `USBPorts.kext` inside the `config.plist`, but disabled it because it seems as though `USBInjectAll.kext` does the trick
 - **13 August 2020:**
   - Verified that supplemental update 10.15.6 `19G73` => `19G2021` works without issues.
 - **10 August 2020:**

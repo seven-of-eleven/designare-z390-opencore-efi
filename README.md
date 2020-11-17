@@ -1,4 +1,5 @@
 # Gigabyte Designaire Z390 - OpenCore - macOS ~~Catalina~~ Big Sur
+## NOTE: The latest release may not work with Catalina anymore. See the previous release if you are still on Catalina.
 
 ⭐️ **Thank you guys for all the stars!** ⭐️
 
@@ -6,12 +7,12 @@
 
 ## Benchmarks (Geekbench)
 CPU:
-- Single core: [1260](https://browser.geekbench.com/v5/cpu/3386429)
-- Multi-core: [8253](https://browser.geekbench.com/v5/cpu/3386429)
+- Single core: [1261](https://browser.geekbench.com/v5/cpu/4770586)
+- Multi-core: [7901](https://browser.geekbench.com/v5/cpu/4770586)
 
 Compute (GPU):
-- Metals: [57287](https://browser.geekbench.com/v5/compute/1378496)
-- OpenCL: [50008](https://browser.geekbench.com/v5/compute/1378498)
+- Metals: [59488](https://browser.geekbench.com/v5/compute/1846110)
+- OpenCL: [51655](https://browser.geekbench.com/v5/compute/1846114)
 
 ## Table of contents
 

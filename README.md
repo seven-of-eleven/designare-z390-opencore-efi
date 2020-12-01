@@ -3,7 +3,7 @@
 
 ⭐️ **Thank you guys for all the stars!** ⭐️
 
-!["About this Mac" screenshot](about_screenshot.png)
+!["About this Mac" screenshot](images/about_screenshot.png)
 
 ## Benchmarks (Geekbench)
 CPU:
@@ -85,6 +85,7 @@ I can also confirm that this basically also works on my wife's computer whose sp
 - NVMe
 - APFS (actually, APFS is required for this build)
 - iMessage, AirDrop, etc.
+- Sidecar
 
 #### **What doesn't work**
 
@@ -107,21 +108,13 @@ The following fields have been replaced by `[REPLACME]` (for ease of Cmd+F):
 #### **Update your motherboard's BIOS firmware**
 
 - Visit [Gigabyte's website](https://www.gigabyte.com/us/Motherboard/Z390-DESIGNARE-rev-10/support#support-dl-bios) and make sure you're running the lates version of the bios
-  - I'm on version `F8` but any later version should work
+  - I'm on version `F9i` but any later version should work
 
 #### **BIOS configuration**
 
-This is by no means an extensive list. This is just some stuff unique to our BIOS.
+Visit the [BIOS configuration](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/blob/master/BIOS.md) page to ensure that your BIOS is configured properly.
 
-The most important settings are:
-
-- Udate to BIOS firmware version F8 or later.
-- Disable:
-  - CSM
-  - SecureBoot
-  - iGPU (onboard graphics)
-- Enable
-  - Above 4G decoding
+    Note: If you've recently updated your BIOS firmware, you will need to double-check these as some of them get reset after updating!
 
 ---
 
@@ -141,11 +134,14 @@ The primary changes that I remember making that differ from the fantastic [OpenC
 ## **Troubleshooting**
 
 - Check your `config.plist` against the corresponding version using [this handy utility](https://opencore.slowgeek.com/).
-- Read the officla [OpenCore Desktop Guide for Coffee Lake](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html) when making changes to the `config.plist` and the guide's [Gather Files section](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#firmware-drivers) when picking drivers and kexts.
+- Read the official [OpenCore Desktop Guide for Coffee Lake](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html) when making changes to the `config.plist` and the guide's [Gather Files section](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#firmware-drivers) when picking drivers and kexts.
 - [Post an issue](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues) and I will get back to you when I can. I should be able to be pretty helpful if you have similar hardware as I do.
   - You *must* grab the OC boot logs if you wish to get help! Refer to the [debugging section of the OpenCore docs](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/debug.html) as well as the [debugging section of `config.plist` setup](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#debug) for info on how to enable logging.
 
 ## Changelog
+- **1 October 2020:**
+  - Modified BIOS suggestions to get Sidecar working *(thanks @QueercoreTrash for [#19](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues/19))*
+  - Added a [BIOS configuration page](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/blob/master/BIOS.md) with screenshots for user assistance.
 - **16 Nov 2020:**
   - Updated to macOS Big Sur from Catalina
   - For some reason, with Big Sur and OC 0.6.3 we no longer need AirportBrcmFix for teh Fenvi BT/WiFi Card

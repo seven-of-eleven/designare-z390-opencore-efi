@@ -1,4 +1,5 @@
 # Gigabyte Designaire Z390 - OpenCore - macOS ~~Catalina~~ Big Sur
+
 ## NOTE: The latest release is for Big Sur may not work with Catalina anymore. See the previous release if you are still on Catalina.
 
 ⭐️ **Thank you guys for all the stars!** ⭐️
@@ -6,11 +7,14 @@
 !["About this Mac" screenshot](images/about_screenshot.png)
 
 ## Benchmarks (Geekbench)
+
 CPU:
-- Single core: [1261](https://browser.geekbench.com/v5/cpu/4770586)
+
+- Single-core: [1261](https://browser.geekbench.com/v5/cpu/4770586)
 - Multi-core: [7901](https://browser.geekbench.com/v5/cpu/4770586)
 
 Compute (GPU):
+
 - Metals: [59488](https://browser.geekbench.com/v5/compute/1846110)
 - OpenCL: [51655](https://browser.geekbench.com/v5/compute/1846114)
 
@@ -27,6 +31,7 @@ Compute (GPU):
 - [Issues](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues)
 
 ## Features
+
 - macOS Big Sur 11.0.1 (20B29)
   - For Catalina, see [this release](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/releases/tag/1.0-oc_0.6.0). It seems to be pretty stable and I can make new Catalina releases if needed, just open an issue.
 - OpenCore 0.6.3 (release mode)
@@ -66,9 +71,9 @@ I can also confirm that this basically also works on my wife's computer whose sp
 
 #### Other Configurations
 
-- [Without dedicated GPU](https://github.com/baughmann/Catalina-Gigabyte-Designare-Z390-i9-9900k-EFI/issues/1)
+- [Without a dedicated GPU](https://github.com/baughmann/Catalina-Gigabyte-Designare-Z390-i9-9900k-EFI/issues/1)
 - Other AMD GPU's are _probably mostly_ plug-n-play. Be sure to read the [fantastic Buyer's Guide by Dortania](https://dortania.github.io/GPU-Buyers-Guide/) before you buy!.
-- MacOS Big Sur Beta: According to [this issue](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues/6), this EFI reportedly works for the Big Sur beta with nearly no modifications. Additional confirmation required on base system.
+- MacOS Big Sur Beta: According to [this issue](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues/6), this EFI reportedly works for the Big Sur beta with nearly no modifications. Additional confirmation required on the base system.
 
 ---
 
@@ -81,7 +86,7 @@ I can also confirm that this basically also works on my wife's computer whose sp
 - Audio (rear 3.5mm audio jack works, haven't tested the front)
 - Shutdown / Restart / Sleep
 - USB 3.0/3/1
-- Thunderbold 3 (including charging and hotswapping)
+- Thunderbolt 3 (including charging and hot-swapping)
 - NVMe
 - APFS (actually, APFS is required for this build)
 - iMessage, AirDrop, etc.
@@ -107,7 +112,7 @@ The following fields have been replaced by `[REPLACME]` (for ease of Cmd+F):
 
 #### **Update your motherboard's BIOS firmware**
 
-- Visit [Gigabyte's website](https://www.gigabyte.com/us/Motherboard/Z390-DESIGNARE-rev-10/support#support-dl-bios) and make sure you're running the lates version of the bios
+- Visit [Gigabyte's website](https://www.gigabyte.com/us/Motherboard/Z390-DESIGNARE-rev-10/support#support-dl-bios) and make sure you're running the latest version of the bios
   - I'm on version `F9i` but any later version should work
 
 #### **BIOS configuration**
@@ -136,15 +141,16 @@ The primary changes that I remember making that differ from the fantastic [OpenC
 - Check your `config.plist` against the corresponding version using [this handy utility](https://opencore.slowgeek.com/).
 - Read the official [OpenCore Desktop Guide for Coffee Lake](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html) when making changes to the `config.plist` and the guide's [Gather Files section](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#firmware-drivers) when picking drivers and kexts.
 - [Post an issue](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues) and I will get back to you when I can. I should be able to be pretty helpful if you have similar hardware as I do.
-  - You *must* grab the OC boot logs if you wish to get help! Refer to the [debugging section of the OpenCore docs](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/debug.html) as well as the [debugging section of `config.plist` setup](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#debug) for info on how to enable logging.
+  - You _must_ grab the OC boot logs if you wish to get help! Refer to the [debugging section of the OpenCore docs](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/debug.html) as well as the [debugging section of `config.plist` setup](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#debug) for info on how to enable logging.
 
 ## Changelog
-- **1 October 2020:**
-  - Modified BIOS suggestions to get Sidecar working *(thanks @QueercoreTrash for [#19](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues/19))*
+
+- **1 December 2020:**
+  - Modified BIOS suggestions to get Sidecar working _(thanks @QueercoreTrash for [#19](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues/19))_
   - Added a [BIOS configuration page](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/blob/master/BIOS.md) with screenshots for user assistance.
 - **16 Nov 2020:**
   - Updated to macOS Big Sur from Catalina
-  - For some reason, with Big Sur and OC 0.6.3 we no longer need AirportBrcmFix for teh Fenvi BT/WiFi Card
+  - For some reason, with Big Sur and OC 0.6.3, we no longer need AirportBrcmFix for the Fenvi BT/WiFi Card
   - Changed `slide=1` to `slide=0`
   - Kept `USBPorts.kext` inside the `config.plist`, but disabled it because it seems as though `USBInjectAll.kext` does the trick
 - **13 August 2020:**
@@ -153,10 +159,10 @@ The primary changes that I remember making that differ from the fantastic [OpenC
   - Added `SmallTreeIntel82576.kext` for enabling the secondary Ethernet port as per [issue #7](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/pull/7)
 - **4 August 2020:**
   - Updated OC to version [0.6.0](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.6.0)
-  - Updated all of [acidanthera's](https://github.com/acidanthera) drivers and kexts
+  - Updated all of [the acidanthera's](https://github.com/acidanthera) drivers and kexts
 - **1 August 2020:**
   - Updated OC to version [0.5.9](https://github.com/acidanthera/OpenCorePkg/releases/tag/0.5.9)
-  - Updated all kexts and drivers to latest
+  - Updated all kexts and drivers to the latest
   - Removed `ApfsDriverLoader.efi` because it was rolled into OC starting with 0.5.9
 - **13 June 2020:**
   - Updated OC, Kernel Extensions, and Drivers to be compatible with latest macOS update `10.15.5` (and supplemental update).

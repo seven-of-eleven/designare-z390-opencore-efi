@@ -108,7 +108,7 @@ The following fields have been replaced by `[REPLACME]` (for ease of Cmd+F):
   - `SystemSerialNumber`
   - `SystemUUID`
   - `MLB`
-    Follow these [instructions](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/iservices.html#generate-a-new-serial) to generate your own unique identifiers. The AppleCare step is optional.
+    Follow these [instructions](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#generate-a-new-serial) to generate your own unique identifiers. The AppleCare step is optional.
 
 #### **Update your motherboard's BIOS firmware**
 

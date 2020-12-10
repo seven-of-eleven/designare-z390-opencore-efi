@@ -102,13 +102,13 @@ I can also confirm that this basically also works on my wife's computer whose sp
 
 #### **Customize the `config.plist`**
 
-The following fields have been replaced by `[REPLACME]` (for ease of Cmd+F):
+The following fields have been replaced by `[REPLACEME]` (for ease of Cmd+F):
 
 - `config.plist` > `PlatformInfo`
   - `SystemSerialNumber`
   - `SystemUUID`
   - `MLB`
-    Follow these [instructions](https://dortania.github.io/OpenCore-Desktop-Guide/post-install/iservices.html#generate-a-new-serial) to generate your own unique identifiers. The AppleCare step is optional.
+    Follow these [instructions](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#generate-a-new-serial) to generate your own unique identifiers. The AppleCare step is optional.
 
 #### **Update your motherboard's BIOS firmware**
 

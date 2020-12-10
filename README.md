@@ -102,7 +102,7 @@ I can also confirm that this basically also works on my wife's computer whose sp
 
 #### **Customize the `config.plist`**
 
-The following fields have been replaced by `[REPLACME]` (for ease of Cmd+F):
+The following fields have been replaced by `[REPLACEME]` (for ease of Cmd+F):
 
 - `config.plist` > `PlatformInfo`
   - `SystemSerialNumber`

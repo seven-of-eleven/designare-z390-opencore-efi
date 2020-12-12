@@ -291,6 +291,22 @@
 			</dict>
 			<dict>
 				<key>BundlePath</key>
+				<string>SmallTreeIntel82576.kext</string>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/SmallTreeIntel82576</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>BundlePath</key>
 				<string>SMCProcessor.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -650,7 +666,7 @@
 				<key>boot-args</key>
 				<string>keepsyms=1 slide=0 alcid=7</string>
 				<key>csr-active-config</key>
-				<data>AAAAAA==</data>
+				<data>5wMAAA==</data>
 				<key>prev-lang:kbd</key>
 				<data>ZW4tVVM6MA==</data>
 			</dict>

@@ -1,4 +1,4 @@
-# Gigabyte Designaire Z390 - OpenCore - macOS ~~Catalina~~ Big Sur
+# Gigabyte Designaire Z390 Hackintosh - OpenCore - macOS ~~Catalina~~ Big Sur
 
 ## NOTE: The latest release is for Big Sur may not work with Catalina anymore. See the previous release if you are still on Catalina.
 

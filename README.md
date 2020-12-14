@@ -113,7 +113,7 @@ The following fields have been replaced by `[REPLACEME]` (for ease of Cmd+F):
 #### **Update your motherboard's BIOS firmware**
 
 - Visit [Gigabyte's website](https://www.gigabyte.com/us/Motherboard/Z390-DESIGNARE-rev-10/support#support-dl-bios) and make sure you're running the latest version of the bios
-  - I'm on version `F9i` but any later version should work
+  - I'm on version `F9g` but any later version should work
 
 #### **BIOS configuration**
 

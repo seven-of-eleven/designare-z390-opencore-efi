@@ -32,7 +32,7 @@ Compute (GPU):
 
 ## Features
 
-- macOS Big Sur 11.0.1 (20B29)
+- macOS Big Sur 11.1 (20C69)
   - For Catalina, see [this release](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/releases/tag/1.0-oc_0.6.0). It seems to be pretty stable and I can make new Catalina releases if needed, just open an issue.
 - OpenCore 0.6.4 (release mode)
 - OpenCanopy (boot UI -- but no boot chime)
@@ -147,6 +147,7 @@ The primary changes that I remember making that differ from the fantastic [OpenC
 - **15 December 2020:**
   - Updated to OpenCore 0.6.4
   - Updated All Kexts and Drivers for which there was an update
+  - Updated to macOS Big Sur 11.1 (20C69)
 - **1 December 2020:**
   - Modified BIOS suggestions to get Sidecar working _(thanks @QueercoreTrash for [#19](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues/19))_
   - Added a [BIOS configuration page](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/blob/master/BIOS.md) with screenshots for user assistance.

@@ -33,7 +33,7 @@ Compute (GPU):
 
 ## Features
 
-- macOS Big Sur 11.1 (20C69)
+- macOS Big Sur 11.2.3 (20D91)
   - For Catalina, see [this release](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/releases/tag/1.0-oc_0.6.0). It seems to be pretty stable and I can make new Catalina releases if needed, just open an issue.
 - OpenCore 0.6.8 (release mode)
 - OpenCanopy (boot UI -- but no boot chime)

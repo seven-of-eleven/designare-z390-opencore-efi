@@ -5,6 +5,7 @@
 ⭐️ **Thank you guys for all the stars!** ⭐️
 
 !["About this Mac" screenshot](images/about_screenshot.png)
+!["Boot Picker for Windows and Mac"](images/Picker.png)
 
 ## Benchmarks (Geekbench)
 

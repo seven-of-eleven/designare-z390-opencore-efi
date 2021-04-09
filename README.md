@@ -1,4 +1,4 @@
-# Gigabyte Designaire Z390 Hackintosh - OpenCore - macOS ~~Catalina~~ Big Sur
+# Gigabyte Designaire Z390 Hackintosh - OpenCore - macOS Big Sur
 
 ## NOTE: The latest release is for Big Sur may not work with Catalina anymore. See the previous release if you are still on Catalina.
 
@@ -34,7 +34,7 @@ Compute (GPU):
 
 - macOS Big Sur 11.1 (20C69)
   - For Catalina, see [this release](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/releases/tag/1.0-oc_0.6.0). It seems to be pretty stable and I can make new Catalina releases if needed, just open an issue.
-- OpenCore 0.6.4 (release mode)
+- OpenCore 0.6.8 (release mode)
 - OpenCanopy (boot UI -- but no boot chime)
 - **_[Almost](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#installation)_** plug-n-play if you have [my hardware configuration](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#primary-system)
 - Regularly updated

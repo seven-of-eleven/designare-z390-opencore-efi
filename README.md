@@ -145,10 +145,15 @@ The primary changes that I remember making that differ from the fantastic [OpenC
   - You _must_ grab the OC boot logs if you wish to get help! Refer to the [debugging section of the OpenCore docs](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/debug.html) as well as the [debugging section of `config.plist` setup](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#debug) for info on how to enable logging.
 
 ## Changelog
+- **10 April 2020:**
+  - Updated OpenCore to 0.6.8
+  - Updated all Kexts and Drivers for which there was an update
+  - Fixed all non-fatal warnings at startup
+  - Ensured compatability with macOS Big Sur 11.2.3 (20D91)
 - **15 December 2020:**
   - Updated to OpenCore 0.6.4
   - Updated All Kexts and Drivers for which there was an update
-  - Updated to macOS Big Sur 11.1 (20C69)
+  - Ensured compatability with macOS Big Sur 11.1 (20C69)
 - **1 December 2020:**
   - Modified BIOS suggestions to get Sidecar working _(thanks @QueercoreTrash for [#19](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues/19))_
   - Added a [BIOS configuration page](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/blob/master/BIOS.md) with screenshots for user assistance.

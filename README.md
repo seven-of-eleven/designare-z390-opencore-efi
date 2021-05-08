@@ -146,6 +146,10 @@ The primary changes that I remember making that differ from the fantastic [OpenC
 
 ## Changelog
 - **10 April 2020:**
+  - Updated OpenCore to 0.6.9
+  - Fixed USB port issue occurring after upgrade to 11.3 by re-disabling `USBInjectAll.kext`, re-enabling `USBPorts.kext` (this mobo's USB map) and setting `Kernel` > `Quirks` > `XhciPortLimit` to `0`
+  - Updated all kexts and drivers that needed updating
+- **10 April 2020:**
   - Updated OpenCore to 0.6.8
   - Updated all Kexts and Drivers for which there was an update
   - Fixed all non-fatal warnings at startup

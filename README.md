@@ -1,7 +1,5 @@
 # Gigabyte Designaire Z390 Hackintosh - OpenCore - macOS Big Sur
 
-## NOTE: The latest release is for Big Sur may not work with Catalina anymore. See the previous release if you are still on Catalina.
-
 ⭐️ **Thank you guys for all the stars!** ⭐️
 
 !["About this Mac" screenshot](images/about_screenshot.png)
@@ -33,16 +31,13 @@ Compute (GPU):
 
 ## Features
 
-- macOS Big Sur 11.2.3 (20D91)
-  - For Catalina, see [this release](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/releases/tag/1.0-oc_0.6.0). It seems to be pretty stable and I can make new Catalina releases if needed, just open an issue.
-- OpenCore 0.6.8 (release mode)
-- OpenCanopy (boot UI -- but no boot chime)
+- macOS Big Sur 11.4 (20F71)
+- OpenCore 0.6.9
+- OpenCanopy
 - **_[Almost](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#installation)_** plug-n-play if you have [my hardware configuration](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#primary-system)
 - Regularly updated
 - Pretty stable (my every-day driver)
 - I suffer so you don't have to! 👨‍🎤
-
-> This EFI is a revision of the [previous Clover EFI](https://github.com/baughmann/Catalina-Gigabyte-Designare-Z390-i9-9900k-EFI) that I posted. Given that OpenCore has a definitive and always-up-to-date installation guide (a much welcome change from Clover), [you should read it](https://dortania.github.io/OpenCore-Desktop-Guide/) in addition to using this EFI.
 
 ---
 
@@ -65,7 +60,7 @@ I can also confirm that this basically also works on my wife's computer whose sp
 | Component | Product                                 |
 | --------- | --------------------------------------- |
 | CPU       | Intel Core i7 8700K                     |
-| MB        | Asus ROG Maximus X Hero (Wi-Fi AC) Z370 |
+| MB        | Gigabyte Designaire Z390 (rev 10) |
 | GPU       | AMD Radeon VII 16 GB                    |
 | SSD       | Samsung 860 EVO SSD (1TB)               |
 | BT/Wi-Fi  | Fenvi T919 Bluetooth/Wi-Fi Card         |
@@ -101,6 +96,10 @@ I can also confirm that this basically also works on my wife's computer whose sp
 
 ## **Installation**
 
+#### **Official Docs**
+
+Be sure to read the [official OpenCore documentation] if you have any questions before posting an issue.
+
 #### **Customize the `config.plist`**
 
 The following fields have been replaced by `[REPLACEME]` (for ease of Cmd+F):
@@ -109,7 +108,7 @@ The following fields have been replaced by `[REPLACEME]` (for ease of Cmd+F):
   - `SystemSerialNumber`
   - `SystemUUID`
   - `MLB`
-    Follow these [instructions](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#generate-a-new-serial) to generate your own unique identifiers. The AppleCare step is optional.
+    Follow the [OpenCore instructions](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#generate-a-new-serial) to generate your own unique identifiers. The AppleCare step is optional.
 
 #### **Update your motherboard's BIOS firmware**
 
@@ -126,7 +125,7 @@ Visit the [BIOS configuration](https://github.com/baughmann/designaire-z390-inte
 
 ## **About this custom EFI**
 
-#### **Most important differences from The Official Guide**
+#### **Most important differences from [The Official Guide](https://dortania.github.io/OpenCore-Install-Guide/)**
 
 The primary changes that I remember making that differ from the fantastic [OpenCore Desktop Guide for Coffee Lake](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/coffee-lake.html) are:
 
@@ -145,7 +144,9 @@ The primary changes that I remember making that differ from the fantastic [OpenC
   - You _must_ grab the OC boot logs if you wish to get help! Refer to the [debugging section of the OpenCore docs](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/debug.html) as well as the [debugging section of `config.plist` setup](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#debug) for info on how to enable logging.
 
 ## Changelog
-- **10 April 2020:**
+- **30 May 2021:**
+  - Confirmed compatability with Big Sur 11.4
+- **10 April 2021:**
   - Updated OpenCore to 0.6.9
   - Fixed USB port issue occurring after upgrade to 11.3 by re-disabling `USBInjectAll.kext`, re-enabling `USBPorts.kext` (this mobo's USB map) and setting `Kernel` > `Quirks` > `XhciPortLimit` to `0`
   - Updated all kexts and drivers that needed updating

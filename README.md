@@ -31,9 +31,9 @@ Compute (GPU):
 
 ## Features
 
-- macOS Big Sur 11.4 (20F71)
-- OpenCore 0.6.9
-- OpenCanopy
+- macOS Big Sur 11.6 (20G165)
+- OpenCore 0.7.4
+- OpenCanopy (OpenCore's Boot UI)
 - **_[Almost](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#installation)_** plug-n-play if you have [my hardware configuration](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#primary-system)
 - Regularly updated
 - Pretty stable (my every-day driver)
@@ -88,10 +88,6 @@ I can also confirm that this basically also works on my wife's computer whose sp
 - iMessage, AirDrop, etc.
 - Sidecar
 
-#### **What doesn't work**
-
-- Emulated NVRAM (it's a Z390 after all) ☹ - please comment on [the issue](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues/4) if you know of a resolution.
-
 ---
 
 ## **Installation**
@@ -110,10 +106,9 @@ The following fields have been replaced by `[REPLACEME]` (for ease of Cmd+F):
   - `MLB`
     Follow the [OpenCore instructions](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#generate-a-new-serial) to generate your own unique identifiers. The AppleCare step is optional.
 
-#### **Update your motherboard's BIOS firmware**
+#### **Update (or downgrade) your motherboard's BIOS firmware**
 
-- Visit [Gigabyte's website](https://www.gigabyte.com/us/Motherboard/Z390-DESIGNARE-rev-10/support#support-dl-bios) and make sure you're running the latest version of the bios
-  - I'm on version `F9g` but any later version should work
+You *must* use BIOS version **F9i**. You can download it from this repo's [releases page](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/releases/download/resources/mb_bios_z390-designare_f9i.zip)
 
 #### **BIOS configuration**
 
@@ -129,7 +124,7 @@ Visit the [BIOS configuration](https://github.com/baughmann/designaire-z390-inte
 
 The primary changes that I remember making that differ from the fantastic [OpenCore Desktop Guide for Coffee Lake](https://dortania.github.io/OpenCore-Desktop-Guide/config.plist/coffee-lake.html) are:
 
-- boot args `slide=0 alcid=7`
+- boot args `alcid=7`
 - ~~Adding my own USB map kext (`USBPorts.kext`) that shuts off the MoBo's built-in Wi-Fi card so that I can use the Fenvi~~ No longer necessary as of macOS Big Sur
 - Adding the `HfsPlus.efi` driver
 - All packages are `RELEASE` and debugging is disabled. If you're having issues, be sure to enable debugging [as described in the OpenCore docs](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#debug), and also grab [the `DEBUG` version of OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases). For debugging help see the [Troubleshooting section of this page](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#troubleshooting).
@@ -144,6 +139,13 @@ The primary changes that I remember making that differ from the fantastic [OpenC
   - You _must_ grab the OC boot logs if you wish to get help! Refer to the [debugging section of the OpenCore docs](https://dortania.github.io/OpenCore-Install-Guide/troubleshooting/debug.html) as well as the [debugging section of `config.plist` setup](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#debug) for info on how to enable logging.
 
 ## Changelog
+- **11 October 2021**
+  - Updated to OpenCore 0.7.4
+  - No longer need `slide=0`
+  - Removed a bunch of hacky stuff (including USB ports unlimiter)
+  - Rebuilt `config.plist` from the ground-up to remove legacy crap that has built up over time
+  - Boot times seemed to have improved
+  - Tried and faile dto use BIOS version F9j
 - **30 May 2021:**
   - Confirmed compatability with Big Sur 11.4
 - **10 April 2021:**

@@ -1,5 +1,11 @@
 # BIOS Configuration
 
+> ==============================
+>
+> **IMPORTANT NOTE:** You *must* use BIOS firmware version **F9i**, version F9j is not compatible (and frankly, buggy in my experience, hackintoshing aside).
+>
+> ==============================
+
 ## About
 I've taken pictures of the important screens of the BIOS. Settings that I've explicitly called out below the associated pictures are important. All settinsg not explicitly mentioned are not important (I think).
 
@@ -11,6 +17,8 @@ I've taken pictures of the important screens of the BIOS. Settings that I've exp
 ## Firmware Version
 
 **My Version:** `F9i`
+
+F9j is not compatible! If you need F9i, you can download it [from the releases page of this repo.](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/releases/download/resources/mb_bios_z390-designare_f9i.zip)
 
 You can view available BIOS firmware releases for the Designaire Z390 [on Gigabyte's website](https://www.gigabyte.com/Motherboard/Z390-DESIGNARE-rev-10/support#support-dl-bios).
 

@@ -10,7 +10,7 @@
 I've taken pictures of the important screens of the BIOS. Settings that I've explicitly called out below the associated pictures are important. All settinsg not explicitly mentioned are not important (I think).
 
 ## Shortcut
-The easiest way to make sure you've got your BIOS configured correctly is to just download [my BIOS profile](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/raw/master/BIOS_Config), throw it on a FAT32-formatted USB, and then "Load Profile" on the "Boot" page of the BIOS. **You still need to update your BIOS to firmware version `F9i` manually before you do this!** (thanks @hellojere for #24)
+The easiest way to make sure you've got your BIOS configured correctly is to just download [my BIOS profile](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/raw/master/BIOS_Config), throw it on a FAT32-formatted USB, and then "Load Profile" on the "Boot" page of the BIOS. **You still need to update your BIOS to firmware version `F9i` manually before you do this!** (thanks @hellojere for #24). This also does not affect *all* settings, so please read through and make sure everything lines up manually.
 
 I've taken pictures of the important screens of the BIOS. Settings that I've explicitly called out below the associated pictures are important. All settings not explicitly mentioned are not important (I think).
 

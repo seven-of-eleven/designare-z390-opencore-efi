@@ -1,4 +1,4 @@
-# Gigabyte Designaire Z390 Hackintosh - OpenCore - macOS Big Sur
+# Gigabyte Designaire Z390 Hackintosh - OpenCore - macOS Monterey
 
 ⭐️ **Thank you guys for all the stars!** ⭐️
 
@@ -31,7 +31,7 @@ Compute (GPU):
 
 ## Features
 
-- macOS Big Sur 11.6 (20G165)
+- macOS Monterey 12.0.1 (21A559) / Big Sur / Catalina
 - OpenCore 0.7.4
 - OpenCanopy (OpenCore's Boot UI)
 - **_[Almost](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#installation)_** plug-n-play if you have [my hardware configuration](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#primary-system)

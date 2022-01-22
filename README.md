@@ -46,13 +46,15 @@ Compute (GPU):
 
 #### Primary System
 
+Note, I've stopped using the Fenvi. It just kind-of sucks. Maybe at some point I will find a better card to use. For now, I'm just not using BT on the system when in macOS.
+
 | Component | Product                           |
 | --------- | --------------------------------- |
 | CPU       | Intel Core i9 9900K               |
 | MB        | Gigabyte Designaire Z390 (rev 10) |
 | GPU       | AMD Radeon VII 16 GB              |
 | SSD       | Samsung EVO 970 (NVMe - 1TB)      |
-| BT/Wi-Fi  | Fenvi T919 Bluetooth/Wi-Fi Card   |
+| ~~BT/Wi-Fi~~  | ~~Fenvi T919 Bluetooth/Wi-Fi Card~~   |
 
 #### Verified Secondary System
 
@@ -64,7 +66,7 @@ I can also confirm that this basically also works on my wife's computer whose sp
 | MB        | Gigabyte Designaire Z390 (rev 10) |
 | GPU       | AMD Radeon VII 16 GB                    |
 | SSD       | Samsung 860 EVO SSD (1TB)               |
-| BT/Wi-Fi  | Fenvi T919 Bluetooth/Wi-Fi Card         |
+| ~~BT/Wi-Fi~~  | ~~Fenvi T919 Bluetooth/Wi-Fi Card~~         |
 
 #### Other Configurations
 

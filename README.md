@@ -32,6 +32,7 @@ Compute (GPU):
 ## Features
 
 - macOS Monterey 12.0.1 (21A559) / Big Sur / Catalina
+- Supports installing Windows 11 on another drive (e.g., doesn't freak out if TPP and Boot Security are enabled)
 - OpenCore 0.7.4
 - OpenCanopy (OpenCore's Boot UI)
 - **_[Almost](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#installation)_** plug-n-play if you have [my hardware configuration](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#primary-system)

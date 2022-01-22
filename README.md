@@ -1,4 +1,5 @@
-# Gigabyte Designaire Z390 Hackintosh - OpenCore - macOS Monterey
+# Gigabyte Designaire Z390 Hackintosh 
+## OpenCore - macOS Monterey
 
 ⭐️ **Thank you guys for all the stars!** ⭐️
 

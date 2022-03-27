@@ -33,7 +33,7 @@ Compute (GPU):
 - [Releases](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/releases)
 - [Issues](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues)
 
-## Why am I leaving
+## Why I am leaving
 I'm quitting Hackintosh. While OpenCore has been a *godsend*, the writing is on the wall. There's no long-term future for Hackintosh. For me, personally, there are three big reasons:
 
 1. I no longer need to build iOS apps

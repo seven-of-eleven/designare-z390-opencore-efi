@@ -1,6 +1,9 @@
 # Gigabyte Designaire Z390 Hackintosh 
 ## OpenCore - macOS Monterey
 
+> ### **The party is over**
+> Consider this repo "no longer maintained". For details, see [Why are you leaving?](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#why-i-am-leaving)
+
 ⭐️ **Thank you guys for all the stars!** ⭐️
 
 !["About this Mac" screenshot](images/about_screenshot.png)
@@ -29,6 +32,15 @@ Compute (GPU):
 - [Changelog](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore#changelog)
 - [Releases](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/releases)
 - [Issues](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/issues)
+
+## Why am I leaving
+I'm quitting Hackintosh. While OpenCore has been a *godsend*, the writing is on the wall. There's no long-term future for Hackintosh. For me, personally, there are three big reasons:
+
+1. I no longer need to build iOS apps
+2. Linux has gotten a lot better
+3. I need an Nvidia GPU for ML
+
+I've enjoyed the support of the community, and had fun maintaining this EFI. However, the time has passed. If anyone is interested in picking up the torch, let me know as I'd be willing to transfer the ownership of this repo if I believe you're capable. Otherwise, I'd be willing to accept PRs for updates that I can test with a USB.
 
 ## Features
 

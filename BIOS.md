@@ -2,12 +2,12 @@
 
 > ==============================
 >
-> **IMPORTANT NOTE:** The downloadable BIOS config file if for BIOS version F9i. If you're using another BIOS version, you should set the values manually.
+> **IMPORTANT NOTE:** The downloadable BIOS config file is for BIOS version F9i. If you're using another BIOS version, you should set the values manually.
 >
 > ==============================
 
 ## About
-I've taken pictures of the important screens of the BIOS. Settings that I've explicitly called out below the associated pictures are important. All settinsg not explicitly mentioned are not important (I think).
+I've taken pictures of the important screens of the BIOS. Settings that I've explicitly called out below the associated pictures are important. All settings not explicitly mentioned are not important (I think). You can also [refer to the guide](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#intel-bios-settings). 
 
 ## Shortcut
 The easiest way to make sure you've got your BIOS configured correctly is to just download [my BIOS profile](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/raw/master/BIOS_Config), throw it on a FAT32-formatted USB, and then "Load Profile" on the "Boot" page of the BIOS. **You still need to update your BIOS to firmware version `F9i` manually before you do this!** (thanks @hellojere for #24). This also does not affect *all* settings, so please read through and make sure everything lines up manually.
@@ -20,7 +20,7 @@ I've taken pictures of the important screens of the BIOS. Settings that I've exp
 
 **My Version:** `F9`
 
-You can view available BIOS firmware releases for the Designaire Z390 [on Gigabyte's website](https://www.gigabyte.com/Motherboard/Z390-DESIGNARE-rev-10/support#support-dl-bios).
+You can view available BIOS firmware releases for the Z390 Designaire [on Gigabyte's website](https://www.gigabyte.com/Motherboard/Z390-DESIGNARE-rev-10/support#support-dl-bios).
 
 # Settings
 

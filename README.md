@@ -1,7 +1,7 @@
 # Gigabyte z390 Designare Hackintosh 
 
 > ### The king is dead. Long live the king.
-> **Thanks to :crown: [baughmann](https://github.com/baughmann)** for passing the torch for me to maintain this repo. I'll try and keep things up to date for everyone and address issues as they come up. I use this computer daily for work and it has been very reliable. I've made quite a few changes to the format and information of this readme so take your a read and let me know if anything is unclear.
+> **Thanks to :crown: [baughmann](https://github.com/baughmann)** for passing the torch for me to maintain this repo. I'll try and keep things up to date for everyone and address issues as they come up. I use this computer daily for work and it has been very reliable. I've made quite a few changes to the format and information of this readme so take a read and let me know if anything is unclear.
 
 **Status: Success | Stable**
 

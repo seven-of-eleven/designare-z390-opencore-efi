@@ -71,6 +71,7 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 - And every other contributor
 - People at [r/hackintosh](https://www.reddit.com/r/hackintosh/) for their advice and help
 - Useful tools by [CorpNewt](https://github.com/corpnewt) and [headkaze](https://github.com/headkaze/Hackintool)
+- CaseySJ [Gigabyte Designare Z390 build](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.316533/)
 
 </details>
 
@@ -259,6 +260,7 @@ The following changes should be noted:
 - Audio changed to alcid=11 see `Audio Setup` below
 - SMBIOS changed to MacPro7,1
 - No Bluetooth or WiFi kexts included - get your fix [here](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#wifi-and-bluetooth)
+- USBPorts.kext changes - highlighted below
 - AAPL,ig-platform-id - changed from `0300913E` to `0300923E` either should work. I was using the latter and it's working so ¯\\_(ツ)_/¯
 
 </details>
@@ -340,7 +342,7 @@ Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to create your own serial
 - MacPro7,1 -`What I used`
   - **See below if you want to keep iMac19,1**
 
-**Note:** If you use a different SMBIOS model than the MacPro7,1 that I've used. The provided USB mapping will not work. You will need to edit the **USBPorts.kext** file.  You can right click on the file and select **Show Package Contents**.  From there you can open the Info.plist file in ProperTree and change MacPro7,1 to whatever Model ID you've chosen. This should provide a working USBPorts.kext.
+**Note:** If you use a different SMBIOS model other than MacPro7,1 or iMac19,1. The provided USB mapping will not work. You will need to edit the **USBPorts.kext** file.  You can right click on the file and select **Show Package Contents**.  From there you can open the Info.plist file in ProperTree and change MacPro7,1 to whatever Model ID you've chosen. This should provide a working USBPorts.kext.
 
 ### Keeping SMBIOS iMac19,1
 
@@ -357,11 +359,36 @@ Alternatively you can manually update the `PlatformInfo` by adjusting the follow
 | SystemSerialNumber | String  | [REPLACEME] ^*^   |
 | SystemUUID         | String  | [REPLACEME] ^*^   |
 
-^*Replace these with your values^
+##### *Replace these with your values
 
 > **NOTE:** If you have everything working with your own USB mapping file. **KEEP IT.** Replace the provided USBPorts.kext file with the one in your existing EFI folder and perform a snapshot in Propertree for good measure.
 
 </details>  
+
+
+
+
+
+<details>  
+<summary><strong>USB Mapping (active ports)</strong></summary>
+<br>
+
+
+
+
+> The latest version of USBPorts.kext will work with either SMBIOS iMac19,1 or MacPro7,1.
+
+MacOS has a fifteen port limit. You can read more about the details in the [guide](https://dortania.github.io/OpenCore-Post-Install/usb/). Depending on your specific needs you may want to customize/recreate the port mapping. The USBPorts.kext file provided enables the following ports:
+
+![USB-Ports](images/USB-Ports.png)
+
+For reference the associated ports are outlined in the following diagrams (modified from [CaseySJ](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.316533/)):
+
+![Motherboard Ports](images/USB-Ports-All-motherboard.png)
+
+![Rear-IO](images/USB-Ports-Rear-IO.png)
+
+</details>
 
 
 
@@ -437,8 +464,8 @@ DeviceProperties>Add
 - [x] Audio jacks - `front and rear 3.5mm audio jacks work with quirks (see Audio Setup for details)`
 - [x] Shutdown / Restart / Sleep
 - [x] USB 3.0/3/1 - `USB map created.`
-- [x] Graphical Boot menu `OpenCanopy (It does work. Not included in OC folder as I generally skip the boot menu.)`
-- [x] Thunderbolt 3 - `reported not tested as I have no TB3 devices`
+- [x] Graphical Boot menu `OpenCanopy (I included it in the EFI but I don't use it as I generally skip the boot menu.)`
+- [x] Thunderbolt 3 - `reported working not tested as I have no TB3 devices`
 - [x] Sidecar - `reported working, I haven't tested`
 
 </details>  
@@ -466,6 +493,13 @@ DeviceProperties>Add
 <details>  
 <summary><strong>Change log 🪵</strong></summary>
 
+
+- **7 Aug 2022**
+
+  - Minor update to README added USB mapping changes
+
+  - USBPorts.kext modified to be used with either SMBIOS `iMac19,1` or `MacPro7,1` 
+  - **NOTE**: Old USBPorts.kext for SMBIOS `iMac19,1` referenced `iMacPro19,1` incorrectly [#61](https://github.com/seven-of-eleven/designare-z390-opencore-efi/issues/61) and may not have been working properly.
 
 
 - **6 Aug 2022**

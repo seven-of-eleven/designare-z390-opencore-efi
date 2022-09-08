@@ -7,8 +7,8 @@
 
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.3-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
-[![macOS-stable](https://img.shields.io/badge/macOS-12.5-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-Unstable](https://img.shields.io/badge/macOS-11.6.8-brightgreen.svg)](https://www.apple.com)[![macOS-Unstable](https://img.shields.io/badge/macOS-13.0-yellow.svg)](https://www.apple.com/macos/ventura)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.4-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![macOS-stable](https://img.shields.io/badge/macOS-12.5.1-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-Unstable](https://img.shields.io/badge/macOS-11.6.8-brightgreen.svg)](https://www.apple.com)[![macOS-Unstable](https://img.shields.io/badge/macOS-13.0-yellow.svg)](https://www.apple.com/macos/ventura)
 
 **DISCLAIMER:**
 
@@ -151,8 +151,8 @@ Compute (GPU):
 
 | Component      | Version |
 | -------------- | ------- |
-| macOS Monterey | 12.5    |
-| OpenCore       | v0.8.3  |
+| macOS Monterey | 12.5.1  |
+| OpenCore       | v0.8.4  |
 
 </details>
 
@@ -177,18 +177,19 @@ Compute (GPU):
 <br>
 
 
-| Kext           | Version                                     |
-| :------------- | ------------------------------------------- |
-| AppleALC       | 1.7.4                                       |
-| AppleIGB       | 5.7.2                                       |
-| IntelMausi     | 1.0.7                                       |
-| Lilu           | 1.6.2                                       |
-| RestrictEvents | 1.0.8 - `only needed with SMBIOS MacPro7,1` |
-| SMCProcessor   | 1.3.0                                       |
-| SMCSuperIO     | 1.3.0                                       |
-| USBPorts       | 1.0.0                                       |
-| VirtualSMC     | 1.3.0                                       |
-| WhateverGreen  | 1.6.1                                       |
+| Kext                | Version                                      |
+| :------------------ | -------------------------------------------- |
+| AppleALC            | 1.7.5                                        |
+| AppleIGB            | 5.7.2                                        |
+| IntelMausi          | 1.0.8                                        |
+| Lilu                | 1.6.2                                        |
+| RestrictEvents      | 1.0.8 - `only needed with SMBIOS MacPro7,1`  |
+| SmallTreeIntel82576 | 1.3.0 - `used for BigSur I211 ethernet port` |
+| SMCProcessor        | 1.3.0                                        |
+| SMCSuperIO          | 1.3.0                                        |
+| USBPorts            | 1.0.0                                        |
+| VirtualSMC          | 1.3.0                                        |
+| WhateverGreen       | 1.6.1                                        |
 
 </details>
 
@@ -202,7 +203,7 @@ Compute (GPU):
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 0.8.3 |
+|   OpenRuntime.efi   | OpenCorePkg 0.8.4 |
 | ResetNvramEntry.efi | 1.0.0             |
 
 </details>
@@ -258,7 +259,7 @@ Visit the [BIOS configuration](https://github.com/seven-of-eleven/designare-z390
 The following changes should be noted:
 
 - Audio changed to alcid=11 see `Audio Setup` below
-- SMBIOS changed to MacPro7,1
+- SMBIOS changed to MacPro7,1 (as of OpenCore 0.8.3)
 - No Bluetooth or WiFi kexts included - get your fix [here](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#wifi-and-bluetooth)
 - USBPorts.kext changes - highlighted below
 - AAPL,ig-platform-id - changed from `0300913E` to `0300923E` either should work. I was using the latter and it's working so ¯\\_(ツ)_/¯
@@ -322,10 +323,11 @@ Format is lang-COUNTRY:keyboard as shown below:
 <br>
 
 
+The EFI folder should work for either Monterey, BigSur or Ventura. No idea if it'll work with Catalina. I've set AppleIGB kext to be enabled for Monterey and above to get both ethernet ports working. For BigSur I've enabled the SmallTreeIntel82576 kext. They are controlled using MinVersion and MaxVersion values so no config.plist file changes are required. 
 
-The EFI folder should work for either Monterey, BigSur or Ventura. No idea if it'll work of Catalina. You may need to change AppleIGB kext to get both ethernet ports working in BigSur as the kext required for ethernet has changed a couple times depending on the OS version installed. Also avoid installing Monterey 12.3 it had issues with AMD GPUs that needed DeviceProperties values set for the PCIE device (not included in this EFI). Google is your friend here but it's easiest just not to install 12.3 :grimacing:.
+Also avoid installing Monterey 12.3 it had issues with AMD GPUs that needed DeviceProperties values set for the PCIE device (not included in this EFI). Google is your friend here but it's easiest just not to install 12.3 :grimacing:.
 
-I'm primarily using this EFI with Monterey 12.5 at the moment. I have successfully install Ventura (beta 4) on a secondary drive and everything was working. Let me know if you have issues with BigSur.
+I'm primarily using this EFI with Monterey 12.5.1 at the moment. I have successfully install Ventura (beta 4) on a secondary drive and everything was working. Let me know if you have issues with BigSur.
 
 </details>  
 
@@ -494,8 +496,13 @@ DeviceProperties>Add
 <summary><strong>Change log 🪵</strong></summary>
 
 
+- **8 Sept 2022**
+  - Update to **OpenCore 0.8.4**
+  - Include SmallTree kext for BigSur (disabled for Monterey with MaxVersion value)
+  - Enable `DisableIoMapper` by default to resolve networking issues [#67](https://github.com/seven-of-eleven/designare-z390-opencore-efi/issues/67)
+  - Ventura beta remains bootable and working
+  
 - **7 Aug 2022**
-
   - Minor update to README added USB mapping changes
 
   - USBPorts.kext modified to be used with either SMBIOS `iMac19,1` or `MacPro7,1` 

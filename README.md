@@ -8,7 +8,7 @@
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
 [![OpenCore](https://img.shields.io/badge/OpenCore-0.8.4-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
-[![macOS-stable](https://img.shields.io/badge/macOS-12.5.1-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-Unstable](https://img.shields.io/badge/macOS-11.6.8-brightgreen.svg)](https://www.apple.com)[![macOS-Unstable](https://img.shields.io/badge/macOS-13.0-yellow.svg)](https://www.apple.com/macos/ventura)
+[![macOS-stable](https://img.shields.io/badge/macOS-12.6-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-Unstable](https://img.shields.io/badge/macOS-11.7-brightgreen.svg)](https://www.apple.com)[![macOS-Unstable](https://img.shields.io/badge/macOS-13.0-yellow.svg)](https://www.apple.com/macos/ventura)
 
 **DISCLAIMER:**
 
@@ -151,7 +151,7 @@ Compute (GPU):
 
 | Component      | Version |
 | -------------- | ------- |
-| macOS Monterey | 12.5.1  |
+| macOS Monterey | 12.6    |
 | OpenCore       | v0.8.4  |
 
 </details>
@@ -327,7 +327,7 @@ The EFI folder should work for either Monterey, BigSur or Ventura. No idea if it
 
 Also avoid installing Monterey 12.3 it had issues with AMD GPUs that needed DeviceProperties values set for the PCIE device (not included in this EFI). Google is your friend here but it's easiest just not to install 12.3 :grimacing:.
 
-I'm primarily using this EFI with Monterey 12.5.1 at the moment. I have successfully install Ventura (beta 4) on a secondary drive and everything was working. Let me know if you have issues with BigSur.
+I'm primarily using this EFI with Monterey 12.6 at the moment. I have successfully install Ventura (beta 4) on a secondary drive and everything was working. Let me know if you have issues with BigSur.
 
 </details>  
 

@@ -7,7 +7,7 @@
 
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.4-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.5-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![macOS-stable](https://img.shields.io/badge/macOS-12.6-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-Unstable](https://img.shields.io/badge/macOS-11.7-brightgreen.svg)](https://www.apple.com)[![macOS-Unstable](https://img.shields.io/badge/macOS-13.0-yellow.svg)](https://www.apple.com/macos/ventura)
 
 **DISCLAIMER:**
@@ -102,21 +102,21 @@ Compute (GPU):
 
 #### My system
 
-| Category  | Component                                                    | Note                                                     |
-| --------- | ------------------------------------------------------------ | -------------------------------------------------------- |
-| CPU       | Intel Core i7-9700k                                          | Other motherboard compatible CPUs shouldn't be an issue  |
-| MB        | [Gigabyte Designaire Z390 (rev 1.0)](https://www.gigabyte.com/Motherboard/Z390-DESIGNARE-rev-10#kf) |                                                          |
-| GPU       | Saphire Pulse RX 5700 XT                                     | `agdpmod=pikera` needed for 5000 & 6000 series AMD cards |
-| SSD       | WD Black 250 GB                                              | Boot drive                                               |
-| SSD       | HP EX 950   1TB                                              | Home folder                                              |
-| SSD       | WD Blue  2TB                                                 | Video and photo storage                                  |
-| SSD       | WB Blue  250GB                                               | Backup boot drive for testing OS update/upgrades         |
-| HD        | Seagate Iron Wolf  6TB                                       | Used as internal time machine backup                     |
-| Ethernet  | Intel I211 and Intel I219                                    | Dual Gigabit LAN (both working)                          |
-| Memory    | 64GB / 3200MHz DDR4                                          |                                                          |
-| Wifi & BT |                                                              | Not installed.                                           |
-| Case      | [O11 Dynamic](https://lian-li.com/product/pc-o11-dynamic/)   | I have the white version.                                |
-| Monitor   | [LG UltraWide 49](https://www.lg.com/us/monitors/lg-49WL95C-W-ultrawide-monitor#) | 49" UltraWide 32:9 Dual QHD (5120 x 1440) IPS Display    |
+| Category  | Component                                                    | Note                                                         |
+| --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| CPU       | Intel Core i7-9700k                                          | Other motherboard compatible CPUs shouldn't be an issue      |
+| MB        | [Gigabyte Designaire Z390 (rev 1.0)](https://www.gigabyte.com/Motherboard/Z390-DESIGNARE-rev-10#kf) |                                                              |
+| GPU       | Saphire Pulse RX 5700 XT                                     | `agdpmod=pikera` needed for 5000 & 6000 series AMD cards     |
+| SSD       | WD Black 250 GB                                              | Boot drive                                                   |
+| SSD       | HP EX 950   1TB                                              | Home folder                                                  |
+| SSD       | WD Blue  2TB                                                 | Video and photo storage                                      |
+| SSD       | WB Blue  250GB                                               | Backup boot drive for testing OS update/upgrades             |
+| HD        | Seagate Iron Wolf  6TB                                       | Used as internal time machine backup                         |
+| Ethernet  | Intel I211 and Intel I219                                    | Dual Gigabit LAN (both working)                              |
+| Memory    | 64GB / 3200MHz DDR4                                          |                                                              |
+| Wifi & BT | Intel® CNVi interface 802.11a/b/g/n/ac                       | Works with regular Intel [wifi/bluetooth limitations](https://openintelwireless.github.io/itlwm/FAQ.html#features) |
+| Case      | [O11 Dynamic](https://lian-li.com/product/pc-o11-dynamic/)   | I have the white version.                                    |
+| Monitor   | [LG UltraWide 49](https://www.lg.com/us/monitors/lg-49WL95C-W-ultrawide-monitor#) | 49" UltraWide 32:9 Dual QHD (5120 x 1440) IPS Display        |
 
 #### baughmann's system
 
@@ -152,7 +152,7 @@ Compute (GPU):
 | Component      | Version |
 | -------------- | ------- |
 | macOS Monterey | 12.6    |
-| OpenCore       | v0.8.4  |
+| OpenCore       | v0.8.5  |
 
 </details>
 
@@ -191,6 +191,18 @@ Compute (GPU):
 | VirtualSMC          | 1.3.0                                        |
 | WhateverGreen       | 1.6.1                                        |
 
+The following are included in the **EFI 2** enabling the internal WiFi and Bluetooth. The USB map is changed to disable port 11& 12 and enable port 8 & 14. See the USB section below for more details.
+
+| Kext                   | Version                                                  |
+| ---------------------- | -------------------------------------------------------- |
+| AirportItlwm           | 2.1.0 - `enable Wifi on Monterey`                        |
+| AirportItlwmBS         | 2.1.0 - `enable Wifi on BigSur`                          |
+| BlueToolFixup          | 2.6.4 - `needed for Monterey and newer`                  |
+| IntelBluetoothFirmware | 2.2.0                                                    |
+| IntelBluetoothInjector | 2.2.0 - `used for BigSur only`                           |
+| IntelBTPatcher         | 2.2.0                                                    |
+| USBPorts               | 1.0.1 - `disables ports 11 & 12, and enable port 8 & 14` |
+
 </details>
 
 
@@ -203,8 +215,8 @@ Compute (GPU):
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 0.8.4 |
-| ResetNvramEntry.efi | 1.0.0             |
+|   OpenRuntime.efi   | OpenCorePkg 0.8.5 |
+| ResetNvramEntry.efi | 0.8.5             |
 
 </details>
 
@@ -244,11 +256,9 @@ Use BIOS version **F9i or F9** (don't use F9j). You can download F9i from this r
 
 Visit the [BIOS configuration](https://github.com/seven-of-eleven/designare-z390-opencore-efi/blob/master/BIOS.md) page to ensure that your BIOS is configured properly.
 
-    Note: If you've recently updated your BIOS firmware, you will need to double-check these as some of them get reset after updating!
+>Note: If you've recently updated your BIOS firmware, you will need to double-check these as some of them get reset after updating!
 
 </details>  
-
-
 
 <details>
 <summary><strong>⚠️ HIGHLIGHTED CHANGES FROM PREVIOUS EFI ⚠️</strong></summary>
@@ -259,8 +269,8 @@ Visit the [BIOS configuration](https://github.com/seven-of-eleven/designare-z390
 The following changes should be noted:
 
 - Audio changed to alcid=11 see `Audio Setup` below
-- SMBIOS changed to MacPro7,1 (as of OpenCore 0.8.3)
-- No Bluetooth or WiFi kexts included - get your fix [here](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#wifi-and-bluetooth)
+- SMBIOS changed to MacPro7,1 (as of OpenCore 0.8.3 release)
+- Internal Wifi/Bluetooth enabled in second EFI - see release
 - USBPorts.kext changes - highlighted below
 - AAPL,ig-platform-id - changed from `0300913E` to `0300923E` either should work. I was using the latter and it's working so ¯\\_(ツ)_/¯
 
@@ -289,8 +299,6 @@ The following fields have been replaced by `[REPLACEME]` (for ease of <kbd>⌘</
 
 </details>
 
-
-
 <details>
 <summary><strong>Own prev-lang-kbd</strong></summary>
 <br>
@@ -306,7 +314,7 @@ The setting is found in the config.plist under:
 
 Format is lang-COUNTRY:keyboard as shown below:
 
-- 🇺🇸 | [0] en_US - U.S --> en-US:0 **OR** ==656e2d55 533a30== in HEX
+- 🇺🇸 | [0] en_US - U.S --> en-US:0 **OR** `656e2d55 533a30` in HEX
 
 | Key           | Type   | Value   |
 | ------------- | ------ | ------- |
@@ -327,11 +335,9 @@ The EFI folder should work for either Monterey, BigSur or Ventura. No idea if it
 
 Also avoid installing Monterey 12.3 it had issues with AMD GPUs that needed DeviceProperties values set for the PCIE device (not included in this EFI). Google is your friend here but it's easiest just not to install 12.3 :grimacing:.
 
-I'm primarily using this EFI with Monterey 12.6 at the moment. I have successfully install Ventura (beta 4) on a secondary drive and everything was working. Let me know if you have issues with BigSur.
+I'm primarily using this EFI with Monterey 12.6 at the moment. I have successfully install Ventura (beta) on a secondary drive and everything was working. Let me know if you have issues with BigSur.
 
 </details>  
-
-## Post-Install
 
 <details>  
 <summary><strong>Generate your own SMBIOS</strong></summary>
@@ -369,18 +375,24 @@ Alternatively you can manually update the `PlatformInfo` by adjusting the follow
 
 
 
-
-
 <details>  
 <summary><strong>USB Mapping (active ports)</strong></summary>
 <br>
 
 
-
-
 > The latest version of USBPorts.kext will work with either SMBIOS iMac19,1 or MacPro7,1.
 
-MacOS has a fifteen port limit. You can read more about the details in the [guide](https://dortania.github.io/OpenCore-Post-Install/usb/). Depending on your specific needs you may want to customize/recreate the port mapping. The USBPorts.kext file provided enables the following ports:
+MacOS has a fifteen port limit. You can read more about the details in the [guide](https://dortania.github.io/OpenCore-Post-Install/usb/). Depending on your specific needs you may want to customize/recreate the port mapping. 
+
+
+
+<details>  
+<summary><strong>USB Mapping EFI 1</strong></summary>
+<br>
+
+
+
+This USBPorts.kext file provided enables the following ports:
 
 ![USB-Ports](images/USB-Ports.png)
 
@@ -389,6 +401,32 @@ For reference the associated ports are outlined in the following diagrams (modif
 ![Motherboard Ports](images/USB-Ports-All-motherboard.png)
 
 ![Rear-IO](images/USB-Ports-Rear-IO.png)
+
+</details>
+
+
+
+<details>  
+<summary><strong>USB Mapping EFI 2</strong></summary>
+<br>
+
+
+> Note the **difference from EFI 1** is the enabling of ports 8 & 14 and disabling of ports 11 & 12. This was done to enable the internal Wifi and bluetooth.
+
+
+This USBPorts.kext file provided enables the following ports:
+
+![USB-Ports](images/USB-Ports-EFI2.png)
+
+For reference the associated ports are outlined in the following diagrams (modified from [CaseySJ](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.316533/)):
+
+![Motherboard Ports](images/USB-Ports-All-motherboard-EFI2.png)
+
+![Rear-IO](images/USB-Ports-Rear-IO-EFI2.png)
+
+</details>
+
+
 
 </details>
 
@@ -463,6 +501,7 @@ DeviceProperties>Add
 - [x] iMessage, FaceTime, App Store, iTunes Store. `Generate your own SMBIOS`
 - [x] Intel I219-V Ethernet port
 - [x] Intel I211 Ethernet port
+- [x] Internal Wifi and bluetooth
 - [x] Audio jacks - `front and rear 3.5mm audio jacks work with quirks (see Audio Setup for details)`
 - [x] Shutdown / Restart / Sleep
 - [x] USB 3.0/3/1 - `USB map created.`
@@ -488,7 +527,6 @@ DeviceProperties>Add
 - [ ] Boot chime - `should work I just haven't tried it`
 - [ ] FileVault - `should work I just haven't tried it`
 - [ ] Windows/Linux from OC boot menu - `I'm not dual booting my system but there's no reason it shouldn't work.`
-- [ ] Bluetooth & Wi-Fi - `should work with compatible card`
 
 </details> 
 
@@ -496,12 +534,16 @@ DeviceProperties>Add
 <summary><strong>Change log 🪵</strong></summary>
 
 
+- **14 Oct 2022**
+  - Update to **OpenCore 0.8.5**
+  - Enable internal Wifi and bluetooth in **EFI 2** - see Releases
+  - Change of USB port mapping in **EFI 2** for internal bluetooth
+  
 - **8 Sept 2022**
   - Update to **OpenCore 0.8.4**
   - Include SmallTree kext for BigSur (disabled for Monterey with MaxVersion value)
   - Enable `DisableIoMapper` by default to resolve networking issues [#67](https://github.com/seven-of-eleven/designare-z390-opencore-efi/issues/67)
   - Ventura beta remains bootable and working
-  
 - **7 Aug 2022**
   - Minor update to README added USB mapping changes
 

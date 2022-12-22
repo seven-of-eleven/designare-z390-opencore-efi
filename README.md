@@ -7,8 +7,7 @@
 
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.5-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
-[![macOS-stable](https://img.shields.io/badge/macOS-12.6-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-Unstable](https://img.shields.io/badge/macOS-11.7-brightgreen.svg)](https://www.apple.com)[![macOS-Unstable](https://img.shields.io/badge/macOS-13.0-yellow.svg)](https://www.apple.com/macos/ventura)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.7-blue.svg)](https://github.com/acidanthera/OpenCorePkg)[![macOS-stable](https://img.shields.io/badge/macOS-11.7.2-brightgreen.svg)](https://www.apple.com)[![macOS-stable](https://img.shields.io/badge/macOS-12.6.2-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-stable](https://img.shields.io/badge/macOS-13.1-brightgreen.svg)](https://www.apple.com/macos/ventura)
 
 **DISCLAIMER:**
 
@@ -39,7 +38,7 @@ It should work and your Gigabyte z390 Designare based hackintosh should boot and
 >
 > 1. Properly set your [BIOS settings](https://github.com/seven-of-eleven/designare-z390-opencore-efi/blob/master/BIOS.md)
 > 2. [Generate SMBIOS values](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#platforminfo) and add them in the config.plist (MacPro7,1)
-> 3. Ensure the value of `showpicker` is `true` in the config.plist file to provide access to the OpenCore menu while booting.
+> 3. **Rename** one of the `config...` files in the OC folder to `config.plist` (see release or notes below for details).
 > 4. Prepare your install [USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
 > 5. Move the entire EFI folder (with your modifications) to the proper partition on your [USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/mac-install.html#setting-up-opencore-s-efi-environment) (or [hard drive](https://dortania.github.io/OpenCore-Post-Install/universal/oc2hdd.html) once the install is complete).
 > 6. [Install](https://dortania.github.io/OpenCore-Install-Guide/installation/installation-process.html#double-checking-your-work) - You need to select <kbd>F12</kbd> to get the boot menu options and **boot from the USB each time the computer restarts** until you've copied the EFI folder onto the hard drive. You may also need to select the correct boot option during install, although this is typically done automatically.
@@ -106,7 +105,7 @@ Compute (GPU):
 | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CPU       | Intel Core i7-9700k                                          | Other motherboard compatible CPUs shouldn't be an issue      |
 | MB        | [Gigabyte Designaire Z390 (rev 1.0)](https://www.gigabyte.com/Motherboard/Z390-DESIGNARE-rev-10#kf) |                                                              |
-| GPU       | Saphire Pulse RX 5700 XT                                     | `agdpmod=pikera` needed for 5000 & 6000 series AMD cards     |
+| GPU       | Saphire Pulse RX 5700 XT                                     | `agdpmod=pikera` needed for 5000 & 6000 series AMD cards (key is set in config.plist) |
 | SSD       | WD Black 250 GB                                              | Boot drive                                                   |
 | SSD       | HP EX 950   1TB                                              | Home folder                                                  |
 | SSD       | WD Blue  2TB                                                 | Video and photo storage                                      |
@@ -114,7 +113,7 @@ Compute (GPU):
 | HD        | Seagate Iron Wolf  6TB                                       | Used as internal time machine backup                         |
 | Ethernet  | Intel I211 and Intel I219                                    | Dual Gigabit LAN (both working)                              |
 | Memory    | 64GB / 3200MHz DDR4                                          |                                                              |
-| Wifi & BT | Intel® CNVi interface 802.11a/b/g/n/ac                       | Works with regular Intel [wifi/bluetooth limitations](https://openintelwireless.github.io/itlwm/FAQ.html#features) |
+| WiFi & BT | Intel® CNVi interface 802.11a/b/g/n/ac                       | Works with regular Intel [WiFi/bluetooth limitations](https://openintelwireless.github.io/itlwm/FAQ.html#features) |
 | Case      | [O11 Dynamic](https://lian-li.com/product/pc-o11-dynamic/)   | I have the white version.                                    |
 | Monitor   | [LG UltraWide 49](https://www.lg.com/us/monitors/lg-49WL95C-W-ultrawide-monitor#) | 49" UltraWide 32:9 Dual QHD (5120 x 1440) IPS Display        |
 
@@ -151,8 +150,8 @@ Compute (GPU):
 
 | Component      | Version |
 | -------------- | ------- |
-| macOS Monterey | 12.6    |
-| OpenCore       | v0.8.5  |
+| macOS Monterey | 13.1    |
+| OpenCore       | v0.8.7  |
 
 </details>
 
@@ -177,31 +176,30 @@ Compute (GPU):
 <br>
 
 
-| Kext                | Version                                      |
-| :------------------ | -------------------------------------------- |
-| AppleALC            | 1.7.5                                        |
-| AppleIGB            | 5.7.2                                        |
-| IntelMausi          | 1.0.8                                        |
-| Lilu                | 1.6.2                                        |
-| RestrictEvents      | 1.0.8 - `only needed with SMBIOS MacPro7,1`  |
-| SmallTreeIntel82576 | 1.3.0 - `used for BigSur I211 ethernet port` |
-| SMCProcessor        | 1.3.0                                        |
-| SMCSuperIO          | 1.3.0                                        |
-| USBPorts            | 1.0.0                                        |
-| VirtualSMC          | 1.3.0                                        |
-| WhateverGreen       | 1.6.1                                        |
-
-The following are included in the **EFI 2** enabling the internal WiFi and Bluetooth. The USB map is changed to disable port 11& 12 and enable port 8 & 14. See the USB section below for more details.
-
 | Kext                   | Version                                                  |
-| ---------------------- | -------------------------------------------------------- |
-| AirportItlwm           | 2.1.0 - `enable Wifi on Monterey`                        |
-| AirportItlwmBS         | 2.1.0 - `enable Wifi on BigSur`                          |
+| :--------------------- | -------------------------------------------------------- |
+| AppleALC               | 1.7.7                                                    |
+| AppleIGB               | 5.7.2                                                    |
+| IntelMausi             | 1.0.7                                                    |
+| Lilu                   | 1.6.2                                                    |
+| RestrictEvents         | 1.0.9 - `only needed with SMBIOS MacPro7,1`              |
+| SmallTreeIntel82576    | 1.3.0 - `used for BigSur I211 ethernet port`             |
+| SMCProcessor           | 1.3.0                                                    |
+| SMCSuperIO             | 1.3.0                                                    |
+| USBPorts               | 1.0.0                                                    |
+| VirtualSMC             | 1.3.0                                                    |
+| WhateverGreen          | 1.6.2                                                    |
+| **Additional Kexts***  | Used to enable builtin WiFi and bluetooth                |
+| AirportItlwm           | 2.2.0-alpha - `enable WiFi on Ventura`                   |
+| AirportItlwmM          | 2.1.0 - `enable WiFi on Monterey`                        |
+| AirportItlwmBS         | 2.1.0 - `enable WiFi on BigSur`                          |
 | BlueToolFixup          | 2.6.4 - `needed for Monterey and newer`                  |
 | IntelBluetoothFirmware | 2.2.0                                                    |
 | IntelBluetoothInjector | 2.2.0 - `used for BigSur only`                           |
 | IntelBTPatcher         | 2.2.0                                                    |
-| USBPorts               | 1.0.1 - `disables ports 11 & 12, and enable port 8 & 14` |
+| USBPortsWFBT           | 1.0.1 - `disables ports 11 & 12, and enable port 8 & 14` |
+
+> **Additional Kexts** included in the EFI enable the internal WiFi and Bluetooth. The USB map used (USBPortsWFBT.kext) is changed to disable port 11& 12 and enable port 8 & 14. See the USB section below for more details.
 
 </details>
 
@@ -215,8 +213,8 @@ The following are included in the **EFI 2** enabling the internal WiFi and Bluet
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 0.8.5 |
-| ResetNvramEntry.efi | 0.8.5             |
+|   OpenRuntime.efi   | OpenCorePkg 0.8.7 |
+| ResetNvramEntry.efi | 0.8.7             |
 
 </details>
 
@@ -268,11 +266,13 @@ Visit the [BIOS configuration](https://github.com/seven-of-eleven/designare-z390
 
 The following changes should be noted:
 
-- Audio changed to alcid=11 see `Audio Setup` below
 - SMBIOS changed to MacPro7,1 (as of OpenCore 0.8.3 release)
-- Internal Wifi/Bluetooth enabled in second EFI - see release
-- USBPorts.kext changes - highlighted below
-- AAPL,ig-platform-id - changed from `0300913E` to `0300923E` either should work. I was using the latter and it's working so ¯\\_(ツ)_/¯
+- Moved from 2 EFI folders back to one (easier to maintain)
+- Choose your preferred config.plist file and **rename it to config.plist**:
+  - config-no-wifi-bt.plist - `disables the internal WiFi and bluetooth`
+    - most similar to older Releases. Use this if you installed a PCIE WiFi/bt card.
+  - config-wifi-bt.plist - `enables builtin WiFi and bluetooth`
+    - use this if you **don't have** PCIE card to enable Intel WiFi/bt
 
 </details>
 
@@ -294,8 +294,10 @@ The following fields have been replaced by `[REPLACEME]` (for ease of <kbd>⌘</
   - `MLB`
   - Follow the [OpenCore instructions](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#generate-a-new-serial) to generate your own unique identifiers.
 - Also replace the ROM value of `11223344 5566` as outlined in the [OpenCore Instructions](https://dortania.github.io/OpenCore-Post-Install/universal/iservices.html#fixing-rom)
-- Choose a `SystemProductName`, either `iMac19,1` or `MacPro7,1` see **Post Install > Generate your own SMBIOS** for details.
+- Choose a `SystemProductName`, either `iMac19,1` or `MacPro7,1` see **Generate your own SMBIOS** for details.
 - All packages are `RELEASE` and debugging is disabled. If you're having issues, be sure to enable debugging [as described in the OpenCore docs](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#debug), and also grab [the `DEBUG` version of OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases).
+
+> If you're not using internal WiFi/bt you can remove the **Additional Kexts** in the Kext listing and take a snapshot with Propertree to update your config file. If you don't know what this means, just ignore it, everything will work fine 😀.
 
 </details>
 
@@ -320,7 +322,7 @@ Format is lang-COUNTRY:keyboard as shown below:
 | ------------- | ------ | ------- |
 | prev-lang:kbd | String | en-US:0 |
 
-> It is set to English but you can find alternatives here:
+> Language is set to **English** but you can find alternatives here:
 >
 > [AppleKeyboardLayouts](https://github.com/acidanthera/OpenCorePkg/blob/master/Utilities/AppleKeyboardLayouts/AppleKeyboardLayouts.txt)
 
@@ -331,11 +333,11 @@ Format is lang-COUNTRY:keyboard as shown below:
 <br>
 
 
-The EFI folder should work for either Monterey, BigSur or Ventura. No idea if it'll work with Catalina. I've set AppleIGB kext to be enabled for Monterey and above to get both ethernet ports working. For BigSur I've enabled the SmallTreeIntel82576 kext. They are controlled using MinVersion and MaxVersion values so no config.plist file changes are required. 
+The EFI folder should work for either BigSur, Monterey, or Ventura. No idea if it'll work with Catalina. I've set AppleIGB kext to be enabled for Monterey and above to get both ethernet ports working. For BigSur I've enabled the SmallTreeIntel82576 kext. They are controlled using MinVersion and MaxVersion values so no config.plist file changes are required.
 
 Also avoid installing Monterey 12.3 it had issues with AMD GPUs that needed DeviceProperties values set for the PCIE device (not included in this EFI). Google is your friend here but it's easiest just not to install 12.3 :grimacing:.
 
-I'm primarily using this EFI with Monterey 12.6 at the moment. I have successfully install Ventura (beta) on a secondary drive and everything was working. Let me know if you have issues with BigSur.
+I'm primarily using this EFI with Monterey 13.1 at the moment. Prior to this release I was running Monterey 12.6.1 without issue. I haven't tested BigSur; let me know if you have issues with it.
 
 </details>  
 
@@ -387,8 +389,10 @@ MacOS has a fifteen port limit. You can read more about the details in the [guid
 
 
 <details>  
-<summary><strong>USB Mapping EFI 1</strong></summary>
+<summary><strong>USB Mapping - config-no-wifi-bt.plist (USBPorts.kext)</strong></summary>
 <br>
+
+
 
 
 
@@ -407,11 +411,13 @@ For reference the associated ports are outlined in the following diagrams (modif
 
 
 <details>  
-<summary><strong>USB Mapping EFI 2</strong></summary>
+<summary><strong>USB Mapping - config-wifi-bt.plist (USBPortsWFBT.kext)</strong></summary>
 <br>
 
 
-> Note the **difference from EFI 1** is the enabling of ports 8 & 14 and disabling of ports 11 & 12. This was done to enable the internal Wifi and bluetooth.
+
+
+> Note the **difference from the USBPorts.kext** is the enabling of ports 8 & 14 and disabling of ports 11 & 12. This was done to **enable the internal WiFi and bluetooth**.
 
 
 This USBPorts.kext file provided enables the following ports:
@@ -450,7 +456,7 @@ Using the **SMBIOS MacPro7,1** will require either `CustomMemory` to be configur
 
 
 
-There are three options available that I'm aware of. You can use alcid 7, 11, or 16. All three are used by different Designare EFIs available online. I'm using alcid 11 because it works for what I need. If you have specific audio requirements and alcid 11 isn't working try the other values. ==Previous EFIs in this repo used alcid=7.==
+There are three options available that I'm aware of. You can use alcid 7, 11, or 16. All three are used by different Designare EFIs available online. I'm using alcid 11 because it works for what I need. If you have specific audio requirements and alcid 11 isn't working try the other values. `Previous EFIs in this repo used alcid=7.`
 
 > NOTE: Alcid values can be added to the 'NVRAM > boot-args' key **or** DeviceProperties. The boot-args value will override the DeviceProperties value if both are used. **You only need one**. This EFI uses the DeviceProperties method.
 
@@ -501,13 +507,14 @@ DeviceProperties>Add
 - [x] iMessage, FaceTime, App Store, iTunes Store. `Generate your own SMBIOS`
 - [x] Intel I219-V Ethernet port
 - [x] Intel I211 Ethernet port
-- [x] Internal Wifi and bluetooth
+- [x] Internal WiFi and bluetooth - `WiFi not fully tested on Ventura`
 - [x] Audio jacks - `front and rear 3.5mm audio jacks work with quirks (see Audio Setup for details)`
 - [x] Shutdown / Restart / Sleep
 - [x] USB 3.0/3/1 - `USB map created.`
 - [x] Graphical Boot menu `OpenCanopy (I included it in the EFI but I don't use it as I generally skip the boot menu.)`
 - [x] Thunderbolt 3 - `reported working not tested as I have no TB3 devices`
 - [x] Sidecar - `reported working, I haven't tested`
+- [x] Conitunity Camera - `working when iPhone is connected by USB`
 
 </details>  
 
@@ -524,6 +531,7 @@ DeviceProperties>Add
 
 
 
+- [ ] WiFi on Ventura - `should work but I use Ethernet and haven't tested it fully`
 - [ ] Boot chime - `should work I just haven't tried it`
 - [ ] FileVault - `should work I just haven't tried it`
 - [ ] Windows/Linux from OC boot menu - `I'm not dual booting my system but there's no reason it shouldn't work.`
@@ -534,9 +542,14 @@ DeviceProperties>Add
 <summary><strong>Change log 🪵</strong></summary>
 
 
+- **21 Dec 2022**
+  - Update to **OpenCore 0.8.7**
+  - Enable/disable internal WiFi and bluetooth - `rename your chosen config.plist`
+  - Moved to primarily booting Ventura 13.1 (using ethernet, not WiFi)
+  
 - **14 Oct 2022**
   - Update to **OpenCore 0.8.5**
-  - Enable internal Wifi and bluetooth in **EFI 2** - see Releases
+  - Enable internal WiFi and bluetooth in **EFI 2** - see Releases
   - Change of USB port mapping in **EFI 2** for internal bluetooth
   
 - **8 Sept 2022**

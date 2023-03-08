@@ -230,10 +230,8 @@ Compute (GPU):
     <p float="left">
         <img src="./images/desktop-image.png" alt="Desktop" width="427">
     </p>
-    <p float="left">
-        <img src="./images/Ventura.jpg" alt="Ventura" width="427">
-    </p>
 </details> 
+
 
 
 

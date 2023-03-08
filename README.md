@@ -1,13 +1,10 @@
 # Gigabyte z390 Designare Hackintosh 
 
-> ### The king is dead. Long live the king.
-> **Thanks to :crown: [baughmann](https://github.com/baughmann)** for passing the torch for me to maintain this repo. I'll try and keep things up to date for everyone and address issues as they come up. I use this computer daily for work and it has been very reliable. I've made quite a few changes to the format and information of this readme so take a read and let me know if anything is unclear.
-
 **Status: Success | Stable**
 
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.8.7-blue.svg)](https://github.com/acidanthera/OpenCorePkg)[![macOS-stable](https://img.shields.io/badge/macOS-11.7.2-brightgreen.svg)](https://www.apple.com)[![macOS-stable](https://img.shields.io/badge/macOS-12.6.2-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-stable](https://img.shields.io/badge/macOS-13.1-brightgreen.svg)](https://www.apple.com/macos/ventura)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.0-blue.svg)](https://github.com/acidanthera/OpenCorePkg)[![macOS-stable](https://img.shields.io/badge/macOS-12.6.3-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-stable](https://img.shields.io/badge/macOS-13.2.1-brightgreen.svg)](https://www.apple.com/macos/ventura)
 
 **DISCLAIMER:**
 
@@ -36,7 +33,7 @@ It should work and your Gigabyte z390 Designare based hackintosh should boot and
 
 > **NOTE** if you simply wish to copy my EFI please do the following:
 >
-> 1. Properly set your [BIOS settings](https://github.com/seven-of-eleven/designare-z390-opencore-efi/blob/master/BIOS.md)
+> 1. Properly set your [BIOS settings](https://github.com/seven-of-eleven/designare-z390-opencore-efi/blob/master/BIOS.md) (<kbd>Del</kbd> to get into bios)
 > 2. [Generate SMBIOS values](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#platforminfo) and add them in the config.plist (MacPro7,1)
 > 3. **Rename** one of the `config...` files in the OC folder to `config.plist` (see release or notes below for details).
 > 4. Prepare your install [USB](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
@@ -57,7 +54,9 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 <summary><strong>Shout out and credits</strong></summary>
 
 
-**Shout out** to [baughmann](https://github.com/baughmann) the OG of this repo. He entrusted it to my care while he's moving on to bigger and better things. All the best to him and many thanks for his contributions.
+**Shout out** to [baughmann](https://github.com/baughmann) the OG of this repo. He entrusted it to my care while he's moving on to bigger and better things. All the best to him and many thanks for his contribution.
+
+[Applebreak1 - z390-Designare-Customac](https://github.com/AppleBreak1/Z390-Designare-Customac) - I used notes from him and CaseySJ to get Thunderbolt working
 
 #### Credit to all these great people whom I don't know but have made my hackintosh dreams come true:
 
@@ -67,10 +66,10 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 - [corpnewt](https://github.com/corpnewt) for [USBMap](https://github.com/corpnewt/USBMap) and [CPUFriendDataProvider](https://github.com/corpnewt/CPUFriendFriend)
 - [headkaze](https://github.com/headkaze) for [Hackintool](https://github.com/headkaze/Hackintool)
 - [Mieze](https://github.com/Mieze) for [IntelMausiEthernet](https://github.com/Mieze/IntelMausiEthernet)
-- And every other contributor
 - People at [r/hackintosh](https://www.reddit.com/r/hackintosh/) for their advice and help
 - Useful tools by [CorpNewt](https://github.com/corpnewt) and [headkaze](https://github.com/headkaze/Hackintool)
 - CaseySJ [Gigabyte Designare Z390 build](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.316533/)
+- And every other contributor
 
 </details>
 
@@ -97,7 +96,7 @@ Compute (GPU):
 <br>
 
 
-[![UEFI](https://img.shields.io/badge/UEFI-F9i-lightgrey)](https://github.com/baughmann/designaire-z390-intel-i9-9900k-opencore/releases/download/resources/mb_bios_z390-designare_f9i.zip)
+[![UEFI](https://img.shields.io/badge/UEFI-F9-lightgrey)](https://download.gigabyte.com/FileList/BIOS/mb_bios_z390-designare_f9.zip?v=be589b6c41e6b8f340b5273a4982e394)
 
 #### My system
 
@@ -106,8 +105,10 @@ Compute (GPU):
 | CPU       | Intel Core i7-9700k                                          | Other motherboard compatible CPUs shouldn't be an issue      |
 | MB        | [Gigabyte Designaire Z390 (rev 1.0)](https://www.gigabyte.com/Motherboard/Z390-DESIGNARE-rev-10#kf) |                                                              |
 | GPU       | Saphire Pulse RX 5700 XT                                     | `agdpmod=pikera` needed for 5000 & 6000 series AMD cards (key is set in config.plist) |
-| SSD       | WD Black 250 GB                                              | Boot drive                                                   |
-| SSD       | HP EX 950   1TB                                              | Home folder                                                  |
+| NVME      | WD Black 250 GB                                              | Boot drive                                                   |
+| NVME      | Crucial P3 4TB                                               | Home folder                                                  |
+| NVME      | WD Black 1TB                                                 | Raid 0 - extra drive (using PCIE adapter)                    |
+| NVME      | HP EX950 1TB                                                 | Raid 0 - extra drive  (using PCIE adapter)                   |
 | SSD       | WD Blue  2TB                                                 | Video and photo storage                                      |
 | SSD       | WB Blue  250GB                                               | Backup boot drive for testing OS update/upgrades             |
 | HD        | Seagate Iron Wolf  6TB                                       | Used as internal time machine backup                         |
@@ -139,6 +140,7 @@ Compute (GPU):
 
 - [Without a dedicated GPU](https://github.com/baughmann/Catalina-Gigabyte-Designare-Z390-i9-9900k-EFI/issues/1)
 - Other AMD GPU's are _probably mostly_ plug-n-play. Be sure to read the [fantastic Buyer's Guide by Dortania](https://dortania.github.io/GPU-Buyers-Guide/) before you buy!
+- [Applebreak1 - z390-Designare-Customac](https://github.com/AppleBreak1/Z390-Designare-Customac)
 
 </details>  
 
@@ -150,8 +152,8 @@ Compute (GPU):
 
 | Component      | Version |
 | -------------- | ------- |
-| macOS Monterey | 13.1    |
-| OpenCore       | v0.8.7  |
+| macOS Monterey | 13.2.1  |
+| OpenCore       | v0.9.0  |
 
 </details>
 
@@ -165,9 +167,12 @@ Compute (GPU):
 | Component                |
 | ------------------------ |
 | SSDT-AWAC.aml            |
+| SSDT-DMAR.aml            |
+| SSDT-DTPG.aml            |
 | SSDT-EC-USBX-DESKTOP.aml |
-| SSDT-PNLF-DRTNIA.aml     |
 | SSDT-PMC.aml             |
+| SSDT-SBUS-MCHC.aml       |
+| SSDT-TB3.aml             |
 
 </details>
 
@@ -178,24 +183,20 @@ Compute (GPU):
 
 | Kext                   | Version                                                  |
 | :--------------------- | -------------------------------------------------------- |
-| AppleALC               | 1.7.7                                                    |
-| AppleIGB               | 5.7.2                                                    |
+| AppleALC               | 1.8.0                                                    |
 | IntelMausi             | 1.0.7                                                    |
-| Lilu                   | 1.6.2                                                    |
+| Lilu                   | 1.6.4                                                    |
 | RestrictEvents         | 1.0.9 - `only needed with SMBIOS MacPro7,1`              |
-| SmallTreeIntel82576    | 1.3.0 - `used for BigSur I211 ethernet port`             |
-| SMCProcessor           | 1.3.0                                                    |
-| SMCSuperIO             | 1.3.0                                                    |
+| SMCProcessor           | 1.3.1                                                    |
+| SMCSuperIO             | 1.3.1                                                    |
 | USBPorts               | 1.0.0                                                    |
-| VirtualSMC             | 1.3.0                                                    |
+| VirtualSMC             | 1.3.1                                                    |
 | WhateverGreen          | 1.6.2                                                    |
 | **Additional Kexts***  | Used to enable builtin WiFi and bluetooth                |
 | AirportItlwm           | 2.2.0-alpha - `enable WiFi on Ventura`                   |
 | AirportItlwmM          | 2.1.0 - `enable WiFi on Monterey`                        |
-| AirportItlwmBS         | 2.1.0 - `enable WiFi on BigSur`                          |
 | BlueToolFixup          | 2.6.4 - `needed for Monterey and newer`                  |
 | IntelBluetoothFirmware | 2.2.0                                                    |
-| IntelBluetoothInjector | 2.2.0 - `used for BigSur only`                           |
 | IntelBTPatcher         | 2.2.0                                                    |
 | USBPortsWFBT           | 1.0.1 - `disables ports 11 & 12, and enable port 8 & 14` |
 
@@ -213,8 +214,8 @@ Compute (GPU):
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 0.8.7 |
-| ResetNvramEntry.efi | 0.8.7             |
+|   OpenRuntime.efi   | OpenCorePkg 0.9.0 |
+| ResetNvramEntry.efi | 0.9.0             |
 
 </details>
 
@@ -266,13 +267,33 @@ Visit the [BIOS configuration](https://github.com/seven-of-eleven/designare-z390
 
 The following changes should be noted:
 
-- SMBIOS changed to MacPro7,1 (as of OpenCore 0.8.3 release)
-- Moved from 2 EFI folders back to one (easier to maintain)
+- Dropped support for Big Sur. You will need to add/change the kexts to get Big Sur working.
+- Removed SSDT-Plug - not needed after [12.3](https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#enabling-x86platformplugin)
+- Thunderbolt working
+  - Added ACPI files and updated config to enable Thunderbolt
+
+
+> **DiableIoMapper is set to false to enable AppleVTD** as outlined below. Set to true if you are having issues with your Fenvi WiFi BT card.
+
+- Enabled AppleVTD
+
+  - Since Monterey 12.3.0, AppleEthernetE1000 driver kit natively attaches to i211 ethernet. However, if the ethernet port is occupied without having AppleVTD enabled, the system will experience freeze, crash, and etc. To avoid having these issues, we need to enable AppleVTD.
+
+  ```
+  - Enable VT-d in BIOS, 
+  - Set DisableIoMapper to false
+  - Drop OEM DMAR Table in config.plist
+  - Inject modified DMAR Table(Reserved Memory Regions removed) in config.plist
+  ```
+
+- Removed AppleIGB kext as it's not needed with AppleVTD enabled.
+
 - Choose your preferred config.plist file and **rename it to config.plist**:
+
   - config-no-wifi-bt.plist - `disables the internal WiFi and bluetooth`
-    - most similar to older Releases. Use this if you installed a PCIE WiFi/bt card.
+    - most similar to older Releases. Use this if you have installed a PCIE WiFi/bt card (Fenvi or other).
   - config-wifi-bt.plist - `enables builtin WiFi and bluetooth`
-    - use this if you **don't have** PCIE card to enable Intel WiFi/bt
+    - use this if you **don't have** PCIE card but want to enable builtin Intel WiFi/bt
 
 </details>
 
@@ -329,15 +350,16 @@ Format is lang-COUNTRY:keyboard as shown below:
 </details>
 
 <details>  
-<summary><strong>Monterey, BigSur or Ventura?</strong></summary>
+<summary><strong>Monterey, or Ventura?</strong></summary>
 <br>
 
 
-The EFI folder should work for either BigSur, Monterey, or Ventura. No idea if it'll work with Catalina. I've set AppleIGB kext to be enabled for Monterey and above to get both ethernet ports working. For BigSur I've enabled the SmallTreeIntel82576 kext. They are controlled using MinVersion and MaxVersion values so no config.plist file changes are required.
 
-Also avoid installing Monterey 12.3 it had issues with AMD GPUs that needed DeviceProperties values set for the PCIE device (not included in this EFI). Google is your friend here but it's easiest just not to install 12.3 :grimacing:.
+The EFI folder should work for either Monterey (12.3+), or Ventura.
 
-I'm primarily using this EFI with Monterey 13.1 at the moment. Prior to this release I was running Monterey 12.6.1 without issue. I haven't tested BigSur; let me know if you have issues with it.
+Also avoid installing Monterey 12.3 it had issues with AMD GPUs that needed DeviceProperties values set for the PCIE device (not included in this EFI). Google is your friend here but it's easiest not to install 12.3 :grimacing:, just install 12.4 or higher.
+
+I'm primarily using this EFI with Monterey 13.2.1 at the moment. Prior to this release I was running Monterey 12.6.2 without issue.
 
 </details>  
 
@@ -512,7 +534,7 @@ DeviceProperties>Add
 - [x] Shutdown / Restart / Sleep
 - [x] USB 3.0/3/1 - `USB map created.`
 - [x] Graphical Boot menu `OpenCanopy (I included it in the EFI but I don't use it as I generally skip the boot menu.)`
-- [x] Thunderbolt 3 - `reported working not tested as I have no TB3 devices`
+- [x] Thunderbolt
 - [x] Sidecar - `reported working, I haven't tested`
 - [x] Conitunity Camera - `working when iPhone is connected by USB`
 
@@ -542,16 +564,23 @@ DeviceProperties>Add
 <summary><strong>Change log 🪵</strong></summary>
 
 
+- **8 Mar 2023**
+  - Update to **OpenCore 0.9.0**
+  - Dropped support for BigSur (can use previous EFI versions if needed)
+    - removed BigSur kexts
+  
+  - Enabled Thunderbold support (tested with OWC Thunderbolt Dock)
+  - Updated BIOS to F9
+  - Enabled AppleVTD
+  
 - **21 Dec 2022**
   - Update to **OpenCore 0.8.7**
   - Enable/disable internal WiFi and bluetooth - `rename your chosen config.plist`
   - Moved to primarily booting Ventura 13.1 (using ethernet, not WiFi)
-  
 - **14 Oct 2022**
   - Update to **OpenCore 0.8.5**
   - Enable internal WiFi and bluetooth in **EFI 2** - see Releases
   - Change of USB port mapping in **EFI 2** for internal bluetooth
-  
 - **8 Sept 2022**
   - Update to **OpenCore 0.8.4**
   - Include SmallTree kext for BigSur (disabled for Monterey with MaxVersion value)

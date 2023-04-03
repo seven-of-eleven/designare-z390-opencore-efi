@@ -4,7 +4,7 @@
 
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.0-blue.svg)](https://github.com/acidanthera/OpenCorePkg)[![macOS-stable](https://img.shields.io/badge/macOS-12.6.3-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-stable](https://img.shields.io/badge/macOS-13.2.1-brightgreen.svg)](https://www.apple.com/macos/ventura)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.0-blue.svg)](https://github.com/acidanthera/OpenCorePkg)[![macOS-stable](https://img.shields.io/badge/macOS-12.6.3-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-stable](https://img.shields.io/badge/macOS-13.3-brightgreen.svg)](https://www.apple.com/macos/ventura)
 
 **DISCLAIMER:**
 
@@ -49,6 +49,50 @@ It should work and your Gigabyte z390 Designare based hackintosh should boot and
 To install macOS follow the guides provided by [Dortania](https://dortania.github.io/OpenCore-Install-Guide/) :thinking:
 
 </details>  
+
+
+
+<details>
+<summary><strong>⚠️ HIGHLIGHTED CHANGES FROM PREVIOUS EFI ⚠️</strong></summary>
+<br>
+
+
+
+
+The following changes should be noted:
+
+- Applied patch from CaseySJ to enable WiFi and 2nd Ethernet port on MacOS 13.3+
+- Dropped support for Big Sur. You will need to add/change the kexts to get Big Sur working.
+- Removed SSDT-Plug - not needed after [12.3](https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#enabling-x86platformplugin)
+- Thunderbolt working
+  - Added ACPI files and updated config to enable Thunderbolt
+
+
+> **DiableIoMapper is set to false to enable AppleVTD** as outlined below. Set to true if you are having issues with your Fenvi WiFi BT card.
+
+- Enabled AppleVTD
+
+  - Since Monterey 12.3.0, AppleEthernetE1000 driver kit natively attaches to i211 ethernet. However, if the ethernet port is occupied without having AppleVTD enabled, the system will experience freeze, crash, and etc. To avoid having these issues, we need to enable AppleVTD.
+
+  ```
+  - Enable VT-d in BIOS, 
+  - Set DisableIoMapper to false
+  - Drop OEM DMAR Table in config.plist
+  - Inject modified DMAR Table(Reserved Memory Regions removed) in config.plist
+  ```
+
+- Removed AppleIGB kext as it's not needed with AppleVTD enabled.
+
+- Choose your preferred config.plist file and **rename it to config.plist**:
+
+  - config-no-wifi-bt.plist - `disables the internal WiFi and bluetooth`
+    - most similar to older Releases. Use this if you have installed a PCIE WiFi/bt card (Fenvi or other).
+  - config-wifi-bt.plist - `enables builtin WiFi and bluetooth`
+    - use this if you **don't have** PCIE card but want to enable builtin Intel WiFi/bt
+
+</details>
+
+
 
 <details> 
 <summary><strong>Shout out and credits</strong></summary>
@@ -152,7 +196,7 @@ Compute (GPU):
 
 | Component      | Version |
 | -------------- | ------- |
-| macOS Monterey | 13.2.1  |
+| macOS Monterey | 13.3    |
 | OpenCore       | v0.9.0  |
 
 </details>
@@ -257,44 +301,6 @@ Visit the [BIOS configuration](https://github.com/seven-of-eleven/designare-z390
 
 </details>  
 
-<details>
-<summary><strong>⚠️ HIGHLIGHTED CHANGES FROM PREVIOUS EFI ⚠️</strong></summary>
-<br>
-
-
-
-The following changes should be noted:
-
-- Dropped support for Big Sur. You will need to add/change the kexts to get Big Sur working.
-- Removed SSDT-Plug - not needed after [12.3](https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#enabling-x86platformplugin)
-- Thunderbolt working
-  - Added ACPI files and updated config to enable Thunderbolt
-
-
-> **DiableIoMapper is set to false to enable AppleVTD** as outlined below. Set to true if you are having issues with your Fenvi WiFi BT card.
-
-- Enabled AppleVTD
-
-  - Since Monterey 12.3.0, AppleEthernetE1000 driver kit natively attaches to i211 ethernet. However, if the ethernet port is occupied without having AppleVTD enabled, the system will experience freeze, crash, and etc. To avoid having these issues, we need to enable AppleVTD.
-
-  ```
-  - Enable VT-d in BIOS, 
-  - Set DisableIoMapper to false
-  - Drop OEM DMAR Table in config.plist
-  - Inject modified DMAR Table(Reserved Memory Regions removed) in config.plist
-  ```
-
-- Removed AppleIGB kext as it's not needed with AppleVTD enabled.
-
-- Choose your preferred config.plist file and **rename it to config.plist**:
-
-  - config-no-wifi-bt.plist - `disables the internal WiFi and bluetooth`
-    - most similar to older Releases. Use this if you have installed a PCIE WiFi/bt card (Fenvi or other).
-  - config-wifi-bt.plist - `enables builtin WiFi and bluetooth`
-    - use this if you **don't have** PCIE card but want to enable builtin Intel WiFi/bt
-
-</details>
-
 
 
 <details>
@@ -357,7 +363,7 @@ The EFI folder should work for either Monterey (12.3+), or Ventura.
 
 Also avoid installing Monterey 12.3 it had issues with AMD GPUs that needed DeviceProperties values set for the PCIE device (not included in this EFI). Google is your friend here but it's easiest not to install 12.3 :grimacing:, just install 12.4 or higher.
 
-I'm primarily using this EFI with Monterey 13.2.1 at the moment. Prior to this release I was running Monterey 12.6.2 without issue.
+I'm primarily using this EFI with Monterey 13.3 at the moment. Prior to this release I was running Monterey 12.6.2 without issue.
 
 </details>  
 

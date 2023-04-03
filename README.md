@@ -57,8 +57,6 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 <br>
 
 
-
-
 The following changes should be noted:
 
 - Applied patch from CaseySJ to enable WiFi and 2nd Ethernet port on MacOS 13.3+
@@ -280,7 +278,7 @@ Compute (GPU):
 
 
 
-## Before installation
+## Installation Notes
 
 <details>  
 <summary><strong>UEFI/BIOS settings</strong></summary>

@@ -4,7 +4,7 @@
 
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.0-blue.svg)](https://github.com/acidanthera/OpenCorePkg)[![macOS-stable](https://img.shields.io/badge/macOS-12.6.3-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-stable](https://img.shields.io/badge/macOS-13.3-brightgreen.svg)](https://www.apple.com/macos/ventura)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.2-blue.svg)](https://github.com/acidanthera/OpenCorePkg)[![macOS-stable](https://img.shields.io/badge/macOS-12.6.5-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-stable](https://img.shields.io/badge/macOS-13.3.1-brightgreen.svg)](https://www.apple.com/macos/ventura)
 
 **DISCLAIMER:**
 
@@ -59,9 +59,15 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 
 The following changes should be noted:
 
-- Applied patch from CaseySJ to enable WiFi and 2nd Ethernet port on MacOS 13.3+
-- Dropped support for Big Sur. You will need to add/change the kexts to get Big Sur working.
-- Removed SSDT-Plug - not needed after [12.3](https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#enabling-x86platformplugin)
+- Choose your preferred config.plist file and **rename it to config.plist**:
+
+  - config-no-wifi-bt.plist - `disables the internal WiFi and bluetooth`
+    - most similar to older Releases. Use this if you have installed a 3rd party PCIE WiFi/bt card (Fenvi or other).
+  - config-wifi-bt.plist - `enables builtin WiFi and bluetooth`
+    - use this if you **don't have** PCIE card but want to enable builtin Intel WiFi/bt
+- Patch from CaseySJ to enable WiFi and 2nd Ethernet port on MacOS 13.3+ was incorporated into OC-0.9.2
+  - Quirk has been enabled and patch disabled
+
 - Thunderbolt working
   - Added ACPI files and updated config to enable Thunderbolt
 
@@ -80,13 +86,6 @@ The following changes should be noted:
   ```
 
 - Removed AppleIGB kext as it's not needed with AppleVTD enabled.
-
-- Choose your preferred config.plist file and **rename it to config.plist**:
-
-  - config-no-wifi-bt.plist - `disables the internal WiFi and bluetooth`
-    - most similar to older Releases. Use this if you have installed a PCIE WiFi/bt card (Fenvi or other).
-  - config-wifi-bt.plist - `enables builtin WiFi and bluetooth`
-    - use this if you **don't have** PCIE card but want to enable builtin Intel WiFi/bt
 
 </details>
 
@@ -194,8 +193,8 @@ Compute (GPU):
 
 | Component      | Version |
 | -------------- | ------- |
-| macOS Monterey | 13.3    |
-| OpenCore       | v0.9.0  |
+| macOS Monterey | 13.3.1  |
+| OpenCore       | v0.9.2  |
 
 </details>
 
@@ -225,19 +224,19 @@ Compute (GPU):
 
 | Kext                   | Version                                                  |
 | :--------------------- | -------------------------------------------------------- |
-| AppleALC               | 1.8.0                                                    |
+| AppleALC               | 1.8.2                                                    |
 | IntelMausi             | 1.0.7                                                    |
-| Lilu                   | 1.6.4                                                    |
-| RestrictEvents         | 1.0.9 - `only needed with SMBIOS MacPro7,1`              |
+| Lilu                   | 1.6.5                                                    |
+| RestrictEvents         | 1.1.1 - `only needed with SMBIOS MacPro7,1`              |
 | SMCProcessor           | 1.3.1                                                    |
 | SMCSuperIO             | 1.3.1                                                    |
 | USBPorts               | 1.0.0                                                    |
 | VirtualSMC             | 1.3.1                                                    |
-| WhateverGreen          | 1.6.2                                                    |
+| WhateverGreen          | 1.6.4                                                    |
 | **Additional Kexts***  | Used to enable builtin WiFi and bluetooth                |
 | AirportItlwm           | 2.2.0-alpha - `enable WiFi on Ventura`                   |
 | AirportItlwmM          | 2.1.0 - `enable WiFi on Monterey`                        |
-| BlueToolFixup          | 2.6.4 - `needed for Monterey and newer`                  |
+| BlueToolFixup          | 2.6.6 - `needed for Monterey and newer`                  |
 | IntelBluetoothFirmware | 2.2.0                                                    |
 | IntelBTPatcher         | 2.2.0                                                    |
 | USBPortsWFBT           | 1.0.1 - `disables ports 11 & 12, and enable port 8 & 14` |
@@ -256,8 +255,8 @@ Compute (GPU):
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 0.9.0 |
-| ResetNvramEntry.efi | 0.9.0             |
+|   OpenRuntime.efi   | OpenCorePkg 0.9.2 |
+| ResetNvramEntry.efi | 0.9.2             |
 
 </details>
 
@@ -324,6 +323,8 @@ The following fields have been replaced by `[REPLACEME]` (for ease of <kbd>⌘</
 
 </details>
 
+
+
 <details>
 <summary><strong>Own prev-lang-kbd</strong></summary>
 <br>
@@ -351,6 +352,8 @@ Format is lang-COUNTRY:keyboard as shown below:
 
 </details>
 
+
+
 <details>  
 <summary><strong>Monterey, or Ventura?</strong></summary>
 <br>
@@ -359,9 +362,9 @@ Format is lang-COUNTRY:keyboard as shown below:
 
 The EFI folder should work for either Monterey (12.3+), or Ventura.
 
-Also avoid installing Monterey 12.3 it had issues with AMD GPUs that needed DeviceProperties values set for the PCIE device (not included in this EFI). Google is your friend here but it's easiest not to install 12.3 :grimacing:, just install 12.4 or higher.
+I would avoid installing Monterey 12.3 as it had issues with AMD GPUs that needed DeviceProperties values set for the PCIE device (not included in this EFI). Google is your friend here but it's easiest not to install 12.3 :grimacing:, just install 12.4 or higher.
 
-I'm primarily using this EFI with Monterey 13.3 at the moment. Prior to this release I was running Monterey 12.6.2 without issue.
+I'm primarily using this EFI with Ventura 13.3.1 at the moment. Prior to this release I was running Monterey 12.6.2 without issue.
 
 </details>  
 
@@ -418,8 +421,6 @@ MacOS has a fifteen port limit. You can read more about the details in the [guid
 
 
 
-
-
 This USBPorts.kext file provided enables the following ports:
 
 ![USB-Ports](images/USB-Ports.png)
@@ -444,7 +445,7 @@ For reference the associated ports are outlined in the following diagrams (modif
 > Note the **difference from the USBPorts.kext** is the enabling of ports 8 & 14 and disabling of ports 11 & 12. This was done to **enable the internal WiFi and bluetooth**.
 
 
-This USBPorts.kext file provided enables the following ports:
+This USBPortsWFBT.kext file provided enables the following ports:
 
 ![USB-Ports](images/USB-Ports-EFI2.png)
 
@@ -566,15 +567,19 @@ DeviceProperties>Add
 <summary><strong>Change log 🪵</strong></summary>
 
 
+- **16 May 2023**
+  - Update to OpenCore 0.9.2
+  - Disable CaseySJ patch and enable new DisableIoMapperMapping quirk (addresses the same issue)
+  - Updated all kexts to latest version
+  
 - **8 Mar 2023**
   - Update to **OpenCore 0.9.0**
   - Dropped support for BigSur (can use previous EFI versions if needed)
     - removed BigSur kexts
-  
+
   - Enabled Thunderbold support (tested with OWC Thunderbolt Dock)
   - Updated BIOS to F9
   - Enabled AppleVTD
-  
 - **21 Dec 2022**
   - Update to **OpenCore 0.8.7**
   - Enable/disable internal WiFi and bluetooth - `rename your chosen config.plist`

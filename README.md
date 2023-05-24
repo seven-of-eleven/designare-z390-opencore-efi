@@ -4,13 +4,23 @@
 
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.2-blue.svg)](https://github.com/acidanthera/OpenCorePkg)[![macOS-stable](https://img.shields.io/badge/macOS-12.6.5-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-stable](https://img.shields.io/badge/macOS-13.3.1-brightgreen.svg)](https://www.apple.com/macos/ventura)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.2-blue.svg)](https://github.com/acidanthera/OpenCorePkg)[![macOS-stable](https://img.shields.io/badge/macOS-12.6.5-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-stable](https://img.shields.io/badge/macOS-13.4-brightgreen.svg)](https://www.apple.com/macos/ventura)
 
 **DISCLAIMER:**
 
 As you embark on your Hackintosh journey you are encouraged to **READ** the entire README and [Dortania](https://dortania.github.io/getting-started/) guides before you start, or check out some [Youtube videos](https://www.youtube.com/c/TechNolli) to get an understanding of the install process. It will save many a message instructing you to read the manual. **I am not an expert**, I haven't forced you to do anything, so put on your big boy pants and take responsibility for any mess you get yourself into.
 
 With that said I'm happy to help when/where I can. When you encounter bug or want to improve this repo, consider opening an issue or pull request. You can also find a wealth of knowledge on [Reddit](https://www.reddit.com/r/hackintosh/), [TonyMacX86](https://www.tonymacx86.com) or [Google](https://www.google.com).
+
+## Bluetooth issue with MacOS 13.4
+Bluetooth broke with the MacOS 13.4 update. Add the below child items to NVRAM>7C436110-AB2A-4BBB-A880-FE41995C9F82 section in your config.plist file to fix it:
+
+Key | Type | Value
+-- | -- | --
+bluetoothInternalControllerInfo | Data | 00000000 00000000 00000000 0000
+bluetoothExternalDongleFailed | Data | 00
+
+---
 
 ## Introduction
 
@@ -193,7 +203,7 @@ Compute (GPU):
 
 | Component      | Version |
 | -------------- | ------- |
-| macOS Monterey | 13.3.1  |
+| macOS Monterey | 13.4    |
 | OpenCore       | v0.9.2  |
 
 </details>
@@ -364,7 +374,7 @@ The EFI folder should work for either Monterey (12.3+), or Ventura.
 
 I would avoid installing Monterey 12.3 as it had issues with AMD GPUs that needed DeviceProperties values set for the PCIE device (not included in this EFI). Google is your friend here but it's easiest not to install 12.3 :grimacing:, just install 12.4 or higher.
 
-I'm primarily using this EFI with Ventura 13.3.1 at the moment. Prior to this release I was running Monterey 12.6.2 without issue.
+I'm primarily using this EFI with Ventura 13.4 at the moment. Prior to this release I was running Monterey 12.6.2 without issue.
 
 </details>  
 

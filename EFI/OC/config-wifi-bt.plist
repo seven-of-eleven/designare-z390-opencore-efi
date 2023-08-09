@@ -3,9 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>#Seven-of-eleven</key>
-	<string>Gigabyte z390 Designare OC-0.9.2</string>
-	<key>#Comment</key>
-	<string>Internal wifi, bluetooth, and thunderbolt working</string>
+	<dict>
+		<key>Board</key>
+		<string>Gigabyte z390 Designare</string>
+		<key>OpenCore Version</key>
+		<string> 0.9.4</string>
+		<key>macOS Compatibility</key>
+		<string>Monterey, Ventura</string>
+		<key>SMBIOS</key>
+		<string>MacPro7,1</string>
+		<key>Note 0 - Setup provides</key>
+		<string>Internal wifi, bluetooth, and thunderbolt</string>
+		<key>Note 1 - File renaming</key>
+		<string>rename file to 'config.plist' to enable this setup</string>
+		<key>Note 2 - Bluetooth fix</key>
+		<string>Inserted 'bluetoothInteralControllerInfo' and 'bluetoothExternalDongleFailed' in the NVRAM section for Ventura bluetooth 13.4+ fix</string>
+		<key>Note 3 - boot-args</key>
+		<string>setup for AMD GPU with 'agdpmod=pikera' remove if using igpu</string>
+	</dict>
 	<key>ACPI</key>
 	<dict>
 		<key>Add</key>
@@ -470,7 +485,7 @@
 				<key>Base</key>
 				<string>__ZN11IOPCIBridge20addBridgeMemoryRangeEyyb</string>
 				<key>Comment</key>
-				<string>CaseySJ - Fix AppleVTD issue in 13.3+ - added to DiableIoMapperMapping option in quirks</string>
+				<string>CaseySJ - Fix AppleVTD issue in 13.3+ -now solved with DiableIoMapperMapping option in quirks</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -570,6 +585,8 @@
 			<false/>
 			<key>HideAuxiliary</key>
 			<true/>
+			<key>InstanceIdentifier</key>
+			<string></string>
 			<key>LauncherOption</key>
 			<string>Disabled</string>
 			<key>LauncherPath</key>
@@ -589,7 +606,7 @@
 			<key>TakeoffDelay</key>
 			<integer>0</integer>
 			<key>Timeout</key>
-			<integer>3</integer>
+			<integer>5</integer>
 		</dict>
 		<key>Debug</key>
 		<dict>
@@ -700,6 +717,12 @@
 				<data>ZW4tVVM6MA==</data>
 				<key>run-efi-updater</key>
 				<string>No</string>
+				<key>#Comment</key>
+				<string>Added two keys below to fix bluetooth issues with Ventura 13.4+</string>
+				<key>bluetoothInternalControllerInfo</key>
+				<data>AAAAAAAAAAAAAAAAAAA=</data>
+				<key>bluetoothExternalDongleFailed</key>
+				<data>AA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -738,6 +761,7 @@
 				<string>fmm-mobileme-token-FMM-BridgeHasAccount</string>
 				<string>nvda_drv</string>
 				<string>prev-lang:kbd</string>
+				<string>backlight-level</string>
 			</array>
 			<key>8BE4DF61-93CA-11D2-AA0D-00E098032B8C</key>
 			<array>
@@ -906,18 +930,6 @@
 				<key>Arguments</key>
 				<string></string>
 				<key>Comment</key>
-				<string>ToggleSipEntry.efi</string>
-				<key>Enabled</key>
-				<true/>
-				<key>LoadEarly</key>
-				<false/>
-				<key>Path</key>
-				<string>ToggleSipEntry.efi</string>
-			</dict>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Comment</key>
 				<string>OpenCanopy.efi</string>
 				<key>Enabled</key>
 				<true/>
@@ -950,6 +962,8 @@
 		<dict>
 			<key>ClearScreenOnModeSwitch</key>
 			<false/>
+			<key>ConsoleFont</key>
+			<string></string>
 			<key>ConsoleMode</key>
 			<string></string>
 			<key>DirectGopRendering</key>
@@ -1018,6 +1032,8 @@
 			<key>HashServices</key>
 			<false/>
 			<key>OSInfo</key>
+			<false/>
+			<key>PciIo</key>
 			<false/>
 			<key>UnicodeCollation</key>
 			<false/>

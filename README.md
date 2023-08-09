@@ -4,7 +4,7 @@
 
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.4-blue.svg)](https://github.com/acidanthera/OpenCorePkg)[![macOS-stable](https://img.shields.io/badge/macOS-12.6.8-brightgreen.svg)](https://www.apple.com/macos/monterey)[![macOS-stable](https://img.shields.io/badge/macOS-13.5-brightgreen.svg)](https://www.apple.com/macos/ventura)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.4-blue.svg)](https://github.com/acidanthera/OpenCorePkg) [![macOS-stable](https://img.shields.io/badge/macOS-12.6.8-brightgreen.svg)](https://www.apple.com/macos/monterey) [![macOS-stable](https://img.shields.io/badge/macOS-13.5-brightgreen.svg)](https://www.apple.com/macos/ventura) [![macOS-stable](https://img.shields.io/badge/macOS-14.0-orange.svg)](https://www.apple.com/macos/sonoma-preview/)
 
 **DISCLAIMER:**
 
@@ -359,12 +359,14 @@ Format is lang-COUNTRY:keyboard as shown below:
 
 
 <details>  
-<summary><strong>Monterey, or Ventura?</strong></summary>
+<summary><strong>Monterey, Ventura, or Sonoma?</strong></summary>
 <br>
 
 
 
-The EFI folder should work for either Monterey (12.3+), or Ventura.
+The EFI folder should work for either Monterey (12.3+), or Ventura. 
+
+> I have installed and booted Sonoma but **<u>not fully tested</u>** it. Noted that WiFi wasn't working but everything else seemed to be working.
 
 I would avoid installing Monterey 12.3 as it had issues with AMD GPUs that needed DeviceProperties values set for the PCIE device (not included in this EFI). Google is your friend here but it's easiest not to install 12.3 :grimacing:, just install 12.4 or higher.
 

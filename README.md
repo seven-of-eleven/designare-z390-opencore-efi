@@ -4,7 +4,7 @@
 
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.4-blue.svg)](https://github.com/acidanthera/OpenCorePkg) [![macOS-stable](https://img.shields.io/badge/macOS-12.6.8-brightgreen.svg)](https://www.apple.com/macos/monterey) [![macOS-stable](https://img.shields.io/badge/macOS-13.5-brightgreen.svg)](https://www.apple.com/macos/ventura) [![macOS-stable](https://img.shields.io/badge/macOS-14.0-orange.svg)](https://www.apple.com/macos/sonoma-preview/)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.6-blue.svg)](https://github.com/acidanthera/OpenCorePkg) [![macOS-stable](https://img.shields.io/badge/macOS-12.6.8-brightgreen.svg)](https://www.apple.com/macos/monterey) [![macOS-stable](https://img.shields.io/badge/macOS-13.6.1-brightgreen.svg)](https://www.apple.com/macos/ventura) [![macOS-stable](https://img.shields.io/badge/macOS-14.1.1-brightgreen.svg)](https://www.apple.com/macos/sonoma-preview/)
 
 **DISCLAIMER:**
 
@@ -63,8 +63,10 @@ The following changes should be noted:
 
   - config-no-wifi-bt.plist - `disables the internal WiFi and bluetooth`
     - most similar to older Releases. Use this if you have installed a 3rd party PCIE WiFi/bt card (Fenvi or other).
+    - all WiFi and Bluetooth related kexts are disabled. If you need BluetoolFixup for your card you'll need to enable it.  Also the child items listed below are commented out, simply remove the '#' at the front of the key value to enable them.
   - config-wifi-bt.plist - `enables builtin WiFi and bluetooth`
-    - use this if you **don't have** PCIE card but want to enable builtin Intel WiFi/bt
+    - use this if you **don't have** PCIE card but want to enable **builtin Intel WiFi/bt**
+    - Kexts provided for Monterey, Ventura, and Sonoma. Restricted by Min/Max Version values.
 - Thunderbolt working
   - Added ACPI files and updated config to enable Thunderbolt
 
@@ -82,7 +84,7 @@ The following changes should be noted:
   - Inject modified DMAR Table(Reserved Memory Regions removed) in config.plist
   ```
 
-- Removed AppleIGB kext as it's not needed with AppleVTD enabled.
+  - Removed AppleIGB kext as it's not needed with AppleVTD enabled.
 
 - Bluetooth broke with the MacOS 13.4 update. Added the below child items to NVRAM>7C436110-AB2A-4BBB-A880-FE41995C9F82 section in the config.plist file to fix it:
 
@@ -197,8 +199,8 @@ Compute (GPU):
 
 | Component      | Version |
 | -------------- | ------- |
-| macOS Monterey | 13.5    |
-| OpenCore       | v0.9.4  |
+| macOS Monterey | 13.6.1  |
+| OpenCore       | v0.9.6  |
 
 </details>
 
@@ -228,10 +230,10 @@ Compute (GPU):
 
 | Kext                   | Version                                                  |
 | :--------------------- | -------------------------------------------------------- |
-| AppleALC               | 1.8.4                                                    |
+| AppleALC               | 1.8.7                                                    |
 | IntelMausi             | 1.0.7                                                    |
 | Lilu                   | 1.6.7                                                    |
-| RestrictEvents         | 1.1.2 - `only needed with SMBIOS MacPro7,1`              |
+| RestrictEvents         | 1.1.3 - `only needed with SMBIOS MacPro7,1`              |
 | SMCProcessor           | 1.3.2                                                    |
 | SMCSuperIO             | 1.3.2                                                    |
 | USBPorts               | 1.0.0                                                    |
@@ -240,6 +242,7 @@ Compute (GPU):
 | **Additional Kexts***  | Used to enable builtin WiFi and bluetooth                |
 | AirportItlwm           | 2.2.0 - `enable WiFi on Ventura`                         |
 | AirportItlwmM          | 2.2.0 - `enable WiFi on Monterey`                        |
+| AirportItlwmS          | 2.3.0 alpha - `enable WiFi on Sonoma`                    |
 | BlueToolFixup          | 2.6.8 - `needed for Monterey and newer`                  |
 | IntelBluetoothFirmware | 2.3.0                                                    |
 | IntelBTPatcher         | 2.3.0                                                    |
@@ -259,8 +262,8 @@ Compute (GPU):
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 0.9.4 |
-| ResetNvramEntry.efi | 0.9.4             |
+|   OpenRuntime.efi   | OpenCorePkg 0.9.6 |
+| ResetNvramEntry.efi | 0.9.6             |
 
 </details>
 
@@ -364,13 +367,13 @@ Format is lang-COUNTRY:keyboard as shown below:
 
 
 
-The EFI folder should work for either Monterey (12.3+), or Ventura. 
+The EFI folder should work for either Monterey (12.3+), Ventura, or Sonoma. 
 
-> I have installed and booted Sonoma but **<u>not fully tested</u>** it. Noted that WiFi wasn't working but everything else seemed to be working.
+> I have installed and booted Sonoma but **<u>not fully tested</u>** it. Everything seemed to be working fine but I still haven't updated to it on my main drive.
 
 I would avoid installing Monterey 12.3 as it had issues with AMD GPUs that needed DeviceProperties values set for the PCIE device (not included in this EFI). Google is your friend here but it's easiest not to install 12.3 :grimacing:, just install 12.4 or higher.
 
-I'm primarily using this EFI with Ventura 13.5 at the moment. Prior to this I was running Monterey 12.6.2 without issue.
+I'm primarily using this EFI with Ventura 13.6.1 at the moment. Prior to this I was running Monterey 12.6.2 without issue.
 
 </details>  
 
@@ -415,7 +418,7 @@ Alternatively you can manually update the `PlatformInfo` by adjusting the follow
 <br>
 
 
-> The latest version of USBPorts.kext will work with either SMBIOS iMac19,1 or MacPro7,1.
+> The latest version of USBPorts.kext included will work with either SMBIOS iMac19,1 or MacPro7,1.
 
 MacOS has a fifteen port limit. You can read more about the details in the [guide](https://dortania.github.io/OpenCore-Post-Install/usb/). Depending on your specific needs you may want to customize/recreate the port mapping. 
 
@@ -475,7 +478,7 @@ For reference the associated ports are outlined in the following diagrams (modif
 
 
 
-> If you're using SMBIOS iMac19,1 you can safely ignore this and just ensure `Kernel>Add> RestrictEvents.kext`> `Enabled` is `False`.
+> If you're using SMBIOS iMac19,1 you can safely ignore this and just ensure `Kernel>Add> RestrictEvents.kext`> `Enabled` is `False` in the config.plist file.
 
 Using the **SMBIOS MacPro7,1** will require either `CustomMemory` to be configured **or** [RestrictEvents.kext](https://github.com/acidanthera/RestrictEvents) to be installed. I've enabled the RestrictEvents.kext as default. If you want to create the custom memory values the details can be found in the [guide](https://dortania.github.io/OpenCore-Post-Install/universal/memory.html).
 
@@ -546,6 +549,7 @@ DeviceProperties>Add
 - [x] Thunderbolt
 - [x] Sidecar - `reported working, I haven't tested`
 - [x] Conitunity Camera - `working when iPhone is connected by USB`
+- [x] WiFi on Ventura - `works but I primarily use Ethernet`
 
 </details>  
 
@@ -562,10 +566,9 @@ DeviceProperties>Add
 
 
 
-- [ ] WiFi on Ventura - `should work but I use Ethernet and haven't tested it fully`
-- [ ] Boot chime - `should work I just haven't tried it`
+- [ ] Boot chime - `should work I just haven't bothered`
 - [ ] FileVault - `should work I just haven't tried it`
-- [ ] Windows/Linux from OC boot menu - `I'm not dual booting my system but there's no reason it shouldn't work.`
+- [ ] Windows/Linux from OC boot menu - `I'm not dual booting my system but there's no reason it shouldn't work. May require some EFI changes.`
 
 </details> 
 
@@ -573,18 +576,22 @@ DeviceProperties>Add
 <summary><strong>Change log 🪵</strong></summary>
 
 
+- **15 Nov 2023**
+  - Update to OpenCore 0.9.6
+  - All kexts at latest available versions
+  - Sonoma support added and working
+  - Sonoma - WiFi support broken with Fenvi cards (can be fixed with OCLP)
+  
 - **9 Aug 2023**
   - Updated to OpenCore 0.9.4
-  
+
   - Added NVRAM key values for Bluetooth fix for Ventura 13.4+
-  
+
   - Updated all kexts to latest available versions
-  
 - **16 May 2023**
   - Update to OpenCore 0.9.2
   - Disable CaseySJ patch and enable new DisableIoMapperMapping quirk (addresses the same issue)
   - Updated all kexts to latest available versions
-
 - **8 Mar 2023**
   - Update to **OpenCore 0.9.0**
   - Dropped support for BigSur (can use previous EFI versions if needed)

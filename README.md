@@ -4,7 +4,7 @@
 
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.6-blue.svg)](https://github.com/acidanthera/OpenCorePkg) [![macOS-stable](https://img.shields.io/badge/macOS-12.6.8-brightgreen.svg)](https://www.apple.com/macos/monterey) [![macOS-stable](https://img.shields.io/badge/macOS-13.6.1-brightgreen.svg)](https://www.apple.com/macos/ventura) [![macOS-stable](https://img.shields.io/badge/macOS-14.1.1-brightgreen.svg)](https://www.apple.com/macos/sonoma-preview/)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg)  [![macOS-stable](https://img.shields.io/badge/macOS-13.6.4-brightgreen.svg)](https://www.apple.com/macos/ventura) [![macOS-stable](https://img.shields.io/badge/macOS-14.4.1-brightgreen.svg)](https://www.apple.com/macos/sonoma-preview/)
 
 **DISCLAIMER:**
 
@@ -54,10 +54,10 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 
 <details>
 <summary><strong>⚠️ HIGHLIGHTED CHANGES FROM PREVIOUS EFI ⚠️</strong></summary>
-<br>
 
 
-The following changes should be noted:
+
+#### Choose your config
 
 - Choose your preferred config.plist file and **rename it to config.plist**:
 
@@ -66,32 +66,30 @@ The following changes should be noted:
     - all WiFi and Bluetooth related kexts are disabled. If you need BluetoolFixup for your card you'll need to enable it.  Also the child items listed below are commented out, simply remove the '#' at the front of the key value to enable them.
   - config-wifi-bt.plist - `enables builtin WiFi and bluetooth`
     - use this if you **don't have** PCIE card but want to enable **builtin Intel WiFi/bt**
-    - Kexts provided for Monterey, Ventura, and Sonoma. Restricted by Min/Max Version values.
-- Thunderbolt working
-  - Added ACPI files and updated config to enable Thunderbolt
+    - Kexts provided for Ventura, and Sonoma. Restricted by Min/Max Version values.
+
+</details>
 
 
-> **DiableIoMapper is set to false to enable AppleVTD** as outlined below. Set to true if you are having issues with your Fenvi WiFi BT card.
 
-- Enabled AppleVTD
+<details> 
+<summary><strong>Update or fresh install instructions for 14.4+</strong></summary>
 
-  - Since Monterey 12.3.0, AppleEthernetE1000 driver kit natively attaches to i211 ethernet. However, if the ethernet port is occupied without having AppleVTD enabled, the system will experience freeze, crash, and etc. To avoid having these issues, we need to enable AppleVTD.
 
-  ```
-  - Enable VT-d in BIOS, 
-  - Set DisableIoMapper to false
-  - Drop OEM DMAR Table in config.plist
-  - Inject modified DMAR Table(Reserved Memory Regions removed) in config.plist
-  ```
 
-  - Removed AppleIGB kext as it's not needed with AppleVTD enabled.
+When updating from 14.x to 14.4+, or installing 14.4+ the following is recommended:
 
-- Bluetooth broke with the MacOS 13.4 update. Added the below child items to NVRAM>7C436110-AB2A-4BBB-A880-FE41995C9F82 section in the config.plist file to fix it:
+- Set **SecureBootModel** to **Disabled** (not *default*)
+- Disable all WiFi kexts if any
+- Disable all Bluetooth kexts if any
+- Add`revpatch=sbvmm` to  **boot-args** (if you want to update through the System Settings, otherwise just download the full installer)
 
-| Key                             | Type | Value                           |
-| ------------------------------- | ---- | ------------------------------- |
-| bluetoothInternalControllerInfo | Data | 00000000 00000000 00000000 0000 |
-| bluetoothExternalDongleFailed   | Data | 00                              |
+After updating:
+
+- Reset **SecureBootModel** to **Default** (or **j160** for MacPro7,1)
+- Enable all WiFi and Bluetooth kexts (latest versions already included in the EFI)
+
+> Note: All WiFi and Bluetooth kexts in the release are enabled by default.
 
 </details>
 
@@ -197,10 +195,10 @@ Compute (GPU):
 
 
 
-| Component      | Version |
-| -------------- | ------- |
-| macOS Monterey | 13.6.1  |
-| OpenCore       | v0.9.6  |
+| Component    | Version |
+| ------------ | ------- |
+| macOS Sonoma | 14.4.1  |
+| OpenCore     | v0.9.9  |
 
 </details>
 
@@ -230,7 +228,7 @@ Compute (GPU):
 
 | Kext                   | Version                                                  |
 | :--------------------- | -------------------------------------------------------- |
-| AppleALC               | 1.8.7                                                    |
+| AppleALC               | 1.8.9                                                    |
 | IntelMausi             | 1.0.7                                                    |
 | Lilu                   | 1.6.7                                                    |
 | RestrictEvents         | 1.1.3 - `only needed with SMBIOS MacPro7,1`              |
@@ -241,11 +239,11 @@ Compute (GPU):
 | WhateverGreen          | 1.6.6                                                    |
 | **Additional Kexts***  | Used to enable builtin WiFi and bluetooth                |
 | AirportItlwm           | 2.2.0 - `enable WiFi on Ventura`                         |
-| AirportItlwmM          | 2.2.0 - `enable WiFi on Monterey`                        |
-| AirportItlwmS          | 2.3.0 alpha - `enable WiFi on Sonoma`                    |
-| BlueToolFixup          | 2.6.8 - `needed for Monterey and newer`                  |
-| IntelBluetoothFirmware | 2.3.0                                                    |
-| IntelBTPatcher         | 2.3.0                                                    |
+| AirportItlwmS-14.0     | 2.3.0 alpha -`enable WiFi on Sonoma 14.0-14.3`           |
+| AirportItlwmS          | 2.3.0 alpha - `enable WiFi on Sonoma 14.4+`              |
+| BlueToolFixup          | 2.6.8                                                    |
+| IntelBluetoothFirmware | 2.4.0                                                    |
+| IntelBTPatcher         | 2.4.0                                                    |
 | USBPortsWFBT           | 1.0.1 - `disables ports 11 & 12, and enable port 8 & 14` |
 
 > **Additional Kexts** included in the EFI enable the internal WiFi and Bluetooth. The USB map used (USBPortsWFBT.kext) is changed to disable port 11& 12 and enable port 8 & 14. See the USB section below for more details.
@@ -262,8 +260,8 @@ Compute (GPU):
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 0.9.6 |
-| ResetNvramEntry.efi | 0.9.6             |
+|   OpenRuntime.efi   | OpenCorePkg 0.9.9 |
+| ResetNvramEntry.efi | 0.9.9             |
 
 </details>
 
@@ -362,24 +360,22 @@ Format is lang-COUNTRY:keyboard as shown below:
 
 
 <details>  
-<summary><strong>Monterey, Ventura, or Sonoma?</strong></summary>
-<br>
+<summary><strong>Ventura, or Sonoma?</strong></summary>
 
 
 
-The EFI folder should work for either Monterey (12.3+), Ventura, or Sonoma. 
 
-> I have installed and booted Sonoma but **<u>not fully tested</u>** it. Everything seemed to be working fine but I still haven't updated to it on my main drive.
+The EFI folder should work for either Ventura, or Sonoma. 
 
-I would avoid installing Monterey 12.3 as it had issues with AMD GPUs that needed DeviceProperties values set for the PCIE device (not included in this EFI). Google is your friend here but it's easiest not to install 12.3 :grimacing:, just install 12.4 or higher.
+I would avoid installing Sonoma 14.4 as it had issues with USB mapping.
 
-I'm primarily using this EFI with Ventura 13.6.1 at the moment. Prior to this I was running Monterey 12.6.2 without issue.
+I'm primarily using this EFI with Sonoma 14.4.1 at the moment. Prior to this I was running Ventura without issue.
 
 </details>  
 
 <details>  
 <summary><strong>Generate your own SMBIOS</strong></summary>
-<br>
+
 
 
 
@@ -388,7 +384,7 @@ Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to create your own serial
 - MacPro7,1 -`What I used`
   - **See below if you want to keep iMac19,1**
 
-**Note:** If you use a different SMBIOS model other than MacPro7,1 or iMac19,1. The provided USB mapping will not work. You will need to edit the **USBPorts.kext** file.  You can right click on the file and select **Show Package Contents**.  From there you can open the Info.plist file in ProperTree and change MacPro7,1 to whatever Model ID you've chosen. This should provide a working USBPorts.kext.
+**Note:** If you use a different SMBIOS model other than MacPro7,1 or iMac19,1. The provided USB mapping **will not** work. You will need to edit the USBPorts.kext file.  You can right click on the file and select **Show Package Contents**.  From there you can open the Info.plist file in ProperTree and change MacPro7,1 to whatever Model ID you've chosen. This should provide a working USBPorts.kext.
 
 ### Keeping SMBIOS iMac19,1
 
@@ -486,7 +482,7 @@ Using the **SMBIOS MacPro7,1** will require either `CustomMemory` to be configur
 
 <details>  
 <summary><strong>Audio Setup</strong></summary>
-<br>
+
 
 
 
@@ -530,6 +526,31 @@ DeviceProperties>Add
 </details>
 
 
+
+<details>  
+<summary><strong>Thunderbolt working</strong></summary>
+
+
+
+- Added ACPI files and updated config to enable Thunderbolt
+
+
+> **DiableIoMapper is set to false to enable AppleVTD** as outlined below. Set to true if you are having issues with your Fenvi WiFi BT card.
+
+- Enabled AppleVTD
+
+  - Since Monterey 12.3.0, AppleEthernetE1000 driver kit natively attaches to i211 ethernet. However, if the ethernet port is occupied without having AppleVTD enabled, the system will experience freeze, crash, and etc. To avoid having these issues, we need to enable AppleVTD.
+
+  ```
+  - Enable VT-d in BIOS, 
+  - Set DisableIoMapper to false
+  - Drop OEM DMAR Table in config.plist
+  - Inject modified DMAR Table(Reserved Memory Regions removed) in config.plist
+  ```
+
+  - Removed AppleIGB kext as it's not needed with AppleVTD enabled.
+
+</details>
 
 ## Status
 
@@ -576,12 +597,18 @@ DeviceProperties>Add
 <summary><strong>Change log 🪵</strong></summary>
 
 
+- **26 Mar 2024**
+  - Update to OpenCore 0.9.9
+  - All kexts update to the latest version at time of release
+  - Dropped Monterey in the EFI - `can use a previous release for Monterey`
+  - Sonoma - Issues with Fenvi cards remain (can be patched using OCLP)
+  - Cleaned up the config.plist file removing unneeded keys
+  
 - **15 Nov 2023**
   - Update to OpenCore 0.9.6
   - All kexts at latest available versions
   - Sonoma support added and working
   - Sonoma - WiFi support broken with Fenvi cards (can be fixed with OCLP)
-  
 - **9 Aug 2023**
   - Updated to OpenCore 0.9.4
 

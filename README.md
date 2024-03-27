@@ -301,6 +301,36 @@ Visit the [BIOS configuration](https://github.com/seven-of-eleven/designare-z390
 
 >Note: If you've recently updated your BIOS firmware, you will need to double-check these as some of them get reset after updating!
 
+
+
+<details>  
+<summary><strong>Thunderbolt working</strong></summary>
+
+
+
+
+- Added ACPI files and updated config to enable Thunderbolt
+
+
+> **DiableIoMapper is set to false to enable AppleVTD** as outlined below. Set to true if you are having issues with your Fenvi WiFi BT card.
+
+- Enabled AppleVTD
+
+  - Since Monterey 12.3.0, AppleEthernetE1000 driver kit natively attaches to i211 ethernet. However, if the ethernet port is occupied without having AppleVTD enabled, the system will experience freeze, crash, and etc. To avoid having these issues, we need to enable AppleVTD.
+
+  ```
+  - Enable VT-d in BIOS, 
+  - Set DisableIoMapper to false
+  - Drop OEM DMAR Table in config.plist
+  - Inject modified DMAR Table(Reserved Memory Regions removed) in config.plist
+  ```
+
+  - Removed AppleIGB kext as it's not needed with AppleVTD enabled.
+
+</details>
+
+
+
 </details>  
 
 
@@ -522,33 +552,6 @@ DeviceProperties>Add
 | -------------------------- | ---------- | ------------ |
 | PciRoot(0x0)/Pci(0x1F,0x3) | Dictionary |              |
 | layout-id                  | Data       | **0B000000** |
-
-</details>
-
-
-
-<details>  
-<summary><strong>Thunderbolt working</strong></summary>
-
-
-
-- Added ACPI files and updated config to enable Thunderbolt
-
-
-> **DiableIoMapper is set to false to enable AppleVTD** as outlined below. Set to true if you are having issues with your Fenvi WiFi BT card.
-
-- Enabled AppleVTD
-
-  - Since Monterey 12.3.0, AppleEthernetE1000 driver kit natively attaches to i211 ethernet. However, if the ethernet port is occupied without having AppleVTD enabled, the system will experience freeze, crash, and etc. To avoid having these issues, we need to enable AppleVTD.
-
-  ```
-  - Enable VT-d in BIOS, 
-  - Set DisableIoMapper to false
-  - Drop OEM DMAR Table in config.plist
-  - Inject modified DMAR Table(Reserved Memory Regions removed) in config.plist
-  ```
-
-  - Removed AppleIGB kext as it's not needed with AppleVTD enabled.
 
 </details>
 

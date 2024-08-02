@@ -4,7 +4,7 @@
 
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg)  [![macOS-stable](https://img.shields.io/badge/macOS-13.6.4-brightgreen.svg)](https://www.apple.com/macos/ventura) [![macOS-stable](https://img.shields.io/badge/macOS-14.4.1-brightgreen.svg)](https://www.apple.com/macos/sonoma-preview/)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg)  [![macOS-stable](https://img.shields.io/badge/macOS-13.6.4-brightgreen.svg)](https://www.apple.com/macos) [![macOS-stable](https://img.shields.io/badge/macOS-14.6-brightgreen.svg)](https://www.apple.com/macos/sonoma/)
 
 **DISCLAIMER:**
 
@@ -197,7 +197,7 @@ Compute (GPU):
 
 | Component    | Version |
 | ------------ | ------- |
-| macOS Sonoma | 14.4.1  |
+| macOS Sonoma | 14.6    |
 | OpenCore     | v0.9.9  |
 
 </details>

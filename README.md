@@ -4,7 +4,7 @@
 
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg)  [![macOS-stable](https://img.shields.io/badge/macOS-13.6.4-brightgreen.svg)](https://www.apple.com/macos) [![macOS-stable](https://img.shields.io/badge/macOS-14.6-brightgreen.svg)](https://www.apple.com/macos/sonoma/)
+[![OpenCore](https://img.shields.io/badge/OpenCore-1.0.1-blue.svg)](https://github.com/acidanthera/OpenCorePkg)  [![macOS-stable](https://img.shields.io/badge/macOS-13.7-brightgreen.svg)](https://www.apple.com/macos) [![macOS-stable](https://img.shields.io/badge/macOS-14.7-brightgreen.svg)](https://www.apple.com/macos/sonoma/) [![OpenCore](https://img.shields.io/badge/macOS-15.0-red.svg)](https://apple.com/macos/)
 
 **DISCLAIMER:**
 
@@ -56,15 +56,16 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 <summary><strong>⚠️ HIGHLIGHTED CHANGES FROM PREVIOUS EFI ⚠️</strong></summary>
 
 
+### Note: Sequoia still has issues with WiFi and Bluetooth.
 
 #### Choose your config
 
 - Choose your preferred config.plist file and **rename it to config.plist**:
 
-  - config-no-wifi-bt.plist - `disables the internal WiFi and bluetooth`
+  - config-no-wifi-bt.plist - `disables the internal (Intel) WiFi and bluetooth`
     - most similar to older Releases. Use this if you have installed a 3rd party PCIE WiFi/bt card (Fenvi or other).
     - all WiFi and Bluetooth related kexts are disabled. If you need BluetoolFixup for your card you'll need to enable it.  Also the child items listed below are commented out, simply remove the '#' at the front of the key value to enable them.
-  - config-wifi-bt.plist - `enables builtin WiFi and bluetooth`
+  - config-wifi-bt.plist - `enables builtin (Intel) WiFi and bluetooth`
     - use this if you **don't have** PCIE card but want to enable **builtin Intel WiFi/bt**
     - Kexts provided for Ventura, and Sonoma. Restricted by Min/Max Version values.
 
@@ -197,8 +198,8 @@ Compute (GPU):
 
 | Component    | Version |
 | ------------ | ------- |
-| macOS Sonoma | 14.6    |
-| OpenCore     | v0.9.9  |
+| macOS Sonoma | 14.7    |
+| OpenCore     | v1.0.1  |
 
 </details>
 
@@ -226,25 +227,26 @@ Compute (GPU):
 <br>
 
 
-| Kext                   | Version                                                  |
-| :--------------------- | -------------------------------------------------------- |
-| AppleALC               | 1.8.9                                                    |
-| IntelMausi             | 1.0.7                                                    |
-| Lilu                   | 1.6.7                                                    |
-| RestrictEvents         | 1.1.3 - `only needed with SMBIOS MacPro7,1`              |
-| SMCProcessor           | 1.3.2                                                    |
-| SMCSuperIO             | 1.3.2                                                    |
-| USBPorts               | 1.0.0                                                    |
-| VirtualSMC             | 1.3.2                                                    |
-| WhateverGreen          | 1.6.6                                                    |
-| **Additional Kexts***  | Used to enable builtin WiFi and bluetooth                |
-| AirportItlwm           | 2.2.0 - `enable WiFi on Ventura`                         |
-| AirportItlwmS-14.0     | 2.3.0 alpha -`enable WiFi on Sonoma 14.0-14.3`           |
-| AirportItlwmS          | 2.3.0 alpha - `enable WiFi on Sonoma 14.4+`              |
-| BlueToolFixup          | 2.6.8                                                    |
-| IntelBluetoothFirmware | 2.4.0                                                    |
-| IntelBTPatcher         | 2.4.0                                                    |
-| USBPortsWFBT           | 1.0.1 - `disables ports 11 & 12, and enable port 8 & 14` |
+| Kext                   | Version                                                      |
+| :--------------------- | ------------------------------------------------------------ |
+| AppleALC               | 1.9.1                                                        |
+| IntelMausi             | 1.0.7                                                        |
+| Lilu                   | 1.6.8                                                        |
+| RestrictEvents         | 1.1.4 - `only needed with SMBIOS MacPro7,1`                  |
+| SMCProcessor           | 1.3.3                                                        |
+| SMCSuperIO             | 1.3.3                                                        |
+| USBPorts               | 1.0.0                                                        |
+| VirtualSMC             | 1.3.3                                                        |
+| WhateverGreen          | 1.6.7                                                        |
+| **Additional Kexts***  | Used to enable builtin WiFi and bluetooth                    |
+| AirportItlwm-Ventura   | 2.3.0 - `enable WiFi on Ventura`                             |
+| AirportItlwm-S-14.0    | 2.3.0 -`enable WiFi on Sonoma 14.0-14.3`                     |
+| AirportItlwm           | 2.3.0 - `enable WiFi on Sonoma 14.4+`                        |
+| itlwm.kext             | 2.3.0 - `enables WiFi on Sequoia` - requires [HeliPort](https://github.com/OpenIntelWireless/HeliPort) app to work |
+| BlueToolFixup          | 2.6.8                                                        |
+| IntelBluetoothFirmware | 2.4.0                                                        |
+| IntelBTPatcher         | 2.4.0                                                        |
+| USBPortsWFBT           | 1.0.1 - `disables ports 11 & 12, and enable port 8 & 14`     |
 
 > **Additional Kexts** included in the EFI enable the internal WiFi and Bluetooth. The USB map used (USBPortsWFBT.kext) is changed to disable port 11& 12 and enable port 8 & 14. See the USB section below for more details.
 
@@ -260,8 +262,8 @@ Compute (GPU):
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 0.9.9 |
-| ResetNvramEntry.efi | 0.9.9             |
+|   OpenRuntime.efi   | OpenCorePkg 1.0.1 |
+| ResetNvramEntry.efi | 1.0.1             |
 
 </details>
 
@@ -390,23 +392,22 @@ Format is lang-COUNTRY:keyboard as shown below:
 
 
 <details>  
-<summary><strong>Ventura, or Sonoma?</strong></summary>
+<summary><strong>Ventura, Sonoma, or Sequoia?</strong></summary>
 
 
 
+The EFI folder should work for either Ventura, Sonoma, or Sequoia*. 
 
-The EFI folder should work for either Ventura, or Sonoma. 
+I would avoid installing Sequoia at this time as there are issues with Bluetooth and the WiFi kexts haven't been as of updated yet.
 
-I would avoid installing Sonoma 14.4 as it had issues with USB mapping.
+I'm primarily using this EFI with Sonoma 14.7 at the moment. Prior to this I was running Ventura without issue.
 
-I'm primarily using this EFI with Sonoma 14.4.1 at the moment. Prior to this I was running Ventura without issue.
+I have installed Sequoia on a secondary drive and everything worked except Bluetooth. There is work being done on the Bluetooth kext so I'm hopefull it will be resolved soon. The **itlwm.kext and Heliport** app were needed for WiFi.
 
 </details>  
 
 <details>  
 <summary><strong>Generate your own SMBIOS</strong></summary>
-
-
 
 
 Use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to create your own serial #... based off of your preferred model.
@@ -473,8 +474,6 @@ For reference the associated ports are outlined in the following diagrams (modif
 <details>  
 <summary><strong>USB Mapping - config-wifi-bt.plist (USBPortsWFBT.kext)</strong></summary>
 <br>
-
-
 
 
 > Note the **difference from the USBPorts.kext** is the enabling of ports 8 & 14 and disabling of ports 11 & 12. This was done to **enable the internal WiFi and bluetooth**.
@@ -600,13 +599,20 @@ DeviceProperties>Add
 <summary><strong>Change log 🪵</strong></summary>
 
 
+- **17 Sept 2024**
+  - Update to OpenCore 1.0.1
+  
+  - All kexts updated to the latest version at the time of release
+  
+  - Sequoia - issues with WiFi and Bluetooth
+  
 - **26 Mar 2024**
   - Update to OpenCore 0.9.9
-  - All kexts update to the latest version at time of release
+  - All kexts updated to the latest version at the time of release
   - Dropped Monterey in the EFI - `can use a previous release for Monterey`
   - Sonoma - Issues with Fenvi cards remain (can be patched using OCLP)
   - Cleaned up the config.plist file removing unneeded keys
-  
+
 - **15 Nov 2023**
   - Update to OpenCore 0.9.6
   - All kexts at latest available versions

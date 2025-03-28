@@ -4,7 +4,7 @@
 
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-1.0.1-blue.svg)](https://github.com/acidanthera/OpenCorePkg)  [![macOS-stable](https://img.shields.io/badge/macOS-13.7-brightgreen.svg)](https://www.apple.com/macos) [![macOS-stable](https://img.shields.io/badge/macOS-14.7-brightgreen.svg)](https://www.apple.com/macos/sonoma/) [![OpenCore](https://img.shields.io/badge/macOS-15.0-red.svg)](https://apple.com/macos/)
+[![OpenCore](https://img.shields.io/badge/OpenCore-1.0.4-blue?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBoZWlnaHQ9IjU0OSIgdmlld0JveD0iNjcwIDAgNTQ5IDU0OSIgd2lkdGg9IjU0OSIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48bGluZWFyR3JhZGllbnQgaWQ9IkEiIHgxPSI3OS41MDQ0ODQlIiB4Mj0iMjguMTE0MjQ0JSIgeTE9IjU3Ljc2NjU2JSIgeTI9IjgwLjE3OTY1NCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzI3ODZkNyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA5NmViNCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJCIiB4MT0iMjEuMDc5NjkzJSIgeDI9Ijg2Ljc2MjEzJSIgeTE9IjEwLjEzNzM5JSIgeTI9IjYzLjI0MzU0OCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAyYWRkYyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA4ZTRjYyIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJDIiB4MT0iNDQuNTg1Mzk3JSIgeDI9Ijk0Ljg3Mzc2JSIgeTE9IjEwNi43NjcwODUlIiB5Mj0iNTUuNjM0OCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwNzBlYyIgc3RvcC1vcGFjaXR5PSIuODcxIi8+PHN0b3Agb2Zmc2V0PSIuNjE0IiBzdG9wLWNvbG9yPSIjMDI5NmUzIiBzdG9wLW9wYWNpdHk9Ii40NTMiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwN2RmZDAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJEIiB4MT0iNTAlIiB4Mj0iNDguMzIzODE2JSIgeTE9IjcyLjQ5MTkwNSUiIHkyPSI5NC4xNjE3OTclIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwMDg5ZTUiIHN0b3Atb3BhY2l0eT0iMCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwNzBlZCIgc3RvcC1vcGFjaXR5PSIuODEiLz48L2xpbmVhckdyYWRpZW50PjxnIHRyYW5zZm9ybT0ibWF0cml4KC43MDcxMDcgLS43MDcxMDcgLjcwNzEwNyAuNzA3MTA3IDYxNC45OTk5OTggMjY5LjI2MDc5OCkiPjxwYXRoIGQ9Ik0yMjkuOTk0IDQ1OS45ODhDMTAyLjk3MiA0NTkuOTg4IDAgMzU3LjAxNiAwIDIyOS45OTRTMTAyLjk3MiAwIDIyOS45OTQgMHMyMjkuOTk0IDEwMi45NzIgMjI5Ljk5NCAyMjkuOTk0LTEwMi45NzIgMjI5Ljk5NC0yMjkuOTk0IDIyOS45OTR6bTAtMTMwLjJjNTUuMTE1IDAgOTkuNzk0LTQ0LjY3OSA5OS43OTQtOTkuNzk0UzI4NS4xMDkgMTMwLjIgMjI5Ljk5NCAxMzAuMiAxMzAuMiAxNzQuODc5IDEzMC4yIDIyOS45OTRzNDQuNjc5IDk5Ljc5NCA5OS43OTQgOTkuNzk0eiIgZmlsbD0idXJsKCNBKSIvPjx1c2UgeGxpbms6aHJlZj0iI0YiIGZpbGw9InVybCgjQikiLz48dXNlIHhsaW5rOmhyZWY9IiNGIiBmaWxsPSJ1cmwoI0MpIi8+PHVzZSB4bGluazpocmVmPSIjRiIgZmlsbD0idXJsKCNEKSIvPjwvZz48ZGVmcyA+PHBhdGggaWQ9IkYiIGQ9Ik00NTkuNzUyIDIyNi43ODRjLTEuMjYyIDM0Ljg0My0yOS45MDYgNjIuNzAyLTY1LjA1NyA2Mi43MDItMzQuMDY1IDAtNjIuMDE5LTI2LjE2NS02NC44NjItNTkuNDk0bC0uMDQ2LjAwMS0uMDAyLS41ODlhNjYuMDEgNjYuMDEgMCAwIDEtLjE5MS01LjAxOWwuMDAzLS41OTVjLTMuMjAzLTUyLjIyNi00Ni41NzMtOTMuNTkxLTk5LjYwNC05My41OTEtNTUuMTE1IDAtMTEyLjM2MiA0My44NDQtMTI5Ljg4MyAxMDcuODYzLTI2LjI2MiA5NS45NTcgNTAuOTYyIDE5OC45MTQgMTI5Ljg0MiAyMjEuODg0bC4xNDEuMDQxaC0uMTAxQzEwMi45NzIgNDU5Ljk4OCAwIDM1Ny4wMTYgMCAyMjkuOTk0UzEwMi45NzIgMCAyMjkuOTk0IDBjMTI1Ljk0OSAwIDIyOC4yNTIgMTAxLjIzOSAyMjkuOTcyIDIyNi43NzlsLS4yMTQuMDA1eiIvPjwvZGVmcz48L3N2Zz4=)](https://github.com/acidanthera/OpenCorePkg)  [![macOS-Stable](https://img.shields.io/badge/MacOS-14.7.4-brightgreen?logo=apple)](https://www.apple.com/macos)  [![macOS-Stable](https://img.shields.io/badge/MacOS-15.3.2-red?logo=apple)](https://www.apple.com/macos/)
 
 **DISCLAIMER:**
 
@@ -56,7 +56,9 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 <summary><strong>⚠️ HIGHLIGHTED CHANGES FROM PREVIOUS EFI ⚠️</strong></summary>
 
 
-### Note: Sequoia still has issues with WiFi and Bluetooth.
+### Note: Sequoia still has issues with AirportItlwm, I'm using itlwm with Sequoia.
+
+> **You need to install the [Heliport app](https://github.com/OpenIntelWireless/HeliPort) to use WiFi on Sequoia.**
 
 #### Choose your config
 
@@ -64,10 +66,12 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 
   - config-no-wifi-bt.plist - `disables the internal (Intel) WiFi and bluetooth`
     - most similar to older Releases. Use this if you have installed a 3rd party PCIE WiFi/bt card (Fenvi or other).
-    - all WiFi and Bluetooth related kexts are disabled. If you need BluetoolFixup for your card you'll need to enable it.  Also the child items listed below are commented out, simply remove the '#' at the front of the key value to enable them.
+    - all WiFi and Bluetooth related kexts are disabled. If you need BluetoolFixup for your card you'll need to enable it.
+    - You may need to use OpenCore Legacy Patcher to get Wifi and Bluetooth working.
+      - I don't have a 3rd party card to test this.
   - config-wifi-bt.plist - `enables builtin (Intel) WiFi and bluetooth`
-    - use this if you **don't have** PCIE card but want to enable **builtin Intel WiFi/bt**
-    - Kexts provided for Ventura, and Sonoma. Restricted by Min/Max Version values.
+    - use this if you want to enable **builtin Intel WiFi/bt**
+    - Kexts provided for Sonoma and Sequoia. Restricted by Min/Max Version values.
 
 </details>
 
@@ -78,7 +82,7 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 
 
 
-When updating from 14.x to 14.4+, or installing 14.4+ the following is recommended:
+When updating your MacOS version 14.4+, the following is recommended:
 
 - Set **SecureBootModel** to **Disabled** (not *default*)
 - Disable all WiFi kexts if any
@@ -90,7 +94,7 @@ After updating:
 - Reset **SecureBootModel** to **Default** (or **j160** for MacPro7,1)
 - Enable all WiFi and Bluetooth kexts (latest versions already included in the EFI)
 
-> Note: All WiFi and Bluetooth kexts in the release are enabled by default.
+> Note: All WiFi and Bluetooth kexts in the release EFI are enabled by default.
 
 </details>
 
@@ -198,8 +202,8 @@ Compute (GPU):
 
 | Component    | Version |
 | ------------ | ------- |
-| macOS Sonoma | 14.7    |
-| OpenCore     | v1.0.1  |
+| macOS Sonoma | 14.7.4  |
+| OpenCore     | v1.0.4  |
 
 </details>
 
@@ -229,21 +233,19 @@ Compute (GPU):
 
 | Kext                   | Version                                                      |
 | :--------------------- | ------------------------------------------------------------ |
-| AppleALC               | 1.9.1                                                        |
-| IntelMausi             | 1.0.7                                                        |
-| Lilu                   | 1.6.8                                                        |
-| RestrictEvents         | 1.1.4 - `only needed with SMBIOS MacPro7,1`                  |
-| SMCProcessor           | 1.3.3                                                        |
-| SMCSuperIO             | 1.3.3                                                        |
+| AppleALC               | 1.9.4                                                        |
+| IntelMausi             | 1.0.8                                                        |
+| Lilu                   | 1.7.0                                                        |
+| RestrictEvents         | 1.1.5 - `only needed with SMBIOS MacPro7,1`                  |
+| SMCProcessor           | 1.3.5                                                        |
+| SMCSuperIO             | 1.3.5                                                        |
 | USBPorts               | 1.0.0                                                        |
-| VirtualSMC             | 1.3.3                                                        |
-| WhateverGreen          | 1.6.7                                                        |
+| VirtualSMC             | 1.3.5                                                        |
+| WhateverGreen          | 1.6.9                                                        |
 | **Additional Kexts***  | Used to enable builtin WiFi and bluetooth                    |
-| AirportItlwm-Ventura   | 2.3.0 - `enable WiFi on Ventura`                             |
-| AirportItlwm-S-14.0    | 2.3.0 -`enable WiFi on Sonoma 14.0-14.3`                     |
 | AirportItlwm           | 2.3.0 - `enable WiFi on Sonoma 14.4+`                        |
 | itlwm.kext             | 2.3.0 - `enables WiFi on Sequoia` - requires [HeliPort](https://github.com/OpenIntelWireless/HeliPort) app to work |
-| BlueToolFixup          | 2.6.8                                                        |
+| BlueToolFixup          | 2.6.9                                                        |
 | IntelBluetoothFirmware | 2.4.0                                                        |
 | IntelBTPatcher         | 2.4.0                                                        |
 | USBPortsWFBT           | 1.0.1 - `disables ports 11 & 12, and enable port 8 & 14`     |
@@ -262,8 +264,8 @@ Compute (GPU):
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 1.0.1 |
-| ResetNvramEntry.efi | 1.0.1             |
+|   OpenRuntime.efi   | OpenCorePkg 1.0.4 |
+| ResetNvramEntry.efi | 1.0.4             |
 
 </details>
 
@@ -279,8 +281,6 @@ Compute (GPU):
         <img src="./images/desktop-image.png" alt="Desktop" width="427">
     </p>
 </details> 
-
-
 
 
 
@@ -307,8 +307,6 @@ Visit the [BIOS configuration](https://github.com/seven-of-eleven/designare-z390
 
 <details>  
 <summary><strong>Thunderbolt working</strong></summary>
-
-
 
 
 - Added ACPI files and updated config to enable Thunderbolt
@@ -343,7 +341,7 @@ Visit the [BIOS configuration](https://github.com/seven-of-eleven/designare-z390
 
 
 
-Read the official [OpenCore Desktop Guide for Coffee Lake](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html) when making changes to the `config.plist` and the guide's [Gather Files section](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#firmware-drivers) when picking drivers and kexts.
+Read the official [OpenCore Desktop Guide for Coffee Lake](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html) when making changes to the `config.plist` and the guide's [Gather Files section](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#firmware-drivers) when picking alternate drivers and kexts.
 
 The following fields have been replaced by `[REPLACEME]` (for ease of <kbd>⌘</kbd>+<kbd>F</kbd>):
 
@@ -392,17 +390,16 @@ Format is lang-COUNTRY:keyboard as shown below:
 
 
 <details>  
-<summary><strong>Ventura, Sonoma, or Sequoia?</strong></summary>
+<summary><strong>Sonoma, or Sequoia?</strong></summary>
 
 
 
-The EFI folder should work for either Ventura, Sonoma, or Sequoia*. 
 
-I would avoid installing Sequoia at this time as there are issues with Bluetooth and the WiFi kexts haven't been as of updated yet.
+The EFI folder should work for either Sonoma 14.4+, or Sequoia. Sequoia still has issues with the WiFi kexts that haven't been updated as of yet. I'm primarily using this EFI with Sonoma 14.7.4 at the moment.
 
-I'm primarily using this EFI with Sonoma 14.7 at the moment. Prior to this I was running Ventura without issue.
+I have installed Sequoia on a secondary drive and everything worked. The **itlwm.kext and Heliport** app were needed for WiFi.
 
-I have installed Sequoia on a secondary drive and everything worked except Bluetooth. There is work being done on the Bluetooth kext so I'm hopefull it will be resolved soon. The **itlwm.kext and Heliport** app were needed for WiFi.
+> Earlier versions of MacOS can be installed using a previous EFI Release.
 
 </details>  
 
@@ -564,7 +561,7 @@ DeviceProperties>Add
 - [x] iMessage, FaceTime, App Store, iTunes Store. `Generate your own SMBIOS`
 - [x] Intel I219-V Ethernet port
 - [x] Intel I211 Ethernet port
-- [x] Internal WiFi and bluetooth - `WiFi not fully tested on Ventura`
+- [x] Internal WiFi and bluetooth
 - [x] Audio jacks - `front and rear 3.5mm audio jacks work with quirks (see Audio Setup for details)`
 - [x] Shutdown / Restart / Sleep
 - [x] USB 3.0/3/1 - `USB map created.`
@@ -572,7 +569,6 @@ DeviceProperties>Add
 - [x] Thunderbolt
 - [x] Sidecar - `reported working, I haven't tested`
 - [x] Conitunity Camera - `working when iPhone is connected by USB`
-- [x] WiFi on Ventura - `works but I primarily use Ethernet`
 
 </details>  
 
@@ -599,20 +595,24 @@ DeviceProperties>Add
 <summary><strong>Change log 🪵</strong></summary>
 
 
+- **27 Mar 2025**
+  - Update to OpenCore 1.0.4
+  - All kexts updated to the latest version at the time of release
+  - Sequoia working with Itlwm and HeliPort app
+  - EFI support updated to MacOS versions 14.4+
+  
 - **17 Sept 2024**
   - Update to OpenCore 1.0.1
-  
+
   - All kexts updated to the latest version at the time of release
-  
+
   - Sequoia - issues with WiFi and Bluetooth
-  
 - **26 Mar 2024**
   - Update to OpenCore 0.9.9
   - All kexts updated to the latest version at the time of release
   - Dropped Monterey in the EFI - `can use a previous release for Monterey`
   - Sonoma - Issues with Fenvi cards remain (can be patched using OCLP)
   - Cleaned up the config.plist file removing unneeded keys
-
 - **15 Nov 2023**
   - Update to OpenCore 0.9.6
   - All kexts at latest available versions

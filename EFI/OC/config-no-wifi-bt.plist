@@ -7,13 +7,13 @@
 		<key>Board</key>
 		<string>Gigabyte z390 Designare</string>
 		<key>OpenCore Version</key>
-		<string>1.0.1</string>
+		<string>1.0.4</string>
 		<key>SMBIOS</key>
 		<string>MacPro7,1</string>
 		<key>macOS Compatibility</key>
-		<string>macOS, Ventura to macOS Sonoma (Sequoia without bluetooth, and HeliPort for wifi)</string>
+		<string>macOS, Sonoma 14.4+ to macOS Sequoia</string>
 		<key>Note 0 - Config provides</key>
-		<string>NO Internal INTEL wifi, or bluetooth. Thunderbolt</string>
+		<string>NO Internal INTEL wifi, or bluetooth. Does provide Thunderbolt</string>
 		<key>Note 1 - File renaming</key>
 		<string>rename file to 'config.plist' to enable this setup</string>
 		<key>Note 2 - boot-args</key>
@@ -127,6 +127,8 @@
 			<false/>
 			<key>AvoidRuntimeDefrag</key>
 			<true/>
+			<key>ClearTaskSwitchBit</key>
+			<false/>
 			<key>DevirtualiseMmio</key>
 			<true/>
 			<key>DisableSingleUser</key>
@@ -231,51 +233,15 @@
 				<key>BundlePath</key>
 				<string>AirportItlwm.kext</string>
 				<key>Comment</key>
-				<string>Airport for Sonoma 14.4+</string>
+				<string>AirportItlwm.kext</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AirportItlwm</string>
 				<key>MaxKernel</key>
 				<string>23.99.99</string>
 				<key>MinKernel</key>
 				<string>23.4.0</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>AirportItlwm-Ventura.kext</string>
-				<key>Comment</key>
-				<string>AirportItlwm-Ventura.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AirportItlwm</string>
-				<key>MaxKernel</key>
-				<string>22.99.99</string>
-				<key>MinKernel</key>
-				<string>22.0.0</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>AirportItlwm-S-14.0.kext</string>
-				<key>Comment</key>
-				<string>AirportItlwm-S-14.0.kext</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AirportItlwm</string>
-				<key>MaxKernel</key>
-				<string>23.3.99</string>
-				<key>MinKernel</key>
-				<string>23.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -342,6 +308,24 @@
 				<string>USBPorts.kext</string>
 				<key>Enabled</key>
 				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>USBPortsWFBT.kext</string>
+				<key>Comment</key>
+				<string>USBPortsWFBT.kext</string>
+				<key>Enabled</key>
+				<false/>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
@@ -496,38 +480,7 @@
 		<key>Force</key>
 		<array/>
 		<key>Patch</key>
-		<array>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string>__ZN11IOPCIBridge20addBridgeMemoryRangeEyyb</string>
-				<key>Comment</key>
-				<string>CaseySJ - Fix AppleVTD issue in 13.3+ -now solved with DiableIoMapperMapping option in quirks</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<false/>
-				<key>Find</key>
-				<data>TIn26Jr/AAA=</data>
-				<key>Identifier</key>
-				<string>com.apple.iokit.IOPCIFamily</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>22.4.0</string>
-				<key>Replace</key>
-				<data>TIn2kJCQkJA=</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-		</array>
+		<array/>
 		<key>Quirks</key>
 		<dict>
 			<key>AppleCpuPmCfgLock</key>
@@ -1059,6 +1012,8 @@
 			<false/>
 		</dict>
 		<key>ReservedMemory</key>
+		<array/>
+		<key>Unload</key>
 		<array/>
 	</dict>
 </dict>

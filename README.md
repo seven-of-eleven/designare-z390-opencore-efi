@@ -4,7 +4,7 @@
 
 <img align="right" src="./images/1000-5.png" alt="z390 Designare" width="430">
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-1.0.4-blue?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBoZWlnaHQ9IjU0OSIgdmlld0JveD0iNjcwIDAgNTQ5IDU0OSIgd2lkdGg9IjU0OSIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48bGluZWFyR3JhZGllbnQgaWQ9IkEiIHgxPSI3OS41MDQ0ODQlIiB4Mj0iMjguMTE0MjQ0JSIgeTE9IjU3Ljc2NjU2JSIgeTI9IjgwLjE3OTY1NCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzI3ODZkNyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA5NmViNCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJCIiB4MT0iMjEuMDc5NjkzJSIgeDI9Ijg2Ljc2MjEzJSIgeTE9IjEwLjEzNzM5JSIgeTI9IjYzLjI0MzU0OCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAyYWRkYyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA4ZTRjYyIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJDIiB4MT0iNDQuNTg1Mzk3JSIgeDI9Ijk0Ljg3Mzc2JSIgeTE9IjEwNi43NjcwODUlIiB5Mj0iNTUuNjM0OCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwNzBlYyIgc3RvcC1vcGFjaXR5PSIuODcxIi8+PHN0b3Agb2Zmc2V0PSIuNjE0IiBzdG9wLWNvbG9yPSIjMDI5NmUzIiBzdG9wLW9wYWNpdHk9Ii40NTMiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwN2RmZDAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJEIiB4MT0iNTAlIiB4Mj0iNDguMzIzODE2JSIgeTE9IjcyLjQ5MTkwNSUiIHkyPSI5NC4xNjE3OTclIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwMDg5ZTUiIHN0b3Atb3BhY2l0eT0iMCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwNzBlZCIgc3RvcC1vcGFjaXR5PSIuODEiLz48L2xpbmVhckdyYWRpZW50PjxnIHRyYW5zZm9ybT0ibWF0cml4KC43MDcxMDcgLS43MDcxMDcgLjcwNzEwNyAuNzA3MTA3IDYxNC45OTk5OTggMjY5LjI2MDc5OCkiPjxwYXRoIGQ9Ik0yMjkuOTk0IDQ1OS45ODhDMTAyLjk3MiA0NTkuOTg4IDAgMzU3LjAxNiAwIDIyOS45OTRTMTAyLjk3MiAwIDIyOS45OTQgMHMyMjkuOTk0IDEwMi45NzIgMjI5Ljk5NCAyMjkuOTk0LTEwMi45NzIgMjI5Ljk5NC0yMjkuOTk0IDIyOS45OTR6bTAtMTMwLjJjNTUuMTE1IDAgOTkuNzk0LTQ0LjY3OSA5OS43OTQtOTkuNzk0UzI4NS4xMDkgMTMwLjIgMjI5Ljk5NCAxMzAuMiAxMzAuMiAxNzQuODc5IDEzMC4yIDIyOS45OTRzNDQuNjc5IDk5Ljc5NCA5OS43OTQgOTkuNzk0eiIgZmlsbD0idXJsKCNBKSIvPjx1c2UgeGxpbms6aHJlZj0iI0YiIGZpbGw9InVybCgjQikiLz48dXNlIHhsaW5rOmhyZWY9IiNGIiBmaWxsPSJ1cmwoI0MpIi8+PHVzZSB4bGluazpocmVmPSIjRiIgZmlsbD0idXJsKCNEKSIvPjwvZz48ZGVmcyA+PHBhdGggaWQ9IkYiIGQ9Ik00NTkuNzUyIDIyNi43ODRjLTEuMjYyIDM0Ljg0My0yOS45MDYgNjIuNzAyLTY1LjA1NyA2Mi43MDItMzQuMDY1IDAtNjIuMDE5LTI2LjE2NS02NC44NjItNTkuNDk0bC0uMDQ2LjAwMS0uMDAyLS41ODlhNjYuMDEgNjYuMDEgMCAwIDEtLjE5MS01LjAxOWwuMDAzLS41OTVjLTMuMjAzLTUyLjIyNi00Ni41NzMtOTMuNTkxLTk5LjYwNC05My41OTEtNTUuMTE1IDAtMTEyLjM2MiA0My44NDQtMTI5Ljg4MyAxMDcuODYzLTI2LjI2MiA5NS45NTcgNTAuOTYyIDE5OC45MTQgMTI5Ljg0MiAyMjEuODg0bC4xNDEuMDQxaC0uMTAxQzEwMi45NzIgNDU5Ljk4OCAwIDM1Ny4wMTYgMCAyMjkuOTk0UzEwMi45NzIgMCAyMjkuOTk0IDBjMTI1Ljk0OSAwIDIyOC4yNTIgMTAxLjIzOSAyMjkuOTcyIDIyNi43NzlsLS4yMTQuMDA1eiIvPjwvZGVmcz48L3N2Zz4=)](https://github.com/acidanthera/OpenCorePkg)  [![macOS-Stable](https://img.shields.io/badge/MacOS-14.7.6-brightgreen?logo=apple)](https://www.apple.com/macos)  [![macOS-Stable](https://img.shields.io/badge/MacOS-15.5-brightgreen?logo=apple)](https://www.apple.com/macos/)
+[![OpenCore](https://img.shields.io/badge/OpenCore-1.0.7-blue?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBoZWlnaHQ9IjU0OSIgdmlld0JveD0iNjcwIDAgNTQ5IDU0OSIgd2lkdGg9IjU0OSIgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48bGluZWFyR3JhZGllbnQgaWQ9IkEiIHgxPSI3OS41MDQ0ODQlIiB4Mj0iMjguMTE0MjQ0JSIgeTE9IjU3Ljc2NjU2JSIgeTI9IjgwLjE3OTY1NCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzI3ODZkNyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA5NmViNCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJCIiB4MT0iMjEuMDc5NjkzJSIgeDI9Ijg2Ljc2MjEzJSIgeTE9IjEwLjEzNzM5JSIgeTI9IjYzLjI0MzU0OCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAyYWRkYyIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzA4ZTRjYyIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJDIiB4MT0iNDQuNTg1Mzk3JSIgeDI9Ijk0Ljg3Mzc2JSIgeTE9IjEwNi43NjcwODUlIiB5Mj0iNTUuNjM0OCUiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzAwNzBlYyIgc3RvcC1vcGFjaXR5PSIuODcxIi8+PHN0b3Agb2Zmc2V0PSIuNjE0IiBzdG9wLWNvbG9yPSIjMDI5NmUzIiBzdG9wLW9wYWNpdHk9Ii40NTMiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwN2RmZDAiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJEIiB4MT0iNTAlIiB4Mj0iNDguMzIzODE2JSIgeTE9IjcyLjQ5MTkwNSUiIHkyPSI5NC4xNjE3OTclIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwMDg5ZTUiIHN0b3Atb3BhY2l0eT0iMCIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzAwNzBlZCIgc3RvcC1vcGFjaXR5PSIuODEiLz48L2xpbmVhckdyYWRpZW50PjxnIHRyYW5zZm9ybT0ibWF0cml4KC43MDcxMDcgLS43MDcxMDcgLjcwNzEwNyAuNzA3MTA3IDYxNC45OTk5OTggMjY5LjI2MDc5OCkiPjxwYXRoIGQ9Ik0yMjkuOTk0IDQ1OS45ODhDMTAyLjk3MiA0NTkuOTg4IDAgMzU3LjAxNiAwIDIyOS45OTRTMTAyLjk3MiAwIDIyOS45OTQgMHMyMjkuOTk0IDEwMi45NzIgMjI5Ljk5NCAyMjkuOTk0LTEwMi45NzIgMjI5Ljk5NC0yMjkuOTk0IDIyOS45OTR6bTAtMTMwLjJjNTUuMTE1IDAgOTkuNzk0LTQ0LjY3OSA5OS43OTQtOTkuNzk0UzI4NS4xMDkgMTMwLjIgMjI5Ljk5NCAxMzAuMiAxMzAuMiAxNzQuODc5IDEzMC4yIDIyOS45OTRzNDQuNjc5IDk5Ljc5NCA5OS43OTQgOTkuNzk0eiIgZmlsbD0idXJsKCNBKSIvPjx1c2UgeGxpbms6aHJlZj0iI0YiIGZpbGw9InVybCgjQikiLz48dXNlIHhsaW5rOmhyZWY9IiNGIiBmaWxsPSJ1cmwoI0MpIi8+PHVzZSB4bGluazpocmVmPSIjRiIgZmlsbD0idXJsKCNEKSIvPjwvZz48ZGVmcyA+PHBhdGggaWQ9IkYiIGQ9Ik00NTkuNzUyIDIyNi43ODRjLTEuMjYyIDM0Ljg0My0yOS45MDYgNjIuNzAyLTY1LjA1NyA2Mi43MDItMzQuMDY1IDAtNjIuMDE5LTI2LjE2NS02NC44NjItNTkuNDk0bC0uMDQ2LjAwMS0uMDAyLS41ODlhNjYuMDEgNjYuMDEgMCAwIDEtLjE5MS01LjAxOWwuMDAzLS41OTVjLTMuMjAzLTUyLjIyNi00Ni41NzMtOTMuNTkxLTk5LjYwNC05My41OTEtNTUuMTE1IDAtMTEyLjM2MiA0My44NDQtMTI5Ljg4MyAxMDcuODYzLTI2LjI2MiA5NS45NTcgNTAuOTYyIDE5OC45MTQgMTI5Ljg0MiAyMjEuODg0bC4xNDEuMDQxaC0uMTAxQzEwMi45NzIgNDU5Ljk4OCAwIDM1Ny4wMTYgMCAyMjkuOTk0UzEwMi45NzIgMCAyMjkuOTk0IDBjMTI1Ljk0OSAwIDIyOC4yNTIgMTAxLjIzOSAyMjkuOTcyIDIyNi43NzlsLS4yMTQuMDA1eiIvPjwvZGVmcz48L3N2Zz4=)](https://github.com/acidanthera/OpenCorePkg)  [![macOS-Stable](https://img.shields.io/badge/MacOS-26.4-brightgreen?logo=apple)](https://www.apple.com/macos/) [![macOS-Stable](https://img.shields.io/badge/MacOS-15.7.5-brightgreen?logo=apple)](https://www.apple.com/macos/)
 
 **DISCLAIMER:**
 
@@ -53,25 +53,25 @@ To install macOS follow the guides provided by [Dortania](https://dortania.githu
 
 
 <details>
-<summary><strong>⚠️ HIGHLIGHTED CHANGES FROM PREVIOUS EFI ⚠️</strong></summary>
+<summary><strong>⚠️ HIGHLIGHTS FROM EFI ⚠️</strong></summary>
 
 
-### Note: Sequoia still has issues with AirportItlwm, I'm using itlwm with Sequoia.
 
-> **You need to install the [Heliport app](https://github.com/OpenIntelWireless/HeliPort) to use WiFi on Sequoia.**
+### Note: Sequoia/Tahoe still have issues with AirportItlwm, using itlwm.kext.
 
-#### Choose your config
+> **You need to install the [Heliport app](https://github.com/OpenIntelWireless/HeliPort) to use WiFi on Sequoia/Tahoe.**
 
-- Choose your preferred config.plist file and **rename it to config.plist**:
+#### Config notes
 
-  - config-no-wifi-bt.plist - `disables the internal (Intel) WiFi and bluetooth`
-    - most similar to older Releases. Use this if you have installed a 3rd party PCIE WiFi/bt card (Fenvi or other).
-    - all WiFi and Bluetooth related kexts are disabled. If you need BluetoolFixup for your card you'll need to enable it.
-    - You may need to use OpenCore Legacy Patcher to get Wifi and Bluetooth working.
-      - I don't have a 3rd party card to test this.
-  - config-wifi-bt.plist - `enables builtin (Intel) WiFi and bluetooth`
-    - use this if you want to enable **builtin Intel WiFi/bt**
-    - Kexts provided for Sonoma and Sequoia. Restricted by Min/Max Version values.
+- config.plist - `enables builtin (Intel) WiFi and bluetooth`
+  - uses itlwm.kext for wifi
+  - RestrictEvents.kext is enabled by default.
+  - New USB mapping file created for Tahoe compatibility
+    - Sequioa USB mapping remains and is restricted by Minversion and Maxversion values.
+- The EFI folder has been simplified to support only internal wifi and bluetooth. 3rd party cards need OCLP patches to work properly. I don't have 3rd party cards, so I can't test them.
+- Tahoe has issues with audio - you can use a VoodooHDA.kext file if needed. I use an external USB device so this hasn't affected me. More details below. YMMV.
+- I added apfs_aligned.efi from ocbinarydata added to uefi->drivers and disabled enablejumpstart under uefi->apfs. To prevent Filevault from starting on Tahoe during the update/upgrade.
+Notes on filevault - https://iboysoft.com/tips/disable-filevault-mac.html
 
 </details>
 
@@ -90,6 +90,9 @@ When updating your MacOS version 14.4+, the following is recommended:
 - Add`revpatch=sbvmm` to  **boot-args** (if you want to update through the System Settings, otherwise just download the full installer)
 
 After updating:
+
+- **CHECK IF FILEVAULT IS ENABLED !!!!**
+  - Disable it immediately. Wait for complete disabling b/f you restart.
 
 - Reset **SecureBootModel** to **Default** (or **j160** for MacPro7,1)
 - Enable all WiFi and Bluetooth kexts (latest versions already included in the EFI)
@@ -202,8 +205,8 @@ Compute (GPU):
 
 | Component     | Version |
 | ------------- | ------- |
-| macOS Sequoia | 15.5    |
-| OpenCore      | v1.0.4  |
+| macOS Sequoia | 26.4    |
+| OpenCore      | v1.0.7  |
 
 </details>
 
@@ -233,24 +236,21 @@ Compute (GPU):
 
 | Kext                   | Version                                                      |
 | :--------------------- | ------------------------------------------------------------ |
-| AppleALC               | 1.9.4                                                        |
-| IntelMausi             | 1.0.8                                                        |
-| Lilu                   | 1.7.0                                                        |
-| RestrictEvents         | 1.1.5 - `only needed with SMBIOS MacPro7,1`                  |
-| SMCProcessor           | 1.3.5                                                        |
-| SMCSuperIO             | 1.3.5                                                        |
-| USBPorts               | 1.0.0                                                        |
-| VirtualSMC             | 1.3.5                                                        |
-| WhateverGreen          | 1.6.9                                                        |
-| **Additional Kexts***  | Used to enable builtin WiFi and bluetooth                    |
-| AirportItlwm           | 2.3.0 - `enable WiFi on Sonoma 14.4+`                        |
-| itlwm.kext             | 2.3.0 - `enables WiFi on Sequoia` - requires [HeliPort](https://github.com/OpenIntelWireless/HeliPort) app to work |
-| BlueToolFixup          | 2.6.9                                                        |
+| AppleALC               | 1.9.7                                                        |
+| Lilu                   | 1.7.2                                                        |
+| RestrictEvents         | 1.1.6                                                        |
+| SMCProcessor           | 1.3.7                                                        |
+| SMCSuperIO             | 1.3.7                                                        |
+| USBPorts               | 1.1.0 - `Tahoe compatible USB mapping`                       |
+| USBPorts-Sequioa       | 1.1.0 - `Sequioa compatible USB mapping`                     |
+| VirtualSMC             | 1.3.7                                                        |
+| WhateverGreen          | 1.7.0                                                        |
+| itlwm.kext             | 2.3.0 - `enables Intel WiFi` - requires [HeliPort](https://github.com/OpenIntelWireless/HeliPort) app to work |
+| BlueToolFixup          | 2.7.2                                                        |
 | IntelBluetoothFirmware | 2.4.0                                                        |
 | IntelBTPatcher         | 2.4.0                                                        |
-| USBPortsWFBT           | 1.0.1 - `disables ports 11 & 12, and enable port 8 & 14`     |
 
-> **Additional Kexts** included in the EFI enable the internal WiFi and Bluetooth. The USB map used (USBPortsWFBT.kext) is changed to disable port 11& 12 and enable port 8 & 14. See the USB section below for more details.
+
 
 </details>
 
@@ -264,8 +264,9 @@ Compute (GPU):
 |       Driver        | Version           |
 | :-----------------: | ----------------- |
 |     HfsPlus.efi     | 1.0.0             |
-|   OpenRuntime.efi   | OpenCorePkg 1.0.4 |
-| ResetNvramEntry.efi | 1.0.4             |
+|   OpenRuntime.efi   | OpenCorePkg 1.0.7 |
+| ResetNvramEntry.efi | 1.0.7             |
+|  apfs_aligned.efi   | 1.0.0             |
 
 </details>
 
@@ -354,7 +355,7 @@ The following fields have been replaced by `[REPLACEME]` (for ease of <kbd>⌘</
 - Choose a `SystemProductName`, either `iMac19,1` or `MacPro7,1` see **Generate your own SMBIOS** for details.
 - All packages are `RELEASE` and debugging is disabled. If you're having issues, be sure to enable debugging [as described in the OpenCore docs](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#debug), and also grab [the `DEBUG` version of OpenCorePkg](https://github.com/acidanthera/OpenCorePkg/releases).
 
-> If you're not using internal WiFi/bt you can remove the **Additional Kexts** in the Kext listing and take a snapshot with Propertree to update your config file. If you don't know what this means, just ignore it, everything will work fine 😀.
+
 
 </details>
 
@@ -390,14 +391,13 @@ Format is lang-COUNTRY:keyboard as shown below:
 
 
 <details>  
-<summary><strong>Sonoma, or Sequoia?</strong></summary>
+<summary><strong>Sequoia or Tahoe?</strong></summary>
 
 
 
+The EFI folder should work for either Sequoia or Tahoe. Both still have issues with the WiFi kexts. I recently updated to Tahoe and things seem to be stable.
 
-The EFI folder should work for either Sonoma 14.4+, or Sequoia. Sequoia still has issues with the WiFi kexts that haven't been updated as of yet. I'm primarily using this EFI with Sequoia 15.5 at the moment.
-
-I have installed Sequoia and everything is working. The **itlwm.kext and Heliport** app are needed for WiFi.
+The **itlwm.kext and Heliport** app are needed for WiFi.
 
 > Earlier versions of MacOS can be installed using a previous EFI Release.
 
@@ -431,7 +431,7 @@ Alternatively you can manually update the `PlatformInfo` by adjusting the follow
 
 ##### *Replace these with your values
 
-> **NOTE:** If you have everything working with your own USB mapping file. **KEEP IT.** Replace the provided USBPorts.kext file with the one in your existing EFI folder and perform a snapshot in Propertree for good measure.
+> **NOTE:** You need to **update your USBMapping file** when upgrading from Sequoia to Tahoe or it wont work correctly. See corpNewt's updater for instructions. Replace the provided USBPorts.kext file with your updated one and perform a snapshot in Propertree for good measure.
 
 </details>  
 
@@ -449,31 +449,12 @@ MacOS has a fifteen port limit. You can read more about the details in the [guid
 
 
 <details>  
-<summary><strong>USB Mapping - config-no-wifi-bt.plist (USBPorts.kext)</strong></summary>
+<summary><strong>USB Mapping - config.plist (USBPorts.kext)</strong></summary>
 <br>
 
 
 
-This USBPorts.kext file provided enables the following ports:
-
-![USB-Ports](images/USB-Ports.png)
-
-For reference the associated ports are outlined in the following diagrams (modified from [CaseySJ](https://www.tonymacx86.com/threads/success-gigabyte-designare-z390-thunderbolt-3-i7-9700k-amd-rx-580.316533/)):
-
-![Motherboard Ports](images/USB-Ports-All-motherboard.png)
-
-![Rear-IO](images/USB-Ports-Rear-IO.png)
-
-</details>
-
-
-
-<details>  
-<summary><strong>USB Mapping - config-wifi-bt.plist (USBPortsWFBT.kext)</strong></summary>
-<br>
-
-
-> Note the **difference from the USBPorts.kext** is the enabling of ports 8 & 14 and disabling of ports 11 & 12. This was done to **enable the internal WiFi and bluetooth**.
+> **USBPorts.kext** enables ports 8 & 14 and disables ports 11 & 12. This is done to **enable the internal WiFi and bluetooth**.
 
 
 This USBPortsWFBT.kext file provided enables the following ports:
@@ -510,7 +491,7 @@ Using the **SMBIOS MacPro7,1** will require either `CustomMemory` to be configur
 <summary><strong>Audio Setup</strong></summary>
 
 
-
+> **ISSUES with Audio on Tahoe** - On Tahoe, you need to rely on VoodooHDA.kext,  an external USB audio device, or AppleALC patched with OCLP-mod, as [outlined here](https://www.tonymacx86.com/threads/how-to-recover-applehda-under-tahoe.332294/).
 
 There are three options available that I'm aware of. You can use alcid 7, 11, or 16. All three are used by different Designare EFIs available online. I'm using alcid 11 because it works for what I need. If you have specific audio requirements and alcid 11 isn't working try the other values. `Previous EFIs in this repo used alcid=7.`
 
@@ -562,7 +543,7 @@ DeviceProperties>Add
 - [x] Intel I219-V Ethernet port
 - [x] Intel I211 Ethernet port
 - [x] Internal WiFi and bluetooth
-- [x] Audio jacks - `front and rear 3.5mm audio jacks work with quirks (see Audio Setup for details)`
+- [x] Audio jacks / need VoodooHDA.kext file - `front and rear 3.5mm audio jacks work with quirks (see Audio Setup for details)`
 - [x] Shutdown / Restart / Sleep
 - [x] USB 3.0/3/1 - `USB map created.`
 - [x] Graphical Boot menu `OpenCanopy (I included it in the EFI but I don't use it as I generally skip the boot menu.)`
@@ -576,7 +557,8 @@ DeviceProperties>Add
 <summary><strong>What's not working ⚠️</strong></summary>
 
 
-- [ ] All empty . Your hack should work wonderfully.
+- [ ] Audio jacks - no longer works with AppleALC.kext on Tahoe.
+- [ ] Wifi - no longer working with AirportItlwm.kext on Sequoia/Tahoe.
 
 </details>  
 
@@ -595,9 +577,22 @@ DeviceProperties>Add
 <summary><strong>Change log 🪵</strong></summary>
 
 
+- **6 Apr 2026**
+  - Updated to Tahoe 26.4
+  
+  - EFI folder 3rd party wifi dropped
+  
+  - Lastest version on Kexts installed
+  
+  - OpenCore update to 1.0.7
+  
+  - Wifi - required itlwm.kext
+  
+  - Tahoe - audio broken with AppleALC.kext
+  
 - **12 Jun 2025**
   - Updated to Sequoia 15.5
-  
+
 - **27 Mar 2025**
   - Update to OpenCore 1.0.4
   - All kexts updated to the latest version at the time of release
